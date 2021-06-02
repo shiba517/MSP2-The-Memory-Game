@@ -39,3 +39,25 @@ Developer and business person
     * I want the users to play again in as quickly as possible without too many boring clicks
 * Frequent visitor goals:
     * I want parents to encourage their children to play again as the children memory is clearly getting better
+
+## THE 5 PLANES
+### Strategy
+Purpose of the website?
+* The purpose of the website is to challenge young children's memory skills, and to exercise it to become better via a fun game.
+
+Target audience?
+* The main audience will be children of primary school age as the game/website is to improve children's memory skill. It should be considered throughout the making of the project that parents should also be listed as a secondary audience target as they have the power for the children to have access to the website/game.
+
+Value to the user?
+* The user should enjoy the game so it shouldn’t be too difficult or too easy to the point where they will find it boring. As according to the purpose of the making of the game, the user should have their memory skills improve which the user most likely won’t notice but the secondary target audience, the parents, surely will.
+
+What makes a good experience?
+* A vibrant, playful colour scheme will evoke excitement to the user. Physical designs of the game should be easily noticeable and not abstract to help keep the simplicity of the look of the game.
+
+How are we different?
+* We will really push the subtly push the child's memory skill through dynamic difficulty levels and challenges to keep the children engaged. This game won’t be one dimensional to the point where a child will quickly get bored as children are prone to.
+
+What we shouldn’t do
+* Make the game too difficult or easy
+The colours to be too dull or adult oriented. It should be remembered that parents are the secondary user, not the main user
+Add too many options/features as this may confuse or/and put off the child from wanting to play
