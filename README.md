@@ -76,3 +76,12 @@ Content
 
 Future alterations/additions
 * The ability to change visuals to narrow down target audiences. For example, the options to change visuals that will engage with girls more than boys and visa versa.
+
+### Structure
+Interactive design
+* Colour theme and visuals (i.e., design and positioning of buttons) must be consistent throughout
+* Should be obvious when a something has been clicked especially during the game
+
+Information Architecture
+* Linnear narrative because he target audience are children therefore navigation must be simple without unnecessary ‘branches’
+Nested List becasue it provides straight forward links to chosen destinations. Should also get to the final game within three clicks
