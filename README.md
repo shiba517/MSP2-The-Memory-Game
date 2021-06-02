@@ -61,3 +61,18 @@ What we shouldn’t do
 * Make the game too difficult or easy
 The colours to be too dull or adult oriented. It should be remembered that parents are the secondary user, not the main user
 Add too many options/features as this may confuse or/and put off the child from wanting to play
+
+### Scope
+Feature
+* Difficulty level for all intelligence level
+* Be able to save the high score for repeat visits
+* Explanation of the rules/how to play
+* Find out about the company
+
+Content
+* Do not contain long sentences as this can bore children. Keep it short and with action
+* Imagery should be fun/cute
+* No gender bias use of language or visuals as it is a game to solely test memory
+
+Future alterations/additions
+* The ability to change visuals to narrow down target audiences. For example, the options to change visuals that will engage with girls more than boys and visa versa.
