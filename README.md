@@ -118,3 +118,15 @@ Laptop/PC Version
     * About us screen - image
     * The game screen - image
     * Game over screen - image
+
+### Surface
+Colour Theme
+* #17E9E0
+* #FCCD04
+* #A64AC9
+* #FFB48F
+* #F5E6CC
+
+Typography
+* Main headings - [link](https://fonts.google.com/specimen/Comfortaa?query=comfort)
+* Regular text - [link](https://fonts.google.com/specimen/Montserrat?query=mont)
