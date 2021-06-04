@@ -20,6 +20,7 @@ body {
 
 .nbs-menuArea {
     height: 10vh;
+    background-color: hotpink;
 }
 
 .nbs-menuArea .row {
@@ -38,3 +39,14 @@ body {
     overflow: hidden;
 }
 
+
+/* *********** FOOTER *********** */
+.nbs-footerArea {
+    height: 8vh;
+    background-color: gray;
+}
+
+.nbs-socialm-icon-dec {
+    color: #A64AC9;
+    font-size: 1.5rem;
+}
