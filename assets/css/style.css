@@ -18,6 +18,15 @@ body {
     height: 12vh;
 }
 
+.nbs-menuArea {
+    height: 10vh;
+}
+
+.nbs-menuArea .row {
+    height: 100%;
+    width: 100%;
+}
+
 /* *********** SECTION 1.1 - THE GAME MENU *********** */
 .nbs-menuArea button {
     background-color: #FCCD04;
