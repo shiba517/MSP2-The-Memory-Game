@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/* *********** UNIVERSAL *********** */
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+
+/* *********** BODY TAG *********** */
+body {
+    background-color: #17E9E0;
+}
+
+
+/* *********** HEADER TAG *********** */
+.nbs-titleArea {
+    height: 12vh;
+}
