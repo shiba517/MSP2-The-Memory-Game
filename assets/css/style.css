@@ -39,6 +39,17 @@ body {
     overflow: hidden;
 }
 
+/* *********** SECTION 2.1 - OPENING SCREEN *********** */
+
+.nbs-openingScreenArea {
+    height: 65vh;
+    background-color: violet;
+}
+
+.nbs-openingScreenArea img {
+    width: 100%;
+}
+
 
 /* *********** FOOTER *********** */
 .nbs-footerArea {
