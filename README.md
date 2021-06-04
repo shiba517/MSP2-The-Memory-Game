@@ -85,3 +85,36 @@ Interactive design
 Information Architecture
 * Linnear narrative because he target audience are children therefore navigation must be simple without unnecessary ‘branches’
 Nested List becasue it provides straight forward links to chosen destinations. Should also get to the final game within three clicks
+
+### Skeleton
+Mobile Version
+* Black and white
+    * Landing/Home screen - image
+    * How to play screen - image
+    * Lets play screen - image
+    * About us screen - image
+    * The game screen - image
+    * Game over screen - image
+* Colour
+    * Landing/Home screen - image
+    * How to play screen - image
+    * Lets play screen - image
+    * About us screen - image
+    * The game screen - image
+    * Game over screen - image
+
+Laptop/PC Version
+* Black and white
+    * Landing/Home screen - image
+    * How to play screen - image
+    * Lets play screen - image
+    * About us screen - image
+    * The game screen - image
+    * Game over screen - image
+* Colour
+    * Landing/Home screen - image
+    * How to play screen - image
+    * Lets play screen - image
+    * About us screen - image
+    * The game screen - image
+    * Game over screen - image
