@@ -17,3 +17,15 @@ body {
 .nbs-titleArea {
     height: 12vh;
 }
+
+/* *********** SECTION 1.1 - THE GAME MENU *********** */
+.nbs-menuArea button {
+    background-color: #FCCD04;
+    width: 30%;
+    height: 6vh;
+    border: 2.5px solid black;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
