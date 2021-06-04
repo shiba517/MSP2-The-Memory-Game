@@ -40,14 +40,13 @@ body {
 }
 
 /* *********** SECTION 2.1 - OPENING SCREEN *********** */
-
 .nbs-openingScreenArea {
-    height: 65vh;
+    height: 70vh;
     background-color: violet;
 }
 
 .nbs-openingScreenArea img {
-    width: 100%;
+    width: 100%
 }
 
 
