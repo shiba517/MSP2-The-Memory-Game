@@ -10,6 +10,15 @@
     display: none;
 }
 
+.nbs-section2Area {
+    min-height: 70vh;
+}
+
+.nbs-height100Percent {
+    height: 100%;
+}
+
+
 /* *********** BODY TAG *********** */
 body {
     background-color: #17E9E0;
@@ -46,7 +55,6 @@ body {
 
 /* *********** SECTION 2.1 - OPENING SCREEN *********** */
 .nbs-openingScreenArea {
-    height: 70vh;
     background-color: violet;
 }
 
@@ -54,10 +62,20 @@ body {
     width: 100%
 }
 
+/* *********** SECTION 2.2 - HOW TO PLAY SCREEN *********** */
+.nbs-card {
+    overflow-y: auto;
+    background-color: #F5E6CC;
+    background-color: #FFB48F;
+    height: fit-content;
+    height: 80%;
+    border: 0.25rem solid black;
+    border-radius: 1.5rem;
+}
 
-/* *********** SECTION 2.2 - START GAME SCREEN *********** */
+
+/* *********** SECTION 2.3 - START GAME SCREEN *********** */
 .nbs-startGameArea {
-    height: 70vh;
     background-color: #A64AC9;
 }
 
