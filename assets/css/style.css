@@ -6,6 +6,9 @@
     font-family: 'Comfortaa', cursive;
 }
 
+.nbs-display-none {
+    display: none;
+}
 
 /* *********** BODY TAG *********** */
 body {
@@ -28,16 +31,18 @@ body {
     width: 100%;
 }
 
+
 /* *********** SECTION 1.1 - THE GAME MENU *********** */
 .nbs-menuArea button {
     background-color: #FCCD04;
     width: 30%;
     height: 6vh;
-    border: 2.5px solid black;
+    border: 0.2rem solid black;
     border-radius: 0.5rem;
     font-size: 1rem;
     overflow: hidden;
 }
+
 
 /* *********** SECTION 2.1 - OPENING SCREEN *********** */
 .nbs-openingScreenArea {
@@ -47,6 +52,30 @@ body {
 
 .nbs-openingScreenArea img {
     width: 100%
+}
+
+
+/* *********** SECTION 2.2 - START GAME SCREEN *********** */
+.nbs-startGameArea {
+    height: 70vh;
+    background-color: #A64AC9;
+}
+
+.nbs-buttonCollection {
+    width: 100vw;
+}
+
+.nbs-difficultyButton {
+    background-color: #FFB48F;
+    border: none;
+    border: 0.3rem solid black;
+    border-radius: 0.5rem;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.nbs-difficultyButton p {
+    background-color: transparent;
 }
 
 
