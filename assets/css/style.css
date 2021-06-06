@@ -97,6 +97,25 @@ body {
 }
 
 
+/* *********** SECTION 2.5 - THE GAME *********** */
+.nbs-headCardsArea {
+    height: 20vh;
+    background-color: #A64AC9;
+}
+
+.nbs-headCard {
+    background-color: #FCCD04;
+    font-size: 3.5rem;
+    /* height: 90%; */
+    height: 18vh;
+    /* width: 30%; */
+    width: 18vh;
+    border: 0.3rem solid black;
+    border-radius: 2%;
+    border-radius: 15%;
+}
+
+
 /* *********** FOOTER *********** */
 .nbs-footerArea {
     height: 8vh;
