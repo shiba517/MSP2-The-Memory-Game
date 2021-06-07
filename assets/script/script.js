@@ -15,6 +15,7 @@ $(document).ready(function() {
     const buttonStartGame = $('#button-startGame')
 
     // TARGETING CLASS VIA JQUERY
+    const fieldCard = $('.nbs-fieldCard')
     const headCard = $('.nbs-headCard')
     const headCardsArea = $('.nbs-headCardsArea')
     const cssDisplayNone = 'nbs-display-none'
@@ -63,6 +64,14 @@ $(document).ready(function() {
         { name: "ghost", iTag: '<i class="fas fa-ghost"></i>' }
     ]
 
+    // STEP 1 OF WHICH ICONS WILL BE ON THE CARDS
+    var cardsCollectionCopy = []
+
+    // STEP 2 OF WHICH ICONS WILL BE ON THE CARDS
+    var cardsOnShow = []
+
+    const fieldCardTotal = 9
+
     // MAKES const allSections2s DISPLAY NONE
     function makeSection2DisplayNone() {
         for (let i = 0; i < allSection2s.length; i++) {
@@ -96,6 +105,7 @@ $(document).ready(function() {
 
         chosenDifficulty($(this).text())
 
+        setFieldCards()
         setHeadCards()
     })
 
@@ -113,6 +123,25 @@ $(document).ready(function() {
         }
     }
 
+    function setFieldCards() {
+        cardsCollectionCopy = []
+        for (let i = 0; i < fieldCardTotal; i++) {
+            cardsCollectionCopy.push(cardsCollection[i])
+        }
+
+        for (let i = 0; i < fieldCardTotal; i++) {
+            let chosenPosition = randomNumber(cardsCollectionCopy.length)
+            cardsOnShow.push(cardsCollectionCopy[chosenPosition])
+            cardsCollectionCopy.splice(chosenPosition, 1)
+        }
+        console.log(cardsOnShow)
+
+        fieldCard.each(function(index) {
+            $(this).empty()
+            $(this).append(`${cardsOnShow[index].iTag}`)
+        })
+    }
+
     function setHeadCards() {
         headCardsArea.empty()
         for (let i = 0; i < inGameDifficulty.cardsToMatch; i++) {
@@ -120,7 +149,7 @@ $(document).ready(function() {
         }
 
         $('.nbs-headCard').each(function() {
-            $(this).append(`${cardsCollection[randomNumber(cardsCollection.length)].iTag}`)
+            $(this).append(`${cardsOnShow[randomNumber(cardsOnShow.length)].iTag}`)
         })
     }
 })
