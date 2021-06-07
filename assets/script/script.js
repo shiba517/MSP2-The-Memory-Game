@@ -15,10 +15,14 @@ $(document).ready(function() {
     const buttonStartGame = $('#button-startGame')
 
     // TARGETING CLASS VIA JQUERY
+    const headCard = $('.nbs-headCard')
+    const headCardsArea = $('.nbs-headCardsArea')
     const cssDisplayNone = 'nbs-display-none'
 
     // TARGETING TRAVERSAL CLASS AND TAGS VIA JQUERY
     const difficultyButton = $('#sectionStartGame button')
+
+    const newHeadCard = `<div class="d-flex justify-content-center align-items-center mx-2 nbs-headCard"></div>`
 
     // THIS ARRAY IS TO TARGET ALL THESE SECTIONS AT ONCE FOR SCREEN NAVIGATION
     const allSection2s = [
@@ -35,7 +39,29 @@ $(document).ready(function() {
         {name: 'hard', cardsToMatch: 3, maxRoundTime: 1000, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
     ]
 
+    // HOW DIFFICULT THE GAME WILL BE. WILL BE SET BY chosenDifficulty()
     var inGameDifficulty
+
+    // MAIN COLLECTION OF ICONS THAT COULD BE ON THE CARDS
+    const cardsCollection = [
+        { name: "otter", iTag: '<i class="fas fa-otter"></i>' },
+        { name: "hippo", iTag: '<i class="fas fa-hippo"></i>' },
+        { name: "dog", iTag: '<i class="fas fa-dog"></i>' },
+        { name: "spider", iTag: '<i class="fas fa-spider"></i>' },
+        { name: "kiwi-bird", iTag: '<i class="fas fa-kiwi-bird"></i>' },
+        { name: "horse-head", iTag: '<i class="fas fa-horse-head"></i>' },
+        { name: "horse", iTag: '<i class="fas fa-horse"></i>' },
+        { name: "frog", iTag: '<i class="fas fa-frog"></i>' },
+        { name: "fish", iTag: '<i class="fas fa-fish"></i>' },
+        { name: "dragon", iTag: '<i class="fas fa-dragon"></i>' },
+        { name: "dove", iTag: '<i class="fas fa-dove"></i>' },
+        { name: "crow", iTag: '<i class="fas fa-crow"></i>' },
+        { name: "cat", iTag: '<i class="fas fa-cat"></i>' },
+        { name: "pastafarianism", iTag: '<i class="fas fa-pastafarianism"></i>' },
+        { name: "android", iTag: '<i class="fab fa-android"></i>' },
+        { name: "bacterium", iTag: '<i class="fas fa-bacterium"></i>' },
+        { name: "ghost", iTag: '<i class="fas fa-ghost"></i>' }
+    ]
 
     // MAKES const allSections2s DISPLAY NONE
     function makeSection2DisplayNone() {
@@ -69,15 +95,32 @@ $(document).ready(function() {
         sectionTheGame.removeClass(cssDisplayNone)
 
         chosenDifficulty($(this).text())
+
+        setHeadCards()
     })
+
+    // FUNCTION CREATES A RANDOM NUMBER
+    function randomNumber(number) {
+        return Math.floor(Math.random() * number)
+    }
 
     function chosenDifficulty(difficultyName) {
         for (let i = 0; i < difficultyLevelInfo.length; i++) {
             if (difficultyName == difficultyLevelInfo[i].name) {
                 inGameDifficulty = difficultyLevelInfo[i]
-                console.log(inGameDifficulty)
                 break
             }
         }
+    }
+
+    function setHeadCards() {
+        headCardsArea.empty()
+        for (let i = 0; i < inGameDifficulty.cardsToMatch; i++) {
+            headCardsArea.append(newHeadCard)
+        }
+
+        $('.nbs-headCard').each(function() {
+            $(this).append(`${cardsCollection[randomNumber(cardsCollection.length)].iTag}`)
+        })
     }
 })
