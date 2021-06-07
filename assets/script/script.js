@@ -17,6 +17,9 @@ $(document).ready(function() {
     // TARGETING CLASS VIA JQUERY
     const cssDisplayNone = 'nbs-display-none'
 
+    // TARGETING TRAVERSAL CLASS AND TAGS VIA JQUERY
+    const difficultyButton = $('#sectionStartGame button')
+
     // THIS ARRAY IS TO TARGET ALL THESE SECTIONS AT ONCE FOR SCREEN NAVIGATION
     const allSection2s = [
         {name: 'sectionOpeningScreen', jq: $('#sectionOpeningScreen')},
@@ -25,6 +28,14 @@ $(document).ready(function() {
         {name: 'sectionAboutUs', jq: $('#sectionAboutUs')},
         {name: 'sectionTheGame', jq: $('#sectionTheGame')}
     ]
+
+    const difficultyLevelInfo = [
+        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
+        {name: 'medium', cardsToMatch: 2, maxRoundTime: 1000, maxPrevTime: 5000, lives: 3, minPosPoints: 20, minNegPoints: 10, challengeSpeed: 75},
+        {name: 'hard', cardsToMatch: 3, maxRoundTime: 1000, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
+    ]
+
+    var inGameDifficulty
 
     // MAKES const allSections2s DISPLAY NONE
     function makeSection2DisplayNone() {
@@ -51,4 +62,22 @@ $(document).ready(function() {
         makeSection2DisplayNone()
         sectionStartGame.removeClass(cssDisplayNone)
     })
+    
+    // GAME WILL START WHEN USER CLICKS ON A BUTTON FROM SECTION 2.3
+    difficultyButton.click(function() {
+        makeSection2DisplayNone()
+        sectionTheGame.removeClass(cssDisplayNone)
+
+        chosenDifficulty($(this).text())
+    })
+
+    function chosenDifficulty(difficultyName) {
+        for (let i = 0; i < difficultyLevelInfo.length; i++) {
+            if (difficultyName == difficultyLevelInfo[i].name) {
+                inGameDifficulty = difficultyLevelInfo[i]
+                console.log(inGameDifficulty)
+                break
+            }
+        }
+    }
 })
