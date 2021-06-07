@@ -43,6 +43,10 @@ $(document).ready(function() {
         {name: 'hard', cardsToMatch: 3, maxRoundTime: 1000, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
     ]
 
+    var gameTimeInfo = {
+        previewTime: 0
+    }
+
     // HOW DIFFICULT THE GAME WILL BE. WILL BE SET BY chosenDifficulty()
     var inGameDifficulty
 
@@ -113,6 +117,8 @@ $(document).ready(function() {
 
         setFieldCards()
         setHeadCards()
+
+        
     })
 
     // FUNCTION CREATES A RANDOM NUMBER
@@ -124,6 +130,7 @@ $(document).ready(function() {
         for (let i = 0; i < difficultyLevelInfo.length; i++) {
             if (difficultyName == difficultyLevelInfo[i].name) {
                 inGameDifficulty = difficultyLevelInfo[i]
+                setBaseInfo()
                 break
             }
         }
@@ -131,6 +138,8 @@ $(document).ready(function() {
 
     function setFieldCards() {
         cardsCollectionCopy = []
+        cardsOnShow = []
+
         for (let i = 0; i < fieldCardTotal; i++) {
             cardsCollectionCopy.push(cardsCollection[i])
         }
@@ -140,13 +149,18 @@ $(document).ready(function() {
             cardsOnShow.push(cardsCollectionCopy[chosenPosition])
             cardsCollectionCopy.splice(chosenPosition, 1)
         }
-        console.log(cardsOnShow)
 
         fieldCard.each(function(index) {
             $(this).empty()
             $(this).append(`${cardsOnShow[index].iTag}`)
             $(this).attr('data-animal', `${cardsOnShow[index].name}`)
         })
+
+        setTimeout(function() {
+            fieldCard.each(function() {
+                $(this).children().addClass(cssDisplayNone)
+            })
+        }, gameTimeInfo.previewTime)
     }
 
     function setHeadCards() {
@@ -159,7 +173,6 @@ $(document).ready(function() {
             let chosenPosition = randomNumber(cardsOnShow.length)
             $(this).append(`${cardsOnShow[chosenPosition].iTag}`)
             $(this).attr('data-animal', `${cardsOnShow[chosenPosition].name}`)
-            console.log($(this).attr('data-animal'))
         })
     }
 
@@ -167,10 +180,39 @@ $(document).ready(function() {
         if ($(this).attr('data-animal') == $('.nbs-headCard').eq(comparisonPosition).attr('data-animal')) {
             $(this).addClass(cssBgCorrect)
             comparisonPosition++
+
+            checkMatchCompletion()
         }
         else {
             $(this).addClass(cssBgIncorrect)
             comparisonPosition = 0
         }
     })
+
+    function checkMatchCompletion() {
+        if (comparisonPosition == inGameDifficulty.cardsToMatch) {
+            comparisonPosition = 0
+
+            setTimeout(function() {
+                fieldCard.each(function() {
+                    $(this).removeClass(cssBgCorrect, cssBgIncorrect)
+                    resetAllCards()
+                    updatePreviewTime()
+                })
+            }, 2000)
+        }
+    }
+
+    function updatePreviewTime() {
+        gameTimeInfo.previewTime -= (gameTimeInfo.previewTime * 0.9)
+    }
+
+    function resetAllCards() {
+        setFieldCards()
+        setHeadCards()
+    }
+
+    function setBaseInfo() {
+        gameTimeInfo.previewTime = inGameDifficulty.maxPrevTime
+    }
 })
