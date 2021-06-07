@@ -18,7 +18,10 @@ $(document).ready(function() {
     const fieldCard = $('.nbs-fieldCard')
     const headCard = $('.nbs-headCard')
     const headCardsArea = $('.nbs-headCardsArea')
+
     const cssDisplayNone = 'nbs-display-none'
+    const cssBgCorrect = 'nbs-bg-correct'
+    const cssBgIncorrect = 'nbs-bg-incorrect'
 
     // TARGETING TRAVERSAL CLASS AND TAGS VIA JQUERY
     const difficultyButton = $('#sectionStartGame button')
@@ -71,6 +74,9 @@ $(document).ready(function() {
     var cardsOnShow = []
 
     const fieldCardTotal = 9
+
+    // HELPS IDENTIFY WHETHER FIELD CARDS MATCH WITH HEAD CARDS
+    var comparisonPosition = 0
 
     // MAKES const allSections2s DISPLAY NONE
     function makeSection2DisplayNone() {
@@ -139,6 +145,7 @@ $(document).ready(function() {
         fieldCard.each(function(index) {
             $(this).empty()
             $(this).append(`${cardsOnShow[index].iTag}`)
+            $(this).attr('data-animal', `${cardsOnShow[index].name}`)
         })
     }
 
@@ -149,7 +156,21 @@ $(document).ready(function() {
         }
 
         $('.nbs-headCard').each(function() {
-            $(this).append(`${cardsOnShow[randomNumber(cardsOnShow.length)].iTag}`)
+            let chosenPosition = randomNumber(cardsOnShow.length)
+            $(this).append(`${cardsOnShow[chosenPosition].iTag}`)
+            $(this).attr('data-animal', `${cardsOnShow[chosenPosition].name}`)
+            console.log($(this).attr('data-animal'))
         })
     }
+
+    fieldCard.click(function() {
+        if ($(this).attr('data-animal') == $('.nbs-headCard').eq(comparisonPosition).attr('data-animal')) {
+            $(this).addClass(cssBgCorrect)
+            comparisonPosition++
+        }
+        else {
+            $(this).addClass(cssBgIncorrect)
+            comparisonPosition = 0
+        }
+    })
 })

@@ -135,6 +135,13 @@ body {
     font-size: 2.5rem;
 }
 
+.nbs-bg-correct {
+    background-color: green;
+}
+
+.nbs-bg-incorrect {
+    background-color: maroon;
+}
 
 /* *********** FOOTER *********** */
 .nbs-footerArea {
