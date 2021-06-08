@@ -10,6 +10,7 @@ $(document).ready(function() {
     const sectionStartGame = $('#sectionStartGame')
     const sectionAboutUs = $('#sectionAboutUs')
     const sectionTheGame = $('#sectionTheGame')
+    const sectionGameOver = $('#sectionGameOver')
     const buttonHowToPlay = $('#button-howToPlay')
     const buttonAboutUs = $('#button-aboutUs')
     const buttonStartGame = $('#button-startGame')
@@ -34,7 +35,8 @@ $(document).ready(function() {
         {name: 'sectionHowToPlay', jq: $('#sectionHowToPlay')},
         {name: 'sectionStartGame', jq: $('#sectionStartGame')},
         {name: 'sectionAboutUs', jq: $('#sectionAboutUs')},
-        {name: 'sectionTheGame', jq: $('#sectionTheGame')}
+        {name: 'sectionTheGame', jq: $('#sectionTheGame')},
+        {name: 'sectionGameOver', jq: $('#sectionGameOver')}
     ]
 
     const difficultyLevelInfo = [
@@ -42,6 +44,11 @@ $(document).ready(function() {
         {name: 'medium', cardsToMatch: 2, maxRoundTime: 1000, maxPrevTime: 5000, lives: 3, minPosPoints: 20, minNegPoints: 10, challengeSpeed: 75},
         {name: 'hard', cardsToMatch: 3, maxRoundTime: 1000, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
     ]
+
+    var inGameInfo = {
+        inPreview: true,
+        lives: 0
+    }
 
     var gameTimeInfo = {
         previewTime: 0
@@ -108,18 +115,22 @@ $(document).ready(function() {
         sectionStartGame.removeClass(cssDisplayNone)
     })
     
-    // GAME WILL START WHEN USER CLICKS ON A BUTTON FROM SECTION 2.3
+    // GAME WILL START WHEN USER CLICKS ON A BUTTON FROM SECTION 2.3 VIA letsPlay()
     difficultyButton.click(function() {
         makeSection2DisplayNone()
         sectionTheGame.removeClass(cssDisplayNone)
 
         chosenDifficulty($(this).text())
 
+        // GAME WILL OFFICIALLY START VIA THIS FUNCTION
+        letsPlay()
+    })
+
+    // RUNNINGS OF THE ACTUAL GAME
+    function letsPlay() {
         setFieldCards()
         setHeadCards()
-
-        
-    })
+    }
 
     // FUNCTION CREATES A RANDOM NUMBER
     function randomNumber(number) {
@@ -154,13 +165,22 @@ $(document).ready(function() {
             $(this).empty()
             $(this).append(`${cardsOnShow[index].iTag}`)
             $(this).attr('data-animal', `${cardsOnShow[index].name}`)
+            $(this).children().removeClass(cssDisplayNone)
         })
+
+        previewCards()
+    }
+
+    function previewCards() {
+        inGameInfo.inPreview = true
 
         setTimeout(function() {
             fieldCard.each(function() {
                 $(this).children().addClass(cssDisplayNone)
+                inGameInfo.inPreview = false
             })
-        }, gameTimeInfo.previewTime)
+        }, 2000)
+        
     }
 
     function setHeadCards() {
@@ -177,42 +197,84 @@ $(document).ready(function() {
     }
 
     fieldCard.click(function() {
-        if ($(this).attr('data-animal') == $('.nbs-headCard').eq(comparisonPosition).attr('data-animal')) {
-            $(this).addClass(cssBgCorrect)
-            comparisonPosition++
+        if (inGameInfo.inPreview == false) {
+            if ($(this).attr('data-animal') == $('.nbs-headCard').eq(comparisonPosition).attr('data-animal')) {
+                $(this).addClass(cssBgCorrect)
+                $(this).children().removeClass(cssDisplayNone)
+                comparisonPosition++
+    
+                checkMatchCompletion()
+            }
+            else {
+                inGameInfo.lives--
+                $(this).addClass(cssBgIncorrect)
+                $(this).children().removeClass(cssDisplayNone)
 
-            checkMatchCompletion()
-        }
-        else {
-            $(this).addClass(cssBgIncorrect)
-            comparisonPosition = 0
+                checkGameOver()
+            }
         }
     })
 
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
-            comparisonPosition = 0
-
             setTimeout(function() {
                 fieldCard.each(function() {
-                    $(this).removeClass(cssBgCorrect, cssBgIncorrect)
-                    resetAllCards()
-                    updatePreviewTime()
+                    $(this).addClass(cssBgCorrect)
                 })
+            }, 500)
+            
+
+            comparisonPosition = 0
+            inGameInfo.inPreview = true
+
+            setTimeout(function() {
+                updatePreviewTime()
+                resetAllCards()
             }, 2000)
         }
     }
 
     function updatePreviewTime() {
-        gameTimeInfo.previewTime -= (gameTimeInfo.previewTime * 0.9)
+        gameTimeInfo.previewTime -= inGameDifficulty.challengeSpeed
     }
 
     function resetAllCards() {
+        fieldCard.each(function() {
+            $(this).removeClass(cssBgCorrect)
+            $(this).removeClass(cssBgIncorrect)
+        })
+
         setFieldCards()
         setHeadCards()
     }
 
     function setBaseInfo() {
         gameTimeInfo.previewTime = inGameDifficulty.maxPrevTime
+        inGameInfo.lives = inGameDifficulty.lives
+    }
+
+    function checkGameOver() {
+        if (inGameInfo.lives == 0) {
+            resetAllGameInfo()
+            inGameInfo.inPreview = true
+
+            setTimeout(function() {
+                fieldCard.each(function() {
+                    $(this).addClass(cssBgIncorrect)
+                })
+            }, 500)
+
+            
+
+            setTimeout(function() {
+                makeSection2DisplayNone()
+                sectionGameOver.removeClass(cssDisplayNone)
+            }, 2000)         
+        }
+    }
+
+    function resetAllGameInfo() {
+        inGameInfo.inPreview = true,
+        comparisonPosition = 0
     }
 })
