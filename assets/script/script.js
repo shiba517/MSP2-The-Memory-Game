@@ -200,9 +200,9 @@ $(document).ready(function() {
         setTimeout(function() {
             fieldCard.each(function() {
                 $(this).children().addClass(cssDisplayNone)
-                inGameInfo.inPreview = false
-                startTimer()
             })
+            inGameInfo.inPreview = false
+            startTimer()
         }, 2000)
         
     }
@@ -301,6 +301,19 @@ $(document).ready(function() {
             if (inGameInfo.matchMade == false) {
                 currentTime--
                 theTimer.text(currentTime)
+
+                if (currentTime < 0) {
+                    theTimer.text(':(')
+                    clearInterval(countdown)
+                    inGameInfo.lives--
+
+                    setTimeout(function() {
+                        checkGameOver()
+                        if (inGameInfo.lives != 0) {
+                            resetAllCards()
+                        }
+                    }, 2000)
+                }
             }
 
             if (inGameInfo.matchMade == true) {
