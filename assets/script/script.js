@@ -18,6 +18,7 @@ $(document).ready(function() {
     const buttonStartGame = $('#button-startGame')
     const livesQuantityOnDisplay = $('#livesQuantity')
     const theTimer = $('#theTimer')
+    const thePoints = $('#thePoints')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -59,6 +60,12 @@ $(document).ready(function() {
         previewTime: 0,
         roundtime: 0,
         timer: false
+    }
+
+    var gamePointsInfo = {
+        completeMatch: 0,
+        nonMatch: 0,
+        totalPoints: 0
     }
 
     // HOW DIFFICULT THE GAME WILL BE. WILL BE SET BY chosenDifficulty()
@@ -219,7 +226,7 @@ $(document).ready(function() {
                 $(this).addClass(cssBgCorrect)
                 $(this).children().removeClass(cssDisplayNone)
                 comparisonPosition++
-    
+                
                 checkMatchCompletion()
             }
             else {
@@ -228,6 +235,9 @@ $(document).ready(function() {
                 $(this).addClass(cssBgIncorrect)
                 $(this).children().removeClass(cssDisplayNone)
 
+                gamePointsInfo.completeMatch -= 15
+                updatePoints()
+
                 checkGameOver()
             }
         }
@@ -235,6 +245,9 @@ $(document).ready(function() {
 
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
+            gamePointsInfo.completeMatch += 30
+            updatePoints()
+
             inGameInfo.matchMade = true
             setTimeout(function() {
                 fieldCard.each(function() {
@@ -251,6 +264,12 @@ $(document).ready(function() {
                 resetAllCards()
             }, 2000)
         }
+    }
+
+    function updatePoints() {
+        gamePointsInfo.totalPoints = gamePointsInfo.completeMatch + gamePointsInfo.nonMatch
+
+        thePoints.text(gamePointsInfo.totalPoints)
     }
 
     function updatePreviewTime() {
@@ -299,15 +318,12 @@ $(document).ready(function() {
     function checkGameOver() {
         if (inGameInfo.lives == 0) {
             resetAllGameInfo()
-            inGameInfo.inPreview = true
 
             setTimeout(function() {
                 fieldCard.each(function() {
                     $(this).addClass(cssBgIncorrect)
                 })
             }, 500)
-
-            
 
             setTimeout(function() {
                 makeSection2DisplayNone()
@@ -322,6 +338,9 @@ $(document).ready(function() {
         inGameInfo.inPreview = true
         inGameInfo.matchMade = false
         gameTimeInfo.timer = false
+        gamePointsInfo.completeMatch = 0
+        gamePointsInfo.nonMatch = 0
+        gamePointsInfo.totalPoints = 0
 
         comparisonPosition = 0
     }
