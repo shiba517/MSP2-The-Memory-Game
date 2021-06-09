@@ -17,6 +17,7 @@ $(document).ready(function() {
     const buttonAboutUs = $('#button-aboutUs')
     const buttonStartGame = $('#button-startGame')
     const livesQuantityOnDisplay = $('#livesQuantity')
+    const theTimer = $('#theTimer')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -43,18 +44,21 @@ $(document).ready(function() {
     ]
 
     const difficultyLevelInfo = [
-        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
-        {name: 'medium', cardsToMatch: 2, maxRoundTime: 1000, maxPrevTime: 5000, lives: 3, minPosPoints: 20, minNegPoints: 10, challengeSpeed: 75},
-        {name: 'hard', cardsToMatch: 3, maxRoundTime: 1000, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
+        {name: 'easy', cardsToMatch: 1, maxRoundTime: 30, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
+        {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, minPosPoints: 20, minNegPoints: 10, challengeSpeed: 75},
+        {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
     ]
 
     var inGameInfo = {
         inPreview: true,
-        lives: 0
+        lives: 0,
+        matchMade: false
     }
 
     var gameTimeInfo = {
-        previewTime: 0
+        previewTime: 0,
+        roundtime: 0,
+        timer: false
     }
 
     // HOW DIFFICULT THE GAME WILL BE. WILL BE SET BY chosenDifficulty()
@@ -156,6 +160,12 @@ $(document).ready(function() {
     function setFieldCards() {
         cardsCollectionCopy = []
         cardsOnShow = []
+        inGameInfo.matchMade = false
+
+        fieldCard.each(function() {
+            $(this).removeClass(cssBgIncorrect)
+            $(this).removeClass(cssBgCorrect)
+        })
 
         for (let i = 0; i < fieldCardTotal; i++) {
             cardsCollectionCopy.push(cardsCollection[i])
@@ -184,6 +194,7 @@ $(document).ready(function() {
             fieldCard.each(function() {
                 $(this).children().addClass(cssDisplayNone)
                 inGameInfo.inPreview = false
+                startTimer()
             })
         }, 2000)
         
@@ -203,7 +214,7 @@ $(document).ready(function() {
     }
 
     fieldCard.click(function() {
-        if (inGameInfo.inPreview == false) {
+        if (inGameInfo.inPreview == false) {            
             if ($(this).attr('data-animal') == $('.nbs-headCard').eq(comparisonPosition).attr('data-animal')) {
                 $(this).addClass(cssBgCorrect)
                 $(this).children().removeClass(cssDisplayNone)
@@ -224,6 +235,7 @@ $(document).ready(function() {
 
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
+            inGameInfo.matchMade = true
             setTimeout(function() {
                 fieldCard.each(function() {
                     $(this).addClass(cssBgCorrect)
@@ -259,6 +271,29 @@ $(document).ready(function() {
         gameTimeInfo.previewTime = inGameDifficulty.maxPrevTime
         inGameInfo.lives = inGameDifficulty.lives
         livesQuantityOnDisplay.text(inGameInfo.lives)
+        gameTimeInfo.roundtime = inGameDifficulty.maxRoundTime
+        theTimer.text(inGameDifficulty.maxRoundTime)
+    }
+
+    function startTimer() {
+        let currentTime = gameTimeInfo.roundtime
+
+        let countdown = setInterval(function() {
+            if (inGameInfo.matchMade == false) {
+                currentTime--
+                theTimer.text(currentTime)
+            }
+
+            if (inGameInfo.matchMade == true) {
+                theTimer.text(':)')
+                clearInterval(countdown)
+            }
+
+            if (inGameInfo.lives == 0) {
+                theTimer.text(':(')
+                clearInterval(countdown)
+            }
+        }, 1000)
     }
 
     function checkGameOver() {
@@ -284,7 +319,10 @@ $(document).ready(function() {
     }
 
     function resetAllGameInfo() {
-        inGameInfo.inPreview = true,
+        inGameInfo.inPreview = true
+        inGameInfo.matchMade = false
+        gameTimeInfo.timer = false
+
         comparisonPosition = 0
     }
 })
