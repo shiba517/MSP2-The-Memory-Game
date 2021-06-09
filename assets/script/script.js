@@ -19,6 +19,11 @@ $(document).ready(function() {
     const livesQuantityOnDisplay = $('#livesQuantity')
     const theTimer = $('#theTimer')
     const thePoints = $('#thePoints')
+    const gameOverFinalScore = $('#gameOverFinalScore')
+    const gameOverTotalMatches = $('#gameOverTotalMatches')
+    const gameOverTotalNonMatches = $('#gameOverTotalNonMatches')
+    const gameOverTotalBonus = $('#gameOverTotalBonus')
+    const gameOverTotalTime = $('#gameOverTotalTime')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -45,7 +50,7 @@ $(document).ready(function() {
     ]
 
     const difficultyLevelInfo = [
-        {name: 'easy', cardsToMatch: 1, maxRoundTime: 30, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
+        {name: 'easy', cardsToMatch: 1, maxRoundTime: 3, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
         {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, minPosPoints: 20, minNegPoints: 10, challengeSpeed: 75},
         {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
     ]
@@ -59,12 +64,16 @@ $(document).ready(function() {
     var gameTimeInfo = {
         previewTime: 0,
         roundtime: 0,
-        timer: false
+        timer: false,
+        totalSeconds: 0
     }
 
     var gamePointsInfo = {
+        correctClicks: 0,
+        incorrectClicks: 0,
         completeMatch: 0,
         nonMatch: 0,
+        bonus: 0,
         totalPoints: 0
     }
 
@@ -235,7 +244,8 @@ $(document).ready(function() {
                 $(this).addClass(cssBgIncorrect)
                 $(this).children().removeClass(cssDisplayNone)
 
-                gamePointsInfo.completeMatch -= 15
+                gamePointsInfo.nonMatch += 15
+                gamePointsInfo.incorrectClicks++
                 updatePoints()
 
                 checkGameOver()
@@ -246,6 +256,7 @@ $(document).ready(function() {
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
             gamePointsInfo.completeMatch += 30
+            gamePointsInfo.correctClicks++
             updatePoints()
 
             inGameInfo.matchMade = true
@@ -254,7 +265,6 @@ $(document).ready(function() {
                     $(this).addClass(cssBgCorrect)
                 })
             }, 500)
-            
 
             comparisonPosition = 0
             inGameInfo.inPreview = true
@@ -267,9 +277,13 @@ $(document).ready(function() {
     }
 
     function updatePoints() {
-        gamePointsInfo.totalPoints = gamePointsInfo.completeMatch + gamePointsInfo.nonMatch
+        if (gamePointsInfo.correctClicks % 3 == 0) {
+            gamePointsInfo.bonus++
+        }
 
-        thePoints.text(gamePointsInfo.totalPoints)
+        gamePointsInfo.totalPoints = gamePointsInfo.completeMatch - gamePointsInfo.nonMatch
+
+        thePoints.text(gamePointsInfo.totalPoints + (gamePointsInfo.bonus * 30))
     }
 
     function updatePreviewTime() {
@@ -277,6 +291,8 @@ $(document).ready(function() {
     }
 
     function resetAllCards() {
+        comparisonPosition = 0
+
         fieldCard.each(function() {
             $(this).removeClass(cssBgCorrect)
             $(this).removeClass(cssBgIncorrect)
@@ -299,8 +315,9 @@ $(document).ready(function() {
 
         let countdown = setInterval(function() {
             if (inGameInfo.matchMade == false) {
-                currentTime--
                 theTimer.text(currentTime)
+                currentTime--
+                gameTimeInfo.totalSeconds++
 
                 if (currentTime < 0) {
                     theTimer.text(':(')
@@ -309,7 +326,7 @@ $(document).ready(function() {
 
                     setTimeout(function() {
                         checkGameOver()
-                        if (inGameInfo.lives != 0) {
+                        if (inGameInfo.lives >= 0) {
                             resetAllCards()
                         }
                     }, 2000)
@@ -321,15 +338,25 @@ $(document).ready(function() {
                 clearInterval(countdown)
             }
 
-            if (inGameInfo.lives == 0) {
+            if (inGameInfo.lives <= 0) {
                 theTimer.text(':(')
                 clearInterval(countdown)
             }
         }, 1000)
     }
 
+    function finalPoints() {
+        return gamePointsInfo.totalPoints
+    }
+
     function checkGameOver() {
         if (inGameInfo.lives == 0) {
+            gameOverFinalScore.text(finalPoints() + ' points!')
+            gameOverTotalMatches.text(gamePointsInfo.correctClicks)
+            gameOverTotalNonMatches.text(gamePointsInfo.incorrectClicks)
+            gameOverTotalBonus.text(gamePointsInfo.bonus * 30)
+            gameOverTotalTime.text(gameTimeInfo.totalSeconds)
+
             resetAllGameInfo()
 
             setTimeout(function() {
@@ -351,9 +378,13 @@ $(document).ready(function() {
         inGameInfo.inPreview = true
         inGameInfo.matchMade = false
         gameTimeInfo.timer = false
+        gameTimeInfo.totalSeconds = 0
+        gamePointsInfo.correctClicks = 0
+        gamePointsInfo.incorrectClicks = 0
         gamePointsInfo.completeMatch = 0
         gamePointsInfo.nonMatch = 0
         gamePointsInfo.totalPoints = 0
+        gamePointsInfo.bonus = 0
 
         comparisonPosition = 0
     }
