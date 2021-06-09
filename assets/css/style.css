@@ -53,6 +53,20 @@ body {
 }
 
 
+/* *********** SECTION 1.2 - GAME INFO *********** */
+.nbs-gameInfoArea {
+    height: 10vh;
+}
+
+.nbs-gameInfoAreaFont {
+    font-size: 2rem;
+}
+
+.nbs-ginfotest {
+    background-color: darkgray;
+}
+
+
 /* *********** SECTION 2.1 - OPENING SCREEN *********** */
 .nbs-openingScreenArea {
     background-color: violet;

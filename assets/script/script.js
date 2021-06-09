@@ -11,9 +11,12 @@ $(document).ready(function() {
     const sectionAboutUs = $('#sectionAboutUs')
     const sectionTheGame = $('#sectionTheGame')
     const sectionGameOver = $('#sectionGameOver')
+    const sectionGameInfo = $('#sectionGameInfo')
+    const sectionGameMenu = $('#sectionGameMenu')
     const buttonHowToPlay = $('#button-howToPlay')
     const buttonAboutUs = $('#button-aboutUs')
     const buttonStartGame = $('#button-startGame')
+    const livesQuantityOnDisplay = $('#livesQuantity')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -120,6 +123,9 @@ $(document).ready(function() {
         makeSection2DisplayNone()
         sectionTheGame.removeClass(cssDisplayNone)
 
+        sectionGameMenu.addClass(cssDisplayNone)
+        sectionGameInfo.removeClass(cssDisplayNone)
+
         chosenDifficulty($(this).text())
 
         // GAME WILL OFFICIALLY START VIA THIS FUNCTION
@@ -207,6 +213,7 @@ $(document).ready(function() {
             }
             else {
                 inGameInfo.lives--
+                livesQuantityOnDisplay.text(inGameInfo.lives)
                 $(this).addClass(cssBgIncorrect)
                 $(this).children().removeClass(cssDisplayNone)
 
@@ -251,6 +258,7 @@ $(document).ready(function() {
     function setBaseInfo() {
         gameTimeInfo.previewTime = inGameDifficulty.maxPrevTime
         inGameInfo.lives = inGameDifficulty.lives
+        livesQuantityOnDisplay.text(inGameInfo.lives)
     }
 
     function checkGameOver() {
@@ -269,6 +277,8 @@ $(document).ready(function() {
             setTimeout(function() {
                 makeSection2DisplayNone()
                 sectionGameOver.removeClass(cssDisplayNone)
+                sectionGameMenu.removeClass(cssDisplayNone)
+                sectionGameInfo.addClass(cssDisplayNone)
             }, 2000)         
         }
     }
