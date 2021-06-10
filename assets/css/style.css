@@ -11,7 +11,7 @@
 }
 
 .nbs-section2Area {
-    height: 70vh;
+    height: 62vh;
 }
 
 .nbs-height100Percent {
@@ -30,18 +30,17 @@ body {
     height: 12vh;
 }
 
+
+/* *********** SECTION 1.1 - THE GAME MENU *********** */
 .nbs-menuArea {
     height: 10vh;
-    background-color: hotpink;
+    /* background-color: hotpink; */
 }
 
 .nbs-menuArea .row {
     height: 100%;
     width: 100%;
 }
-
-
-/* *********** SECTION 1.1 - THE GAME MENU *********** */
 .nbs-menuArea button {
     background-color: #FCCD04;
     width: 30%;
@@ -63,9 +62,22 @@ body {
 }
 
 
+/* *********** SECTION 1.3 - GAME OPTIONS *********** */
+.nbs-gameOptionsArea {
+    height: 8vh;
+    /* background-color: darkolivegreen; */
+}
+
+.nbs-gameOptionsIconAll i {
+    color: #A64AC9;
+    margin-inline: 0.5rem;
+    font-size: 2rem;
+}
+
+
 /* *********** SECTION 2.1 - OPENING SCREEN *********** */
 .nbs-openingScreenArea {
-    background-color: violet;
+    /* background-color: violet; */
 }
 
 .nbs-openingScreenArea img {
@@ -79,14 +91,20 @@ body {
     background-color: #FFB48F;
     height: fit-content;
     height: 80%;
+    position: relative;
     border: 0.25rem solid black;
     border-radius: 1.5rem;
+}
+
+.nbs-cardBody {
+    background-color: transparent;
+    flex: none; 
 }
 
 
 /* *********** SECTION 2.3 - START GAME SCREEN *********** */
 .nbs-startGameArea {
-    background-color: #A64AC9;
+    /* background-color: #A64AC9; */
 }
 
 .nbs-buttonCollection {
@@ -111,7 +129,7 @@ body {
 /* HEAD CARDS */
 .nbs-headCardsArea {
     height: 20vh;
-    background-color: #A64AC9;
+    /* background-color: #A64AC9; */
 }
 
 .nbs-headCard {
@@ -121,7 +139,7 @@ body {
     height: 18vh;
     /* width: 30%; */
     width: 18vh;
-    border: 0.3rem solid black;
+    border: 0.35rem solid black;
     border-radius: 2%;
     border-radius: 15%;
 }
@@ -129,7 +147,7 @@ body {
 /* FIELD CARDS */
 .nbs-fieldCardsArea {
     min-height: 50vh;
-    background-color: lemonchiffon;
+    /* background-color: lemonchiffon; */
 }
 
 .nbs-fieldCard {
@@ -157,9 +175,14 @@ body {
 .nbs-footerArea {
     height: 8vh;
     background-color: gray;
+    /* background-color: #A64AC9; */
+    background-color: #F5E6CC;
+    /* background-color: #FFB48F; */
 }
 
 .nbs-socialm-icon-dec {
+    color: #F5E6CC;
+    color: #FFB48F;
     color: #A64AC9;
     font-size: 1.5rem;
 }
