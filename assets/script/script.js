@@ -87,6 +87,7 @@ $(document).ready(function() {
         completeMatch: 0,
         nonMatch: 0,
         bonus: 0,
+        help: 0,
         totalPoints: 0
     }
 
@@ -188,6 +189,24 @@ $(document).ready(function() {
 
             inGameInfo.music = false
             $('#bgMusic')[0].pause()
+        }
+    })
+
+    // MAKES ICONS ON CARD APPEAR FOR A SHORT MOMENT
+    iconHelp.click(function() {
+        if (inGameInfo.inPreview == false) {
+            gamePointsInfo.help++
+            updatePoints()
+
+            fieldCard.each(function() {
+                $(this).children().removeClass(cssDisplayNone)
+            })
+    
+            setTimeout(function() {
+                fieldCard.each(function() {
+                    $(this).children().addClass(cssDisplayNone)
+                })
+            }, 1500)
         }
     })
 
@@ -357,7 +376,7 @@ $(document).ready(function() {
 
         gamePointsInfo.totalPoints = gamePointsInfo.completeMatch - gamePointsInfo.nonMatch
 
-        thePoints.text(gamePointsInfo.totalPoints + (gamePointsInfo.bonus * 30))
+        thePoints.text((gamePointsInfo.totalPoints + (gamePointsInfo.bonus * 30)) - (gamePointsInfo.help * 15))
     }
 
     // CALCULATES THE LENGTH OF TIME THE ICONS WILL BE ON DISPLAY
@@ -479,7 +498,9 @@ $(document).ready(function() {
         gamePointsInfo.completeMatch = 0
         gamePointsInfo.nonMatch = 0
         gamePointsInfo.totalPoints = 0
+        gamePointsInfo.help = 0
         gamePointsInfo.bonus = 0
+        gamePointsInfo.totalPoints = 0
 
         comparisonPosition = 0
     }
