@@ -13,6 +13,7 @@ $(document).ready(function() {
     const sectionGameOver = $('#sectionGameOver')
     const sectionGameInfo = $('#sectionGameInfo')
     const sectionGameMenu = $('#sectionGameMenu')
+    const sectionGameOptions = $('#sectionGameOptions')
     const buttonHowToPlay = $('#button-howToPlay')
     const buttonAboutUs = $('#button-aboutUs')
     const buttonStartGame = $('#button-startGame')
@@ -37,6 +38,7 @@ $(document).ready(function() {
     // TARGETING TRAVERSAL CLASS AND TAGS VIA JQUERY
     const difficultyButton = $('#sectionStartGame button')
 
+    // TARGETING FULL HTML CODES
     const newHeadCard = `<div class="d-flex justify-content-center align-items-center mx-2 nbs-headCard"></div>`
     const iconChild = '<i class="fas fa-child"></i>'
     const iconSkullCrossbones = '<i class="fas fa-skull-crossbones"></i>'
@@ -81,7 +83,7 @@ $(document).ready(function() {
         totalPoints: 0
     }
 
-    // HOW DIFFICULT THE GAME WILL BE. WILL BE SET BY chosenDifficulty()
+    // TARGET VARIABLE FOR GAME DIFFICULTY, WILL BE EQUAL TO AN OBJECT FROM const difficultyLevelInfo. IT WILL BE SET BY chosenDifficulty()
     var inGameDifficulty
 
     // MAIN COLLECTION OF ICONS THAT COULD BE ON THE CARDS
@@ -111,6 +113,7 @@ $(document).ready(function() {
     // STEP 2 OF WHICH ICONS WILL BE ON THE CARDS
     var cardsOnShow = []
 
+    // HOW MANY FIELD CARDS WILL BE ON SHOW
     const fieldCardTotal = 9
 
     // HELPS IDENTIFY WHETHER FIELD CARDS MATCH WITH HEAD CARDS
@@ -148,7 +151,9 @@ $(document).ready(function() {
         sectionTheGame.removeClass(cssDisplayNone)
 
         sectionGameMenu.addClass(cssDisplayNone)
+        footerTag.addClass(cssDisplayNone)
         sectionGameInfo.removeClass(cssDisplayNone)
+        sectionGameOptions.removeClass(cssDisplayNone)
 
         chosenDifficulty($(this).text())
 
@@ -167,6 +172,7 @@ $(document).ready(function() {
         return Math.floor(Math.random() * number)
     }
 
+    // var inGameDifficulty WILL BE SET VIA THIS FUNCTION
     function chosenDifficulty(difficultyName) {
         for (let i = 0; i < difficultyLevelInfo.length; i++) {
             if (difficultyName == difficultyLevelInfo[i].name) {
@@ -177,6 +183,7 @@ $(document).ready(function() {
         }
     }
 
+    // SETS THE ICONS ON THE FIELD CARDS
     function setFieldCards() {
         cardsCollectionCopy = []
         cardsOnShow = []
@@ -207,6 +214,7 @@ $(document).ready(function() {
         previewCards()
     }
 
+    // CONTROLS WHEN AND HOW LONG THE ICOSN WILL BE VISIBLE
     function previewCards() {
         inGameInfo.inPreview = true
         theTimer.empty()
@@ -222,6 +230,7 @@ $(document).ready(function() {
         
     }
 
+    // SETS THE ICONS ON THE HEAD CARDS
     function setHeadCards() {
         headCardsArea.empty()
         for (let i = 0; i < inGameDifficulty.cardsToMatch; i++) {
@@ -235,6 +244,7 @@ $(document).ready(function() {
         })
     }
 
+    // ACTIONS WHEN A FIELD CARD IS CLICKED
     fieldCard.click(function() {
         if (inGameInfo.inPreview == false) {            
             if ($(this).attr('data-animal') == $('.nbs-headCard').eq(comparisonPosition).attr('data-animal')) {
@@ -259,6 +269,7 @@ $(document).ready(function() {
         }
     })
 
+    // CHECKS IF A COMPLETE MATCH OCCURS
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
             theTimer.empty()
@@ -285,6 +296,7 @@ $(document).ready(function() {
         }
     }
 
+    // UPDATES POINTS WHICH WILL ALSO BE VISIBLE ON SCREEN
     function updatePoints() {
         if (gamePointsInfo.correctClicks % 3 == 0) {
             gamePointsInfo.bonus++
@@ -295,10 +307,12 @@ $(document).ready(function() {
         thePoints.text(gamePointsInfo.totalPoints + (gamePointsInfo.bonus * 30))
     }
 
+    // CALCULATES THE LENGTH OF TIME THE ICONS WILL BE ON DISPLAY
     function updatePreviewTime() {
         gameTimeInfo.previewTime -= inGameDifficulty.challengeSpeed
     }
 
+    // RESETS ALL CARDS
     function resetAllCards() {
         comparisonPosition = 0
 
@@ -311,6 +325,7 @@ $(document).ready(function() {
         setHeadCards()
     }
 
+    // SETS BASE INFO OF THE GAME DEPENDING ON DIFFICULTY LEVEL CHOSEN VIA var inGameDifficulty
     function setBaseInfo() {
         gameTimeInfo.previewTime = inGameDifficulty.maxPrevTime
         inGameInfo.lives = inGameDifficulty.lives
@@ -319,6 +334,7 @@ $(document).ready(function() {
         theTimer.text(inGameDifficulty.maxRoundTime)
     }
 
+    // STARTS THE TIMER
     function startTimer() {
         theTimer.empty()
         let currentTime = gameTimeInfo.roundtime
@@ -359,10 +375,12 @@ $(document).ready(function() {
         }, 1000)
     }
 
+    // CALCULATES THE FINAL POINTS FOR USE IN checkGameOver()
     function finalPoints() {
         return gamePointsInfo.totalPoints
     }
 
+    // DETERMINES IF THE GAME IS OVER
     function checkGameOver() {
         if (inGameInfo.lives <= 0) {
             theTimer.empty()
@@ -386,10 +404,13 @@ $(document).ready(function() {
                 sectionGameOver.removeClass(cssDisplayNone)
                 sectionGameMenu.removeClass(cssDisplayNone)
                 sectionGameInfo.addClass(cssDisplayNone)
+                sectionGameOptions.addClass(cssDisplayNone)
+                footerTag.removeClass(cssDisplayNone)
             }, 2000)         
         }
     }
 
+    // RESETS A HOST OF INFORMATION FROM MANY VARIABLES FOR FRESH RESTART WHEN USER PLAYS AGAIN WHEN STARTING THE NAVIGATION FROM GAMEOVER SCREEN
     function resetAllGameInfo() {
         inGameInfo.inPreview = true
         inGameInfo.matchMade = false
