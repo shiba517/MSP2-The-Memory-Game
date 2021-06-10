@@ -25,6 +25,7 @@ $(document).ready(function() {
     const gameOverTotalNonMatches = $('#gameOverTotalNonMatches')
     const gameOverTotalBonus = $('#gameOverTotalBonus')
     const gameOverTotalTime = $('#gameOverTotalTime')
+    const iconMusic = $('#iconMusic')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -56,7 +57,7 @@ $(document).ready(function() {
     ]
 
     const difficultyLevelInfo = [
-        {name: 'easy', cardsToMatch: 1, maxRoundTime: 3, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
+        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
         {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, minPosPoints: 20, minNegPoints: 10, challengeSpeed: 75},
         {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
     ]
@@ -64,7 +65,8 @@ $(document).ready(function() {
     var inGameInfo = {
         inPreview: true,
         lives: 0,
-        matchMade: false
+        matchMade: false,
+        music: false
     }
 
     var gameTimeInfo = {
@@ -162,11 +164,16 @@ $(document).ready(function() {
     })
 
     // MAKES BACKGROUND MUSIC PLAY
-    function backgroundMusic() {
-        $('#bgMusic').prop('volume', 0.2)
-        $('#bgMusic')[0].play()
-    }
-    backgroundMusic()
+    iconMusic.click(function() {
+        if (inGameInfo.music == false) {
+            inGameInfo.music = true
+            $('#bgMusic').prop('volume', 0.1)
+            $('#bgMusic')[0].play()
+        }
+        else {
+            $('#bgMusic')[0].pause()
+        }
+    })
 
     // RUNNINGS OF THE ACTUAL GAME
     function letsPlay() {
