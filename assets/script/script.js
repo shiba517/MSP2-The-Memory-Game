@@ -38,6 +38,10 @@ $(document).ready(function() {
     const difficultyButton = $('#sectionStartGame button')
 
     const newHeadCard = `<div class="d-flex justify-content-center align-items-center mx-2 nbs-headCard"></div>`
+    const iconChild = '<i class="fas fa-child"></i>'
+    const iconSkullCrossbones = '<i class="fas fa-skull-crossbones"></i>'
+    const iconPoo = '<i class="fas fa-poo"></i>'
+    const iconClock = '<i class="fas fa-clock"></i>'
 
     // THIS ARRAY IS TO TARGET ALL THESE SECTIONS AT ONCE FOR SCREEN NAVIGATION
     const allSection2s = [
@@ -205,6 +209,8 @@ $(document).ready(function() {
 
     function previewCards() {
         inGameInfo.inPreview = true
+        theTimer.empty()
+        theTimer.append(iconClock)
 
         setTimeout(function() {
             fieldCard.each(function() {
@@ -255,6 +261,9 @@ $(document).ready(function() {
 
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
+            theTimer.empty()
+            theTimer.append(iconChild)
+
             gamePointsInfo.completeMatch += 30
             gamePointsInfo.correctClicks++
             updatePoints()
@@ -311,6 +320,7 @@ $(document).ready(function() {
     }
 
     function startTimer() {
+        theTimer.empty()
         let currentTime = gameTimeInfo.roundtime
 
         let countdown = setInterval(function() {
@@ -320,26 +330,30 @@ $(document).ready(function() {
                 gameTimeInfo.totalSeconds++
 
                 if (currentTime < 0) {
-                    theTimer.text(':(')
+                    theTimer.empty()
+                    theTimer.append(iconPoo)
                     clearInterval(countdown)
                     inGameInfo.lives--
+                    livesQuantityOnDisplay.text(inGameInfo.lives)
 
-                    setTimeout(function() {
-                        checkGameOver()
-                        if (inGameInfo.lives >= 0) {
+                    if (inGameInfo.lives >= 0) {
+                        
+                        setTimeout(function() {
+                            checkGameOver()
                             resetAllCards()
-                        }
-                    }, 2000)
+                        }, 2000)
+                    }
+                    
                 }
             }
 
             if (inGameInfo.matchMade == true) {
-                theTimer.text(':)')
                 clearInterval(countdown)
             }
 
             if (inGameInfo.lives <= 0) {
-                theTimer.text(':(')
+                theTimer.empty()
+                theTimer.append(iconSkullCrossbones)
                 clearInterval(countdown)
             }
         }, 1000)
@@ -350,7 +364,9 @@ $(document).ready(function() {
     }
 
     function checkGameOver() {
-        if (inGameInfo.lives == 0) {
+        if (inGameInfo.lives <= 0) {
+            theTimer.empty()
+            theTimer.append(iconSkullCrossbones)
             gameOverFinalScore.text(finalPoints() + ' points!')
             gameOverTotalMatches.text(gamePointsInfo.correctClicks)
             gameOverTotalNonMatches.text(gamePointsInfo.incorrectClicks)
