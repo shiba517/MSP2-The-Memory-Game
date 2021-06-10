@@ -161,6 +161,13 @@ $(document).ready(function() {
         letsPlay()
     })
 
+    // MAKES BACKGROUND MUSIC PLAY
+    function backgroundMusic() {
+        $('#bgMusic').prop('volume', 0.2)
+        $('#bgMusic')[0].play()
+    }
+    backgroundMusic()
+
     // RUNNINGS OF THE ACTUAL GAME
     function letsPlay() {
         setFieldCards()
