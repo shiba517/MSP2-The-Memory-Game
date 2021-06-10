@@ -26,6 +26,9 @@ $(document).ready(function() {
     const gameOverTotalBonus = $('#gameOverTotalBonus')
     const gameOverTotalTime = $('#gameOverTotalTime')
     const iconMusic = $('#iconMusic')
+    const iconGoHome = $('#iconGoHome')
+    const iconPause = $('#iconPause')
+    const iconHelp = $('#iconHelp')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -35,6 +38,8 @@ $(document).ready(function() {
     const cssDisplayNone = 'nbs-display-none'
     const cssBgCorrect = 'nbs-bg-correct'
     const cssBgIncorrect = 'nbs-bg-incorrect'
+    const cssVolumeUp = 'fa-volume-up'
+    const cssVolumeOff = 'fa-volume-off'
 
     // TARGETING TRAVERSAL CLASS AND TAGS VIA JQUERY
     const difficultyButton = $('#sectionStartGame button')
@@ -44,7 +49,7 @@ $(document).ready(function() {
     const iconChild = '<i class="fas fa-child"></i>'
     const iconSkullCrossbones = '<i class="fas fa-skull-crossbones"></i>'
     const iconPoo = '<i class="fas fa-poo"></i>'
-    const iconClock = '<i class="fas fa-clock"></i>'
+    const iconClock = '<i class="fas fa-clock"></i>' 
 
     // THIS ARRAY IS TO TARGET ALL THESE SECTIONS AT ONCE FOR SCREEN NAVIGATION
     const allSection2s = [
@@ -153,9 +158,13 @@ $(document).ready(function() {
         sectionTheGame.removeClass(cssDisplayNone)
 
         sectionGameMenu.addClass(cssDisplayNone)
-        footerTag.addClass(cssDisplayNone)
         sectionGameInfo.removeClass(cssDisplayNone)
         sectionGameOptions.removeClass(cssDisplayNone)
+        footerTag.addClass(cssDisplayNone)
+
+        iconGoHome.removeClass(cssDisplayNone)
+        iconPause.removeClass(cssDisplayNone)
+        iconHelp.removeClass(cssDisplayNone)
 
         chosenDifficulty($(this).text())
 
@@ -166,11 +175,18 @@ $(document).ready(function() {
     // MAKES BACKGROUND MUSIC PLAY
     iconMusic.click(function() {
         if (inGameInfo.music == false) {
+            iconMusic.removeClass(cssVolumeUp)
+            iconMusic.addClass(cssVolumeOff)
+
             inGameInfo.music = true
             $('#bgMusic').prop('volume', 0.1)
             $('#bgMusic')[0].play()
         }
         else {
+            iconMusic.removeClass(cssVolumeOff)
+            iconMusic.addClass(cssVolumeUp)
+
+            inGameInfo.music = false
             $('#bgMusic')[0].pause()
         }
     })
@@ -270,6 +286,7 @@ $(document).ready(function() {
             }
             else {
                 inGameInfo.lives--
+                playNoMatchSound()
                 livesQuantityOnDisplay.text(inGameInfo.lives)
                 $(this).addClass(cssBgIncorrect)
                 $(this).children().removeClass(cssDisplayNone)
@@ -286,6 +303,8 @@ $(document).ready(function() {
     // CHECKS IF A COMPLETE MATCH OCCURS
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
+            playMatchSound()
+
             theTimer.empty()
             theTimer.append(iconChild)
 
@@ -308,6 +327,26 @@ $(document).ready(function() {
                 resetAllCards()
             }, 2000)
         }
+    }
+
+    // MAKES SOUND WHEN A MATCH OCCURS
+    function playMatchSound() {
+        $('#matchSound').prop('volume', 0.2)
+        $('#matchSound')[0].play()
+    }
+
+    // MAKES SOUND WHEN INCORRECT CARD IS CLICKED
+    function playNoMatchSound() {
+        if (inGameInfo.lives > 0) {
+            $('#noMatchSound').prop('volume', 0.2)
+            $('#noMatchSound')[0].play()
+        }
+    }
+
+    // MAKES SOUND WHEN GAME IS OVER
+    function playGameOverSound() {
+        $('#gameOverSound').prop('volume', 0.2)
+        $('#gameOverSound')[0].play()
     }
 
     // UPDATES POINTS WHICH WILL ALSO BE VISIBLE ON SCREEN
@@ -397,6 +436,8 @@ $(document).ready(function() {
     // DETERMINES IF THE GAME IS OVER
     function checkGameOver() {
         if (inGameInfo.lives <= 0) {
+            playGameOverSound()
+
             theTimer.empty()
             theTimer.append(iconSkullCrossbones)
             gameOverFinalScore.text(finalPoints() + ' points!')
@@ -418,8 +459,11 @@ $(document).ready(function() {
                 sectionGameOver.removeClass(cssDisplayNone)
                 sectionGameMenu.removeClass(cssDisplayNone)
                 sectionGameInfo.addClass(cssDisplayNone)
-                sectionGameOptions.addClass(cssDisplayNone)
                 footerTag.removeClass(cssDisplayNone)
+
+                iconGoHome.addClass(cssDisplayNone)
+                iconPause.addClass(cssDisplayNone)
+                iconHelp.addClass(cssDisplayNone)
             }, 2000)         
         }
     }

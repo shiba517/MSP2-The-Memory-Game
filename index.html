@@ -17,12 +17,12 @@
     <title>The Memory Game (GIT version)</title>
 </head>
 
-<body>
+<body>   
     <header>
         <div class="container-xxl nbs-titleArea d-flex justify-content-center align-items-center">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-uppercase text-center">
+                    <h1 class="text-uppercase text-center bsc-display-1">
                         <strong>the memory game</strong> 
                     </h1>
                 </div>
@@ -32,12 +32,12 @@
 
     <!-- BACKGROUND MUSIC -->
     <audio id="bgMusic">
-        <source src="assets/audio/bensound-ukulele.mp3" type="audio/mpeg">
+        <source src="audio/bensound-ukulele.mp3" type="audio/mpeg">
     </audio>
-
+    
     <!-- SECTION 1.1 -->
     <section id="sectionGameMenu">
-        <div class="container-xxl d-flex justify-content-center align-items-center g-0 nbs-menuArea">
+        <div class="container-xxl d-flex justify-content-center align-items-center g-0 nbs-menuArea ">
             <div class="row">
                 <div class="col d-flex justify-content-center align-items-center">
                     <button id="button-howToPlay" class="mx-1">How to play</button>
@@ -49,16 +49,16 @@
     </section>
 
     <!-- SECTION 1.3 -->
-    <section id="sectionGameOptions" class="nbs-display-none">
+    <section id="sectionGameOptions" class="">
         <div class="container-xxl nbs-gameOptionsArea">
             <div class="row">
                 <div class="col d-flex justify-content-center  nbs-gameOptionsIconAll">
                     <i id="iconGoHome" class="fas fa-home nbs-display-none"></i>
                     <i id="iconPause" class="fas fa-pause nbs-display-none"></i>
-                    <!-- <i class="fas fa-play"></i> -->
+                    <!-- <i class="fas fa-play nbs-display-none"></i> -->
                     <i id="iconHelp" class="fas fa-medkit nbs-display-none"></i>
-                    <i id="iconMusic" class="fas fa-volume-mute"></i>
-                    <!-- <i class="fas fa-music"></i> -->
+                    <i id="iconMusic" class="fas fa-volume-up"></i>
+                    <!-- <i class="fas fa-music nbs-display-none"></i> -->
                 </div>
             </div>
         </div>
@@ -75,27 +75,29 @@
                     </p>
                 </div>
                 <div class="col-4 d-flex justify-content-center align-items-center nbs-gameInfoEach">
-                    <p id="theTimer" class="nbs-gameInfoAreaFont"></p>
+                    <p id="theTimer" class="nbs-gameInfoAreaFont">0:0</p>
                 </div>
                 <div class="col-4 d-flex justify-content-center align-items-center nbs-gameInfoEach">
-                    <p id="thePoints"  class="nbs-gameInfoAreaFont"></p>
+                    <p id="thePoints" class="nbs-gameInfoAreaFont"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- SECTION 2.0 -->
+    <section id="sectionOpeningScreen">
+        <div class="container-xxl d-flex justify-content-center align-items-center nbs-section2Area nbs-openingScreenArea">
+            <div class="row">
+                <div class="col">
+                    <img src="images/logo design 1.3.png" alt="">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 2.1 -->
-    <section id="sectionOpeningScreen">
-        <div class="container-xxl d-flex justify-content-center align-items-center nbs-section2Area nbs-openingScreenArea">
-            <div class="row">
-                <div class="col">
-                    <img src="assets/images/logo.png">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2.2 -->
     <section id="sectionHowToPlay" class="nbs-display-none">
         <div class="container-xxl d-flex justify-content-center align-items-center nbs-section2Area nbs-howToPlayArea">
             <div class="row nbs-height100Percent">
@@ -216,9 +218,18 @@
         </div>
     </section>
 
+    <!-- AUDIO WHEN A MATCH OCCURS -->
+    <audio id="matchSound">
+        <source src="audio/476178__unadamlar__correct-choice.wav">
+    </audio>
+
+    <!-- AUDIO WHEN A CARD DOES NOT MATCH -->
+    <audio id="noMatchSound">
+        <source src="audio/131657__bertrof__game-sound-wrong.wav">
+    </audio>
+
     <!-- SECTION 2.6 -->
-    <!-- SECTION 2.6 -->
-    <section id="sectionGameOver" >
+    <section id="sectionGameOver" class="nbs-display-none">
         <div class="container-xxl d-flex justify-content-center align-items-center nbs-section2Area">
             <div class="row nbs-height100Percent">
                 <div class="offset-1 col-10 text-center d-flex justify-content-center align-items-center nbs-height100Percent">
@@ -257,26 +268,31 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container-xxl d-flex justify-content-center align-items-center nbs-footerArea">
+    <!-- AUDIO THAT PLAYS WHEN GAME IS OVER -->
+    <audio id="gameOverSound">
+        <source src="audio/253886__themusicalnomad__negative-beeps.wav">
+    </audio>
+
+    <footer class="">
+        <div class="container-xxl nbs-footerArea d-flex justify-content-center align-items-center">
             <div class="row">
                 <div class="col text-center">
-                    <p class="my-1 mx-1 d-inline-block gx-3">
+                    <p class="my-1 mx-1 d-inline-block gx-3 nbs-socialm-icon-dec">
                         <a href="https://en-gb.facebook.com/" target="_blank" rel="external" alt="Facebook icon" aria-label="Goes to Facebook page">
                             <i class="fab fa-facebook nbs-socialm-icon-dec"></i>
                         </a>
                     </p>
-                    <p class="my-1 mx-1 d-inline-block gx-3">
+                    <p class="my-1 mx-1 d-inline-block gx-3 nbs-socialm-icon-dec">
                         <a href="https://www.instagram.com/" target="_blank" rel="external" alt="Instagram icon" aria-label="Goes to Instagram page">
                             <i class="fab fa-instagram nbs-socialm-icon-dec"></i>
                         </a>
                     </p>
-                    <p class="my-1 mx-1 d-inline-block gx-3=">
+                    <p class="my-1 mx-1 d-inline-block gx-3 nbs-socialm-icon-dec">
                         <a href="https://twitter.com/?lang=en-gb" target="_blank" rel="external" alt="Twitter icon" aria-label="Goes to Twitter page">
                             <i class="fab fa-twitter nbs-socialm-icon-dec"></i>
                         </a>
                     </p>
-                    <p class="my-1 mx-1 d-inline-block gx-3">
+                    <p class="my-1 mx-1 d-inline-block gx-3 nbs-socialm-icon-dec">
                         <a href="https://www.youtube.com/" target="_blank" rel="external" alt="YouTube icon" aria-label="Goes to YouTube page">
                             <i class="fab fa-youtube nbs-socialm-icon-dec"></i>
                         </a>
