@@ -62,9 +62,9 @@ $(document).ready(function() {
     ]
 
     const difficultyLevelInfo = [
-        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, minPosPoints: 10, minNegPoints: 5, challengeSpeed: 100},
-        {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, minPosPoints: 20, minNegPoints: 10, challengeSpeed: 75},
-        {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, minPosPoints: 30, minNegPoints: 15, challengeSpeed: 50}
+        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, posPoints: 30, negPoints: 15, bonusPoints: 50, helpPoints: 30, bonusClickQty: 3},
+        {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, posPoints: 50, negPoints: 25, bonusPoints: 70, helpPoints: 20, bonusClickQty: 5},
+        {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, posPoints: 70, negPoints: 35, bonusPoints: 90, helpPoints: 10, bonusClickQty: 3}
     ]
 
     var inGameInfo = {
@@ -310,7 +310,7 @@ $(document).ready(function() {
                 $(this).addClass(cssBgIncorrect)
                 $(this).children().removeClass(cssDisplayNone)
 
-                gamePointsInfo.nonMatch += 15
+                gamePointsInfo.nonMatch++
                 gamePointsInfo.incorrectClicks++
                 updatePoints()
 
@@ -327,7 +327,7 @@ $(document).ready(function() {
             theTimer.empty()
             theTimer.append(iconChild)
 
-            gamePointsInfo.completeMatch += 30
+            gamePointsInfo.completeMatch++
             gamePointsInfo.correctClicks++
             updatePoints()
 
@@ -370,13 +370,20 @@ $(document).ready(function() {
 
     // UPDATES POINTS WHICH WILL ALSO BE VISIBLE ON SCREEN
     function updatePoints() {
-        if (gamePointsInfo.correctClicks % 3 == 0) {
-            gamePointsInfo.bonus++
+        if (gamePointsInfo.correctClicks % inGameDifficulty.bonusClickQty == 0) {
+            if (gamePointsInfo.correctClicks !== 0 || gamePointsInfo.incorrectClicks !== 0) {
+                console.log('Bonus Points!!!')
+                gamePointsInfo.bonus++
+            }
         }
 
-        gamePointsInfo.totalPoints = gamePointsInfo.completeMatch - gamePointsInfo.nonMatch
+        let plusThese = (gamePointsInfo.completeMatch * inGameDifficulty.posPoints) + (gamePointsInfo.bonus * inGameDifficulty.bonusPoints)
+        let minusThese = (gamePointsInfo.nonMatch * inGameDifficulty.negPoints) + (gamePointsInfo.help * inGameDifficulty.helpPoints)
 
-        thePoints.text((gamePointsInfo.totalPoints + (gamePointsInfo.bonus * 30)) - (gamePointsInfo.help * 15))
+        let totalToBe = plusThese - minusThese
+        console.log(totalToBe)
+
+        thePoints.text(totalToBe)
     }
 
     // CALCULATES THE LENGTH OF TIME THE ICONS WILL BE ON DISPLAY

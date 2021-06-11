@@ -76,10 +76,6 @@ body {
 
 
 /* *********** SECTION 2.1 - OPENING SCREEN *********** */
-.nbs-openingScreenArea {
-    /* background-color: violet; */
-}
-
 .nbs-openingScreenArea img {
     width: 100%
 }
@@ -103,10 +99,6 @@ body {
 
 
 /* *********** SECTION 2.3 - START GAME SCREEN *********** */
-.nbs-startGameArea {
-    /* background-color: #A64AC9; */
-}
-
 .nbs-buttonCollection {
     width: 100vw;
 }
