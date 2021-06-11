@@ -4,7 +4,6 @@ $(document).ready(function() {
     const headerTag = $('header')
 
     // TARGETING ID TAGS VIA JQUERY
-    // const sectionGameMenu = $('#sectionGameMenu')
     const sectionOpeningScreen = $('#sectionOpeningScreen')
     const sectionHowToPlay = $('#sectionHowToPlay')
     const sectionStartGame = $('#sectionStartGame')
@@ -29,6 +28,7 @@ $(document).ready(function() {
     const iconGoHome = $('#iconGoHome')
     const iconPause = $('#iconPause')
     const iconHelp = $('#iconHelp')
+    const screenOverlay = $('#screenOverlay')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -426,7 +426,7 @@ $(document).ready(function() {
         let currentTime = gameTimeInfo.roundtime
 
         let countdown = setInterval(function() {
-            if (inGameInfo.matchMade == false) {
+            if (inGameInfo.matchMade == false && inGameInfo.pause == false) {
                 console.log('I am still working')
                 theTimer.text(currentTime)
                 currentTime--
@@ -535,11 +535,15 @@ $(document).ready(function() {
             headCard.each(function() {
                 $(this).children().addClass(cssDisplayNone)
             })
+
+            screenOverlay.removeClass(cssDisplayNone)
         }
         else if (inGameInfo.pause == true) {
             console.log(inGameInfo.pause)
             inGameInfo.pause = false
             inGameInfo.clickable = true
+
+            screenOverlay.addClass(cssDisplayNone)
         }
     })
 

@@ -18,6 +18,17 @@
     height: 100%;
 }
 
+.nbs-screenOverlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 
 /* *********** BODY TAG *********** */
 body {
@@ -72,6 +83,7 @@ body {
     color: #A64AC9;
     margin-inline: 0.5rem;
     font-size: 2rem;
+    z-index: 2;
 }
 
 
