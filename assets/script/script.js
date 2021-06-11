@@ -68,6 +68,7 @@ $(document).ready(function() {
     ]
 
     var inGameInfo = {
+        inPlay: false,
         inPreview: true,
         lives: 0,
         matchMade: false,
@@ -212,6 +213,7 @@ $(document).ready(function() {
 
     // RUNNINGS OF THE ACTUAL GAME
     function letsPlay() {
+        inGameInfo.inPlay = true
         setFieldCards()
         setHeadCards()
     }
@@ -420,6 +422,7 @@ $(document).ready(function() {
 
         let countdown = setInterval(function() {
             if (inGameInfo.matchMade == false) {
+                console.log('I am still working')
                 theTimer.text(currentTime)
                 currentTime--
                 gameTimeInfo.totalSeconds++
@@ -449,6 +452,11 @@ $(document).ready(function() {
             if (inGameInfo.lives <= 0) {
                 theTimer.empty()
                 theTimer.append(iconSkullCrossbones)
+                clearInterval(countdown)
+            }
+
+            if (inGameInfo.inPlay == false) {
+                theTimer.empty()
                 clearInterval(countdown)
             }
         }, 1000)
@@ -493,6 +501,20 @@ $(document).ready(function() {
             }, 2000)         
         }
     }
+
+    iconGoHome.click(function() {
+        inGameInfo.inPlay = false
+        resetAllGameInfo()
+
+        makeSection2DisplayNone()
+        sectionGameMenu.removeClass(cssDisplayNone)
+        sectionOpeningScreen.removeClass(cssDisplayNone)
+        footerTag.removeClass(cssDisplayNone)
+        sectionGameInfo.addClass(cssDisplayNone)
+        iconGoHome.addClass(cssDisplayNone)
+        iconPause.addClass(cssDisplayNone)
+        iconHelp.addClass(cssDisplayNone)
+    })
 
     // RESETS A HOST OF INFORMATION FROM MANY VARIABLES FOR FRESH RESTART WHEN USER PLAYS AGAIN WHEN STARTING THE NAVIGATION FROM GAMEOVER SCREEN
     function resetAllGameInfo() {
