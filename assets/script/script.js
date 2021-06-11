@@ -69,6 +69,8 @@ $(document).ready(function() {
 
     var inGameInfo = {
         inPlay: false,
+        pause: false,
+        clickable: false,
         inPreview: true,
         lives: 0,
         matchMade: false,
@@ -195,7 +197,7 @@ $(document).ready(function() {
 
     // MAKES ICONS ON CARD APPEAR FOR A SHORT MOMENT
     iconHelp.click(function() {
-        if (inGameInfo.inPreview == false) {
+        if (inGameInfo.clickable == true) {
             gamePointsInfo.help++
             updatePoints()
 
@@ -267,6 +269,7 @@ $(document).ready(function() {
 
     // CONTROLS WHEN AND HOW LONG THE ICOSN WILL BE VISIBLE
     function previewCards() {
+        inGameInfo.clickable = true
         inGameInfo.inPreview = true
         theTimer.empty()
         theTimer.append(iconClock)
@@ -297,7 +300,7 @@ $(document).ready(function() {
 
     // ACTIONS WHEN A FIELD CARD IS CLICKED
     fieldCard.click(function() {
-        if (inGameInfo.inPreview == false) {            
+        if (inGameInfo.inPreview == false && inGameInfo.clickable == true) {            
             if ($(this).attr('data-animal') == $('.nbs-headCard').eq(comparisonPosition).attr('data-animal')) {
                 $(this).addClass(cssBgCorrect)
                 $(this).children().removeClass(cssDisplayNone)
@@ -342,6 +345,8 @@ $(document).ready(function() {
 
             comparisonPosition = 0
             inGameInfo.inPreview = true
+            inGameInfo.clickable = false
+
 
             setTimeout(function() {
                 updatePreviewTime()
@@ -502,6 +507,7 @@ $(document).ready(function() {
         }
     }
 
+    // TAKES USER BACK TO HOME SCREEN
     iconGoHome.click(function() {
         inGameInfo.inPlay = false
         resetAllGameInfo()
@@ -514,6 +520,27 @@ $(document).ready(function() {
         iconGoHome.addClass(cssDisplayNone)
         iconPause.addClass(cssDisplayNone)
         iconHelp.addClass(cssDisplayNone)
+    })
+
+    // PAUSES THE GAME
+    iconPause.click(function() {
+        if (inGameInfo.pause == false && inGameInfo.inPreview == false) {
+            console.log(inGameInfo.pause)
+            inGameInfo.pause = true
+            inGameInfo.clickable = false
+
+            fieldCard.each(function() {
+                $(this).children().addClass(cssDisplayNone)
+            })
+            headCard.each(function() {
+                $(this).children().addClass(cssDisplayNone)
+            })
+        }
+        else if (inGameInfo.pause == true) {
+            console.log(inGameInfo.pause)
+            inGameInfo.pause = false
+            inGameInfo.clickable = true
+        }
     })
 
     // RESETS A HOST OF INFORMATION FROM MANY VARIABLES FOR FRESH RESTART WHEN USER PLAYS AGAIN WHEN STARTING THE NAVIGATION FROM GAMEOVER SCREEN
