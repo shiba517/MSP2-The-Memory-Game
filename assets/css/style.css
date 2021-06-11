@@ -18,7 +18,16 @@
     height: 100%;
 }
 
+.nbs-zIndex-Minus1 {
+    z-index: -1;
+}
+
+.nbs-zIndex-Plus2 {
+    z-index: 2;
+}
+
 .nbs-screenOverlay {
+    /* display: none; */
     position: fixed;
     z-index: 1;
     top: 0;
@@ -29,6 +38,28 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.nbs-modal-popUp {
+    width: 70%;
+    height: 40%;
+    background-color: #FFB48F;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+}
+
+.nbs-modal-popUp h2 {
+    font-size: 2rem;
+    /* font-size: 1.75rem; */
+}
+
+.nbs-screenOverlay button {
+    background-color: #FCCD04;
+    width: 30%;
+    height: 6vh;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+}
 
 /* *********** BODY TAG *********** */
 body {
@@ -52,6 +83,7 @@ body {
     height: 100%;
     width: 100%;
 }
+
 .nbs-menuArea button {
     background-color: #FCCD04;
     width: 30%;
@@ -83,7 +115,6 @@ body {
     color: #A64AC9;
     margin-inline: 0.5rem;
     font-size: 2rem;
-    z-index: 2;
 }
 
 

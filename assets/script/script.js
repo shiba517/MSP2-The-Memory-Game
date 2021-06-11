@@ -29,6 +29,8 @@ $(document).ready(function() {
     const iconPause = $('#iconPause')
     const iconHelp = $('#iconHelp')
     const screenOverlay = $('#screenOverlay')
+    const goHomeModalArea = $('#goHomeModalArea')
+    const goHomeModalButtons = $('#goHomeModalArea button')
 
     // TARGETING CLASS VIA JQUERY
     const fieldCard = $('.nbs-fieldCard')
@@ -40,6 +42,8 @@ $(document).ready(function() {
     const cssBgIncorrect = 'nbs-bg-incorrect'
     const cssVolumeUp = 'fa-volume-up'
     const cssVolumeOff = 'fa-volume-off'
+    const zIndexMinus1 = 'nbs-zIndex-Minus1'
+    const zIndexPlus2 = 'nbs-zIndex-Plus2'
 
     // TARGETING TRAVERSAL CLASS AND TAGS VIA JQUERY
     const difficultyButton = $('#sectionStartGame button')
@@ -508,7 +512,79 @@ $(document).ready(function() {
     }
 
     // TAKES USER BACK TO HOME SCREEN
-    iconGoHome.click(function() {
+    iconGoHome.click(function() {   
+        if (inGameInfo.pause == false && inGameInfo.inPreview == false) {
+            screenOverlay.addClass(cssDisplayNone)
+            goHomeModalOnDisplay()
+        }  
+        else if (inGameInfo.pause == true) {
+            removeAllGameOptionIconZindex()
+            iconGoHome.addClass(zIndexPlus2)
+            iconMusic.addClass(zIndexPlus2)
+            goHomeModalOnDisplay()
+        }
+    })
+
+    function goHomeModalOnDisplay() {
+        inGameInfo.pause = true
+
+        iconOptionsClickable($(iconGoHome).attr('data-name'))
+
+        screenOverlay.addClass(cssDisplayNone)
+        goHomeModalArea.removeClass(cssDisplayNone)
+    }
+
+    goHomeModalButtons.click(function() {
+        console.log('This is working')
+
+        if ($(this).text() == 'yes') {
+            goHomeModalArea.addClass(cssDisplayNone)
+            removeAllGameOptionIconZindex()
+            resetAllGameInfo()
+            goToHomeScreen()
+        }
+        else if ($(this).text() == 'no') {
+            iconPause.removeClass(zIndexMinus1)
+            iconHelp.removeClass(zIndexMinus1)
+            inGameInfo.pause = false
+            inGameInfo.clickable = true
+
+            goHomeModalArea.addClass(cssDisplayNone)
+            removeAllGameOptionIconZindex()
+            console.log('I want to keep on playing')
+        }
+    })
+
+    function removeAllGameOptionIconZindex() {
+        iconGoHome.removeClass(zIndexMinus1)
+        iconPause.removeClass(zIndexMinus1)
+        iconHelp.removeClass(zIndexMinus1)
+        iconMusic.removeClass(zIndexMinus1)
+        iconGoHome.removeClass(zIndexPlus2)
+        iconPause.removeClass(zIndexPlus2)
+        iconHelp.removeClass(zIndexPlus2)
+        iconMusic.removeClass(zIndexPlus2)
+    }
+
+    function iconOptionsClickable(iconName) {
+        console.log('This is happening')
+        if (iconName == iconGoHome.attr('data-name')) {
+            console.log('I clicked GO HOME')
+            removeAllGameOptionIconZindex()
+            iconPause.addClass(zIndexMinus1)
+            iconHelp.addClass(zIndexMinus1)
+            iconMusic.addClass(zIndexPlus2)
+        }
+        else if (iconName == iconPause.attr('data-name')) {
+            removeAllGameOptionIconZindex()
+            iconHelp.addClass(zIndexMinus1)
+            iconPause.addClass(zIndexPlus2)
+            iconMusic.addClass(zIndexPlus2)
+            iconGoHome.addClass(zIndexPlus2)
+        }
+    }
+
+    function goToHomeScreen() {
         inGameInfo.inPlay = false
         resetAllGameInfo()
 
@@ -520,11 +596,15 @@ $(document).ready(function() {
         iconGoHome.addClass(cssDisplayNone)
         iconPause.addClass(cssDisplayNone)
         iconHelp.addClass(cssDisplayNone)
-    })
+    }
 
     // PAUSES THE GAME
-    iconPause.click(function() {
+    iconPause.click(pauseTheGame)
+
+    function pauseTheGame() {
         if (inGameInfo.pause == false && inGameInfo.inPreview == false) {
+            iconOptionsClickable(iconPause.attr('data-name'))
+
             console.log(inGameInfo.pause)
             inGameInfo.pause = true
             inGameInfo.clickable = false
@@ -545,12 +625,14 @@ $(document).ready(function() {
 
             screenOverlay.addClass(cssDisplayNone)
         }
-    })
+    }
 
     // RESETS A HOST OF INFORMATION FROM MANY VARIABLES FOR FRESH RESTART WHEN USER PLAYS AGAIN WHEN STARTING THE NAVIGATION FROM GAMEOVER SCREEN
     function resetAllGameInfo() {
         inGameInfo.inPreview = true
         inGameInfo.matchMade = false
+        inGameInfo.pause = false
+        inGameInfo.click = false
         gameTimeInfo.timer = false
         gameTimeInfo.totalSeconds = 0
         gamePointsInfo.correctClicks = 0
@@ -561,6 +643,9 @@ $(document).ready(function() {
         gamePointsInfo.help = 0
         gamePointsInfo.bonus = 0
         gamePointsInfo.totalPoints = 0
+        
+        iconPause.removeClass(zIndexMinus1)
+        iconHelp.removeClass(zIndexMinus1)
 
         comparisonPosition = 0
     }

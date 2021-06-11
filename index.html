@@ -53,10 +53,10 @@
         <div class="container-xxl nbs-gameOptionsArea">
             <div class="row">
                 <div class="col d-flex justify-content-center  nbs-gameOptionsIconAll">
-                    <i id="iconGoHome" class="fas fa-home nbs-display-none"></i>
-                    <i id="iconPause" class="fas fa-pause nbs-display-none"></i>
+                    <i id="iconGoHome" class="fas fa-home nbs-display-none" data-name="goHome"></i>
+                    <i id="iconPause" class="fas fa-pause nbs-display-none" data-name="pauseGame"></i>
                     <!-- <i class="fas fa-play nbs-display-none"></i> -->
-                    <i id="iconHelp" class="fas fa-medkit nbs-display-none"></i>
+                    <i id="iconHelp" class="fas fa-medkit nbs-display-none" data-name="helpGame"></i>
                     <i id="iconMusic" class="fas fa-volume-up"></i>
                     <!-- <i class="fas fa-music nbs-display-none"></i> -->
                 </div>
@@ -86,6 +86,21 @@
 
     <!-- OVERLAY -->
     <section id="screenOverlay" class="nbs-screenOverlay nbs-display-none"></section>
+
+    <!-- GO HOME MODAL -->
+    <section id="goHomeModalArea" class="nbs-display-none">
+        <div class="row d-flex justify-content-center align-items-center nbs-screenOverlay g-0">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="p-4 nbs-modal-popUp">
+                    <h2 class="text-center text-uppercase">are you sure?</h2>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button class="text-uppercase p-2 m-2">yes</button>
+                        <button class="text-uppercase p-2 m-2">no</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- SECTION 2.0 -->
     <section id="sectionOpeningScreen">
