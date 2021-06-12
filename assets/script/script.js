@@ -392,6 +392,7 @@ $(document).ready(function() {
         let minusThese = (gamePointsInfo.nonMatch * inGameDifficulty.negPoints) + (gamePointsInfo.help * inGameDifficulty.helpPoints)
 
         let totalToBe = plusThese - minusThese
+        gamePointsInfo.totalPoints = totalToBe
         console.log(totalToBe)
 
         thePoints.text(totalToBe)
@@ -480,17 +481,21 @@ $(document).ready(function() {
 
     // CALCULATES THE FINAL POINTS FOR USE IN checkGameOver()
     function finalPoints() {
+        console.log(gamePointsInfo)
         return gamePointsInfo.totalPoints
     }
 
     // DETERMINES IF THE GAME IS OVER
     function checkGameOver() {
         if (inGameInfo.lives <= 0) {
+            showFinalScore = finalPoints()
+            console.log(showFinalScore)
+
             playGameOverSound()
 
             theTimer.empty()
             theTimer.append(iconSkullCrossbones)
-            gameOverFinalScore.text(finalPoints() + ' points!')
+            gameOverFinalScore.text(showFinalScore + ' points!')
             gameOverTotalMatches.text(gamePointsInfo.correctClicks)
             gameOverTotalNonMatches.text(gamePointsInfo.incorrectClicks)
             gameOverTotalBonus.text(gamePointsInfo.bonus * 30)
