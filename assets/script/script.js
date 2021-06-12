@@ -66,9 +66,9 @@ $(document).ready(function() {
     ]
 
     const difficultyLevelInfo = [
-        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, posPoints: 30, negPoints: 15, bonusPoints: 50, helpPoints: 30, bonusClickQty: 3},
-        {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, posPoints: 50, negPoints: 25, bonusPoints: 70, helpPoints: 20, bonusClickQty: 5},
-        {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, posPoints: 70, negPoints: 35, bonusPoints: 90, helpPoints: 10, bonusClickQty: 3}
+        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, posPoints: 30, negPoints: 15, bonusPoints: 50, helpPoints: 30, bonusClickQty: 3, challengeSpeedPerc: 10, toNextLevel: 3},
+        {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, posPoints: 50, negPoints: 25, bonusPoints: 70, helpPoints: 20, bonusClickQty: 5, challengeSpeedPerc: 5, toNextLevel: 5},
+        {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, posPoints: 70, negPoints: 35, bonusPoints: 90, helpPoints: 10, bonusClickQty: 3, challengeSpeedPerc: 2.5, toNextLevel: 7}
     ]
 
     var inGameInfo = {
@@ -284,7 +284,7 @@ $(document).ready(function() {
             })
             inGameInfo.inPreview = false
             startTimer()
-        }, 2000)
+        }, updatePreviewTime())
         
     }
 
@@ -353,7 +353,7 @@ $(document).ready(function() {
 
 
             setTimeout(function() {
-                updatePreviewTime()
+                // updatePreviewTime()
                 resetAllCards()
             }, 2000)
         }
@@ -399,7 +399,14 @@ $(document).ready(function() {
 
     // CALCULATES THE LENGTH OF TIME THE ICONS WILL BE ON DISPLAY
     function updatePreviewTime() {
-        gameTimeInfo.previewTime -= inGameDifficulty.challengeSpeed
+        if (gamePointsInfo.correctClicks !== 0) {
+            if (gamePointsInfo.correctClicks % inGameDifficulty.toNextLevel == 0) {
+                gameTimeInfo.previewTime -= (inGameDifficulty.maxPrevTime * 0.1)
+                console.log(gameTimeInfo.previewTime)
+            }
+        }
+        console.log(gameTimeInfo.previewTime)
+        return gameTimeInfo.previewTime
     }
 
     // RESETS ALL CARDS
