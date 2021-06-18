@@ -133,3 +133,31 @@ Typography
 * Regular text - [link](https://fonts.google.com/specimen/Montserrat?query=mont)
 
 
+## FEATURES
+### Existing Features
+* Header section – Contains the title of the game. Will be on display on every screen 
+* Home screen – contains the game menu and the website logo 
+* Game menu – Has three buttons (How to play, Start, and About us) which links to different screens 
+    * How to play – takes user to a screen where the rules of the game are explained 
+    * Start – takes user to a screen where the user will have the option to choose the difficulty level of the game 
+    * About us – takes user to a screen explaining about the company that had made the game 
+* Game options – Icons that are mostly available whilst playing the game 
+    * Home icon – leads user to the opening screen 
+    * Pause icon – lets user pause the game 
+    * Help icon – icons on the field cards will be on display for a short period of time 
+    * Sound icon – lets user have background music or not. This is the only icon that is always available on every screen 
+* Game info – split into three parts; lives, time and points 
+    * Lives – will show how many lives user. Once it hits 0, the game will end 
+    * Timer – a countdown of each round. Will differ depending on which game mode is selected 
+    * Points – accumulation of points depending on users actions 
+* The Game – this is when and where the game will be played. Will include head cards and field cards 
+    * Head cards – these are cards the user will have to find a match for within the field cards 
+    * Field cards – these cards will have its icons on display for a short period of time before it disappears. User must select the card that had an icon that is the same as the one displayed on the head cards. 
+    * Game icons and game options will be on display too but not the game options 
+* Game over – informs the user the game has ended and will contain information regarding the final points.  
+* Footer – contains icons linking to websites social media pages.  
+
+### Future Features
+* A logo of higher pixel qulity. Due to funds being low, it was not financially feasible to have downloaded a higher pixel quality version of the logo
+* Ability to change how high or low the background music. At the moment, it is either off or on
+* Some animation of the icons such as flash, or animals bouncing off the screen 
