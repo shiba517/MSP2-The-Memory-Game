@@ -95,29 +95,30 @@ Mobile Version
     * About us screen - [image](assets/readme-files/images/wireframes/wf-mobile-bw-aboutUs.png)
     * The game screen - [image](assets/readme-files/images/wireframes/wf-mobile-bw-theGame.png)
     * Game over screen - [image](assets/readme-files/images/wireframes/wf-mobile-bw-gameOver.png)
-* Colour
-    * Landing/Home screen - image
-    * How to play screen - image
-    * Lets play screen - image
-    * About us screen - image
-    * The game screen - image
-    * Game over screen - image
+* Colour - Was made after the 'Surface' section was written
+    * Landing/Home screen - [image](assets/readme-files/images/wireframes/wf-mobile-clr-homePage.png)
+    * How to play screen - [image](assets/readme-files/images/wireframes/wf-mobile-clr-howtoPlay.png)
+    * Lets play screen - [image](assets/readme-files/images/wireframes/wf-mobile-clr-letsPlay.png)
+    * About us screen - [image](assets/readme-files/images/wireframes/wf-mobile-clr-aboutUs.png)
+    * The game screen - [image](assets/readme-files/images/wireframes/wf-mobile-clr-theGame.png)
+    * Game over screen - [image](assets/readme-files/images/wireframes/wf-mobile-clr-gameOver.png)
 
 Laptop/PC Version
 * Black and white
-    * Landing/Home screen - image
-    * How to play screen - image
-    * Lets play screen - image
-    * About us screen - image
-    * The game screen - image
-    * Game over screen - image
-* Colour
-    * Landing/Home screen - image
-    * How to play screen - image
-    * Lets play screen - image
-    * About us screen - image
-    * The game screen - image
-    * Game over screen - image
+    * Landing/Home screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-bw-homePage.png)
+    * How to play screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-bw-howToPlay.png)
+    * Lets play screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-bw-letsPlay.png)
+    * About us screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-bw-aboutUs.png)
+    * The game screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-bw-theGame.png)
+    * Game over screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-bw-gameOver.png)
+    
+* Colour - Was made after the 'Surface' section was written
+    * Landing/Home screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-homePage.png)
+    * How to play screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-howToPlay.png)
+    * Lets play screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-letsPlay.png)
+    * About us screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-aboutUs.png)
+    * The game screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-theGame.png)
+    * Game over screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-gameOver.png)
 
 ### Surface
 Colour Theme
