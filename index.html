@@ -22,7 +22,7 @@
         <div class="container-xxl nbs-titleArea d-flex justify-content-center align-items-center">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-uppercase text-center bsc-display-1">
+                    <h1 class="text-uppercase text-center fw-bold bsc-display-1">
                         <strong>the memory game</strong> 
                     </h1>
                 </div>
@@ -36,7 +36,7 @@
     </audio>
     
     <!-- SECTION 1.1 -->
-    <section id="sectionGameMenu">
+    <section id="sectionGameMenu" class="">
         <div class="container-xxl d-flex justify-content-center align-items-center g-0 nbs-menuArea ">
             <div class="row">
                 <div class="col d-flex justify-content-center align-items-center">
@@ -64,26 +64,6 @@
         </div>
     </section>
 
-    <!-- SECTION 1.2 -->
-    <section id="sectionGameInfo" class="nbs-display-none">
-        <div class="container-xxl nbs-gameInfoArea">
-            <div class="row d-flex justify-content-center align-items-center nbs-height100Percent">
-                <div id="theLives" class="col-4 d-flex justify-content-center align-items-center">
-                    <p>
-                        <i class="fas fa-heart d-inline-block mx-1 nbs-gameInfoAreaFont"></i>
-                        <p id="livesQuantity" class="d-inline-block mx-2 nbs-gameInfoAreaFont">0</p>
-                    </p>
-                </div>
-                <div class="col-4 d-flex justify-content-center align-items-center nbs-gameInfoEach">
-                    <p id="theTimer" class="nbs-gameInfoAreaFont">0:0</p>
-                </div>
-                <div class="col-4 d-flex justify-content-center align-items-center nbs-gameInfoEach">
-                    <p id="thePoints" class="nbs-gameInfoAreaFont"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- OVERLAY -->
     <section id="screenOverlay" class="nbs-screenOverlay nbs-display-none"></section>
 
@@ -102,8 +82,29 @@
         </div>
     </section>
 
+    <!-- SECTION 1.2 -->
+    <section id="sectionGameInfo" class="nbs-display-none">
+        <div class="container-xxl nbs-gameInfoArea">
+            <div class="row d-flex justify-content-center align-items-center nbs-height100Percent">
+                <div id="theLives" class="col-4 d-flex justify-content-center align-items-center">
+                    <p>
+                        <i class="fas fa-heart d-inline-block mx-1 nbs-gameInfoAreaFont"></i>
+                        <p id="livesQuantity" class="d-inline-block mx-2 nbs-gameInfoAreaFont">0</p>
+                    </p>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center nbs-gameInfoEach">
+                    <p id="theTimer" class="nbs-gameInfoAreaFont">0:0</p>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-items-center nbs-gameInfoEach">
+                    <p id="thePoints" class="nbs-gameInfoAreaFont">0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- SECTION 2.0 -->
-    <section id="sectionOpeningScreen">
+    <section id="sectionOpeningScreen" class="">
         <div class="container-xxl d-flex justify-content-center align-items-center nbs-section2Area nbs-openingScreenArea">
             <div class="row">
                 <div class="col">
@@ -121,7 +122,7 @@
                     <div class="card nbs-card">
                         <div class="card-body">
                             <div class="card-title text-uppercase mt-2">
-                                <h2 class="display-2"><strong>how to play</strong></h2>
+                                <h2 class="display-2 fw-bold"><strong>how to play</strong></h2>
                             </div>
                             <div class="card-text">
                                 <p>
@@ -147,12 +148,12 @@
 
     <!-- SECTION 2.3 -->
     <section id="sectionStartGame" class="nbs-display-none">
-        <div class="container-xxl d-flex justify-content-center align-items-center nbs-section2Area">
+        <div class="container-xxl d-flex justify-content-center align-items-center nbs-section2Area nbs-startGameArea">
             <div class="row nbs-buttonCollection">
                 <div class="offset-3 col-6">
-                    <button class="btn-lg my-2 nbs-difficultyButton" type="button"><p class="bsc-display-3 m-0">easy</p></button>
-                    <button class="btn-lg my-2 nbs-difficultyButton" type="button"><p class="bsc-display-3 m-0">medium</p></button>
-                    <button class="btn-lg my-2 nbs-difficultyButton" type="button"><p class="bsc-display-3 m-0">hard</p></button>
+                    <button class="btn-lg my-2 nbs-difficultyButton" type="button"><p class="bsc-display-3 m-0 bsc-display-5">easy</p></button>
+                    <button class="btn-lg my-2 nbs-difficultyButton" type="button"><p class="bsc-display-3 m-0 bsc-display-5">medium</p></button>
+                    <button class="btn-lg my-2 nbs-difficultyButton" type="button"><p class="bsc-display-3 m-0 bsc-display-5">hard</p></button>
                 </div>
             </div>
         </div>
@@ -166,7 +167,7 @@
                     <div class="card nbs-card">
                         <div class="card-body">
                             <div class="card-title text-uppercase mt-2">
-                                <h2 class="display-2"><strong>about us</strong></h2>
+                                <h2 class="display-2 fw-bold"><strong>about us</strong></h2>
                             </div>
                             <div class="card-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -252,12 +253,12 @@
                     <div class="card nbs-card">
                         <div class="card-body">
                             <div class="card-title text-uppercase mt-2">
-                                <h2 class="display-2 text-uppercase"><strong>game over</strong></h2>
+                                <h2 class="display-2 text-uppercase fw-bold"><strong>game over</strong></h2>
                             </div>
                             <div class="card-text">
                                 <div class="d-inline">
                                     <h4 class="display-6">You scored</h4>
-                                    <p id="gameOverFinalScore"></p>
+                                    <p id="gameOverFinalScore" class="display-1 fw-bold">30</p>
                                 </div>
                                 <div>
                                     <h6 class="d-inline">Correct matches: </h4>
@@ -289,10 +290,10 @@
         <source src="assets/audio/253886__themusicalnomad__negative-beeps.wav">
     </audio>
 
-    <footer>
-        <div class="container-xxl nbs-footerArea d-flex justify-content-center align-items-center">
+    <footer class="">
+        <div class="container-fluid nbs-footerArea d-flex justify-content-center align-items-center">
             <div class="row">
-                <div class="col text-center">
+                <div class="col text-center display-6">
                     <p class="my-1 mx-1 d-inline-block gx-3 nbs-socialm-icon-dec">
                         <a href="https://en-gb.facebook.com/" target="_blank" rel="external" alt="Facebook icon" aria-label="Goes to Facebook page">
                             <i class="fab fa-facebook nbs-socialm-icon-dec"></i>
@@ -316,7 +317,7 @@
                 </div>
             </div>
         </div>
-    </footer>  
+    </footer>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

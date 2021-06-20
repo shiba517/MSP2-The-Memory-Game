@@ -42,7 +42,7 @@
     width: 70%;
     height: 40%;
     background-color: #FFB48F;
-    border: 0.2rem solid black;
+    border: 0.3rem solid black;
     border-radius: 0.5rem;
 }
 
@@ -72,6 +72,20 @@ body {
     height: 12vh;
 }
 
+@media (min-width: 576px) {
+    .bsc-display-1 {
+        font-size: calc(1.625rem + 4.5vw);
+        font-weight: 300;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bsc-display-1 {
+      font-size: 5rem;
+    }
+}
+
 
 /* *********** SECTION 1.1 - THE GAME MENU *********** */
 .nbs-menuArea {
@@ -92,6 +106,24 @@ body {
     border-radius: 0.5rem;
     font-size: 1rem;
     overflow: hidden;
+    transform: scale(1);
+}
+
+.nbs-menuArea button:active {
+    transform: scale(0.9);
+    transition: transform .5s;
+}
+
+@media (min-width: 576px) {
+    .nbs-menuArea button {
+        width: 30%;
+        height: 6vh;
+        border: 0.3rem solid black;
+        border-radius: 1rem;
+        font-size: 1rem;
+        overflow: hidden;
+        font-size: 2rem;
+    }
 }
 
 
@@ -102,6 +134,16 @@ body {
 
 .nbs-gameInfoAreaFont {
     font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    .nbs-gameInfoArea {
+        /* background-color: #A64AC9; */
+    }
+
+    .nbs-gameInfoAreaFont {
+        font-size: 4rem;
+    }
 }
 
 
@@ -117,6 +159,13 @@ body {
     font-size: 2rem;
 }
 
+@media (min-width: 576px) {
+    .nbs-gameOptionsIconAll i {
+        margin-inline: 0.5rem;
+        font-size: 4rem;
+    }
+}
+
 
 /* *********** SECTION 2.1 - OPENING SCREEN *********** */
 .nbs-openingScreenArea img {
@@ -128,16 +177,23 @@ body {
     overflow-y: auto;
     background-color: #F5E6CC;
     background-color: #FFB48F;
-    height: fit-content;
+    /* height: fit-content; */
     height: 80%;
     position: relative;
     border: 0.25rem solid black;
     border-radius: 1.5rem;
 }
 
-.nbs-cardBody {
-    background-color: transparent;
-    flex: none; 
+@media (min-width: 576px) {
+    .nbs-card {
+        border: 0.5rem solid black;
+        border-radius: 2rem;
+    }
+
+    .nbs-card p {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
 }
 
 
@@ -150,13 +206,33 @@ body {
     background-color: #FFB48F;
     border: none;
     border: 0.3rem solid black;
-    border-radius: 0.5rem;
     width: 100%;
     border-radius: 2rem;
 }
 
 .nbs-difficultyButton p {
     background-color: transparent;
+}
+
+@media (min-width: 576px) {
+    .nbs-difficultyButton {
+        height: 6rem;
+        border: 0.45rem solid black;
+        width: 90%;
+        border-radius: 4rem;
+    }
+
+    .bsc-display-5 {
+        font-size: calc(1.425rem + 2.1vw);
+        font-weight: 300;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bsc-display-5 {
+        font-size: 3rem;
+    }
 }
 
 
@@ -179,6 +255,13 @@ body {
     border-radius: 15%;
 }
 
+@media (min-width: 576px) {
+    .nbs-headCard {
+        font-size: 8rem;
+        border: 0.6rem solid black;
+    }
+}
+
 /* FIELD CARDS */
 .nbs-fieldCardsArea {
     min-height: 50vh;
@@ -192,6 +275,12 @@ body {
     border: 4px solid black;
     border: 0.3rem solid black;
     border-radius: 15%;
+    transform: scale(1);
+}
+
+.nbs-fieldCard:active {
+    transform: scale(0.97);
+    transition: transform .1s;
 }
 
 .nbs-fieldCard i {
@@ -204,6 +293,33 @@ body {
 
 .nbs-bg-incorrect {
     background-color: maroon;
+}
+
+@media (min-width: 576px) {
+    .nbs-fieldCard {
+        /* background-color: #fff; */
+        border: 0.5rem solid black;
+        border-radius: 15%;
+    }
+
+    .nbs-fieldCard i {
+        font-size: 4.5rem;
+    }
+}
+
+
+/* *********** SECTION 2.6 - GAME OVER *********** */
+@media (min-width: 576px) {
+    #gameOverFinalScore {
+        /* Copied from bootsrap.css */
+        font-size: calc(1.625rem + 4.5vw);
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    #sectionGameOver h6 {
+        font-size: 2rem;
+    }
 }
 
 /* *********** FOOTER *********** */
@@ -219,5 +335,5 @@ body {
     color: #F5E6CC;
     color: #FFB48F;
     color: #A64AC9;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
 }
