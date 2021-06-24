@@ -1,4 +1,8 @@
+![website logo](assets/images/logo.png)
 # MILESTONE PROJECT 2 - THE MEMORY GAME
+
+![Mock-up of website shown across deifferent platforms](readme-files/readme-images/features/rmss-alldevices.jpg)
+[View live website](https://shiba517.github.io/MSP2-The-Memory-Game/)
 
 ## OVERVIEW
 A study in 2004 by Vladimir Sloutsky found children performed better than adults at a surprise recognition test that was based on the idea that children are more likely to use an induction like thinking when analysing pictures whilst adults are more likely to use a category like thinking. Another recognition experiment was done on another group of children and adults but the test was not a surprise. The results were that adults performed much better than the children.
@@ -341,16 +345,18 @@ Method 2
 6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination 
 
 ## CREDITS
+### Codes
+* When field cards are clicked, they have a slight animation in the form of changing its size. I found and copied the code from this youTube video created by freeCodeCamp.org - [link](https://youtu.be/ZniVgo8U7ek?t=693)
+* I used a youTube video created by The Net Ninja to help me create a modal; It appears when the home icon is clicked - [link](https://www.youtube.com/watch?v=jp_p6wCkc9I&t=317s)
+
+### Content
+* Inpsiration for the fictional story of the aim of the making of the website, written in the Overview section, was inspired by an article found on sciencedaily.com - [link](https://www.sciencedaily.com/releases/2004/07/040722085301.htm)
+* All written content on the website was created by me
+### Media
 Colour scheme - https://visme.co/blog/website-color-schemes/ 
-
 Typography for headings - https://fonts.google.com/specimen/Comfortaa?query=comfort 
-
 Typography for non-headings - https://fonts.google.com/specimen/Montserrat?query=mont 
-
 Background music - https://www.bensound.com/royalty-free-music/track/ukulele 
-
 Sound for when a correct card is clicked - https://freesound.org/people/unadamlar/sounds/476178/ 
-
 Sound for when incorrect card is clicked - https://freesound.org/people/Bertrof/sounds/131657/ 
-
 Sound for when game is over - https://freesound.org/people/themusicalnomad/sounds/253886/ 
