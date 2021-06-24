@@ -1,7 +1,7 @@
 ![website logo](assets/images/logo.png)
 # MILESTONE PROJECT 2 - THE MEMORY GAME
 
-![Mock-up of website shown across deifferent platforms](readme-files/readme-images/features/rmss-alldevices.jpg)
+![Mock-up of website shown across deifferent platforms](assets/readme-files/images/mock-up.jpg)
 [View live website](https://shiba517.github.io/MSP2-The-Memory-Game/)
 
 ## OVERVIEW
