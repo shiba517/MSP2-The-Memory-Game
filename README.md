@@ -161,3 +161,29 @@ Typography
 * A logo of higher pixel qulity. Due to funds being low, it was not financially feasible to have downloaded a higher pixel quality version of the logo
 * Ability to change how high or low the background music. At the moment, it is either off or on
 * Some animation of the icons such as flash, or animals bouncing off the screen 
+
+## DEPLOYMENT
+### Github pages
+The website was deployed onto GitHub via the following steps: 
+1. Logging into my GitHub account and creating a new repository 
+2. Under the subheading ‘Repository template’, I chose the template given to me by Code Institute from the drop-down menu 
+3. I named my repository under the subheading ‘Repository name’ and then clicked on the green button named ‘Create repository’. 
+4. Once the repository was created, I was lead to my repository page. From here, I clicked on the ‘Settings’ button near the top of the page 
+5. Scroll down to the ‘GitHub Pages’ section and click on the text, ‘Check it out here!’, which will be in blue 
+6. Under the subheading ‘Source’, click on its only drop-down menu and select ‘Master’ and then click on the button ‘Save’ 
+7. The repository webpage will now have been created and the link will now be shown to you for your use 
+
+### Making A Local Clone
+You may want to have access via a copy of the repository on your own device. There are three ways to do this: 
+* Method 1
+1. Login to your GitHub account and open up the repository you would like to copy 
+2. Click on the button with a drop-down menu named ‘Code’ which will be placed next to the green ‘Gitpod’ button 
+3. You will then have the option to download it on to your system via the ‘Download ZIP’ option 
+
+Method 2 
+1. Open up your preferred IDE and open up the folder where you would the repository to be copied/cloned 
+2. In the terminal, type in ‘git clone’ ; do not press enter or anything else 
+3. Now login to your GitHub account and open up the repository you would like to copy 
+4. Click on the ‘Code’ button again and copy the text given under the subheading ‘HTTPS’. A button next to this text gives you an easier way of copying the text 
+5. Back to your IDE terminal, after the ‘git clone’, press the spacebar button and paste in the link you copied from the repository. Your entry in the terminal should look something like this: ‘gti clone https://github.com/shiba517/MSP2-The-Memory-Game.git’. Then press enter 
+6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination 
