@@ -219,6 +219,7 @@ $(document).ready(function() {
 
     // RUNNINGS OF THE ACTUAL GAME
     function letsPlay() {
+        thePoints.text('0')
         inGameInfo.inPlay = true
         setFieldCards()
         setHeadCards()
@@ -381,16 +382,16 @@ $(document).ready(function() {
 
     // UPDATES POINTS WHICH WILL ALSO BE VISIBLE ON SCREEN
     function updatePoints() {
-        if (gamePointsInfo.correctClicks % inGameDifficulty.bonusClickQty == 0) {
-            if (gamePointsInfo.correctClicks !== 0 || gamePointsInfo.incorrectClicks !== 0) {
-                console.log('Bonus Points!!!')
+        if (gamePointsInfo.correctClicks != 0) {
+            if (gamePointsInfo.correctClicks % inGameDifficulty.bonusClickQty == 0) {
                 gamePointsInfo.bonus++
             }
         }
 
         let plusThese = (gamePointsInfo.completeMatch * inGameDifficulty.posPoints) + (gamePointsInfo.bonus * inGameDifficulty.bonusPoints)
+        console.log(plusThese)
         let minusThese = (gamePointsInfo.nonMatch * inGameDifficulty.negPoints) + (gamePointsInfo.help * inGameDifficulty.helpPoints)
-
+        console.log(minusThese)
         let totalToBe = plusThese - minusThese
         gamePointsInfo.totalPoints = totalToBe
         console.log(totalToBe)
