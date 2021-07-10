@@ -38,28 +38,6 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.nbs-modal-popUp {
-    width: 70%;
-    height: 40%;
-    background-color: #FFB48F;
-    border: 0.3rem solid black;
-    border-radius: 0.5rem;
-}
-
-.nbs-modal-popUp h2 {
-    font-size: 2rem;
-    /* font-size: 1.75rem; */
-}
-
-.nbs-screenOverlay button {
-    background-color: #FCCD04;
-    width: 30%;
-    height: 6vh;
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    overflow: hidden;
-}
 
 /* *********** BODY TAG *********** */
 body {
@@ -165,6 +143,55 @@ body {
     .nbs-gameOptionsIconAll i {
         margin-inline: 0.5rem;
         font-size: 4rem;
+    }
+}
+
+
+/* GO HOME MODAL */
+
+.nbs-modal-popUp {
+    width: 70%;
+    height: 40%;
+    background-color: #FFB48F;
+    border: 0.3rem solid black;
+    border-radius: 0.5rem;
+}
+
+.nbs-modal-popUp h2 {
+    font-size: 2rem;
+    /* font-size: 1.75rem; */
+    padding: 0;
+}
+
+
+.nbs-screenOverlay button {
+    background-color: #FCCD04;
+    width: 30%;
+    height: 6vh;
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+@media (min-width: 576px) {
+    .nbs-modal-popUp {
+        width: 40%;
+        height: 40%;
+        border: 0.5rem solid black;
+    }
+
+    .nbs-modal-popUp h2 {
+        font-size: 4.5rem;
+        margin: 2rem;
+    }
+
+    .nbs-modal-popUp button {
+        font-size: 2rem;
+    }
+
+    .nbs-screenOverlay button {
+        border: 0.3rem solid black;
     }
 }
 
