@@ -494,6 +494,8 @@ $(document).ready(function() {
 
             playGameOverSound()
 
+            buttonStartGame.text('Play again')
+
             theTimer.empty()
             theTimer.append(iconSkullCrossbones)
             gameOverFinalScore.text(showFinalScore + ' points!')
