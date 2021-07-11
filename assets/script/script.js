@@ -39,8 +39,6 @@ $(document).ready(function() {
     const cssDisplayNone = 'nbs-display-none'
     const cssBgCorrect = 'nbs-bg-correct'
     const cssBgIncorrect = 'nbs-bg-incorrect'
-    const cssVolumeUp = 'fa-volume-up'
-    const cssVolumeOff = 'fa-volume-off'
     const zIndexMinus1 = 'nbs-zIndex-Minus1'
     const zIndexPlus2 = 'nbs-zIndex-Plus2'
 
@@ -181,17 +179,11 @@ $(document).ready(function() {
     // MAKES BACKGROUND MUSIC PLAY
     iconMusic.click(function() {
         if (inGameInfo.music == false) {
-            iconMusic.removeClass(cssVolumeUp)
-            iconMusic.addClass(cssVolumeOff)
-
             inGameInfo.music = true
             $('#bgMusic').prop('volume', 0.1)
             $('#bgMusic')[0].play()
         }
         else {
-            iconMusic.removeClass(cssVolumeOff)
-            iconMusic.addClass(cssVolumeUp)
-
             inGameInfo.music = false
             $('#bgMusic')[0].pause()
         }
@@ -401,7 +393,7 @@ $(document).ready(function() {
     function updatePreviewTime() {
         if (gamePointsInfo.correctClicks !== 0) {
             if (gamePointsInfo.correctClicks % inGameDifficulty.toNextLevel == 0) {
-                gameTimeInfo.previewTime -= (inGameDifficulty.maxPrevTime * 0.1)
+                gameTimeInfo.previewTime -= (inGameDifficulty.maxPrevTime * inGameDifficulty.challengeSpeed)
                 console.log(gameTimeInfo.previewTime)
             }
         }
