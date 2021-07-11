@@ -65,9 +65,9 @@ $(document).ready(function() {
     ]
 
     const difficultyLevelInfo = [
-        {name: 'easy', cardsToMatch: 1, maxRoundTime: 1000, maxPrevTime: 2000, lives: 2, posPoints: 30, negPoints: 15, bonusPoints: 50, helpPoints: 30, bonusClickQty: 3, challengeSpeedPerc: 10, toNextLevel: 3},
-        {name: 'medium', cardsToMatch: 2, maxRoundTime: 30, maxPrevTime: 5000, lives: 3, posPoints: 50, negPoints: 25, bonusPoints: 70, helpPoints: 20, bonusClickQty: 5, challengeSpeedPerc: 5, toNextLevel: 5},
-        {name: 'hard', cardsToMatch: 3, maxRoundTime: 30, maxPrevTime: 7000, lives: 4, posPoints: 70, negPoints: 35, bonusPoints: 90, helpPoints: 10, bonusClickQty: 3, challengeSpeedPerc: 2.5, toNextLevel: 7}
+        {name: 'easy', cardsToMatch: 1, maxRoundTime: 5, maxPrevTime: 3, lives: 2, posPoints: 30, negPoints: 15, bonusPoints: 50, helpPoints: 30, bonusClickQty: 7, challengeSpeed: 0.2, toNextLevel: 3},
+        {name: 'medium', cardsToMatch: 2, maxRoundTime: 10, maxPrevTime: 5, lives: 3, posPoints: 50, negPoints: 25, bonusPoints: 70, helpPoints: 20, bonusClickQty: 5, challengeSpeed: 0.1, toNextLevel: 5},
+        {name: 'hard', cardsToMatch: 3, maxRoundTime: 15, maxPrevTime: 7, lives: 4, posPoints: 70, negPoints: 35, bonusPoints: 90, helpPoints: 10, bonusClickQty: 3, challengeSpeed: 0.05, toNextLevel: 7}
     ]
 
     var inGameInfo = {
