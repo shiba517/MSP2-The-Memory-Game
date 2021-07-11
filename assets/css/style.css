@@ -217,11 +217,32 @@ body {
     .nbs-card {
         border: 0.5rem solid black;
         border-radius: 2rem;
+        /* background-color: #FCCD04; */
+    }
+
+    .nbs-card p {
+        font-size: 1.7rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .nbs-card {
+        /* background-color: #A64AC9; */
+    }
+
+    .nbs-card p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nbs-card {
+        /* background-color: #FFB48F; */
     }
 
     .nbs-card p {
         font-size: 2rem;
-        margin-top: 1.5rem;
     }
 }
 
@@ -338,10 +359,17 @@ body {
 
 
 /* *********** SECTION 2.6 - GAME OVER *********** */
+#gameOverFinalScore {
+    /* Copied from bootsrap.css (.display-4) */
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300; 
+    line-height: 1.2;
+}
+
 @media (min-width: 576px) {
     #gameOverFinalScore {
-        /* Copied from bootsrap.css */
-        font-size: calc(1.625rem + 4.5vw);
+        /* Copied from bootsrap.css (.display-3) */
+        font-size: calc(1.525rem + 3.3vw);
         font-weight: 300;
         line-height: 1.2;
     }

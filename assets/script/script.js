@@ -23,7 +23,6 @@ $(document).ready(function() {
     const gameOverTotalMatches = $('#gameOverTotalMatches')
     const gameOverTotalNonMatches = $('#gameOverTotalNonMatches')
     const gameOverTotalBonus = $('#gameOverTotalBonus')
-    const gameOverTotalTime = $('#gameOverTotalTime')
     const iconMusic = $('#iconMusic')
     const iconGoHome = $('#iconGoHome')
     const iconPause = $('#iconPause')
@@ -85,7 +84,6 @@ $(document).ready(function() {
         previewTime: 0,
         roundtime: 0,
         timer: false,
-        totalSeconds: 0
     }
 
     var gamePointsInfo = {
@@ -443,7 +441,6 @@ $(document).ready(function() {
                 console.log('I am still working')
                 theTimer.text(currentTime)
                 currentTime--
-                gameTimeInfo.totalSeconds++
 
                 if (currentTime < 0) {
                     theTimer.empty()
@@ -495,14 +492,13 @@ $(document).ready(function() {
             playGameOverSound()
 
             buttonStartGame.text('Play again')
-
+                                
             theTimer.empty()
             theTimer.append(iconSkullCrossbones)
-            gameOverFinalScore.text(showFinalScore + ' points!')
+            gameOverFinalScore.text(showFinalScore + ' pts!')
             gameOverTotalMatches.text(gamePointsInfo.correctClicks)
             gameOverTotalNonMatches.text(gamePointsInfo.incorrectClicks)
-            gameOverTotalBonus.text(gamePointsInfo.bonus * 30)
-            gameOverTotalTime.text(gameTimeInfo.totalSeconds)
+            gameOverTotalBonus.text(gamePointsInfo.bonus * inGameDifficulty.bonusPoints)
 
             resetAllGameInfo()
 
@@ -649,7 +645,6 @@ $(document).ready(function() {
         inGameInfo.pause = false
         inGameInfo.click = false
         gameTimeInfo.timer = false
-        gameTimeInfo.totalSeconds = 0
         gamePointsInfo.correctClicks = 0
         gamePointsInfo.incorrectClicks = 0
         gamePointsInfo.completeMatch = 0
@@ -657,11 +652,14 @@ $(document).ready(function() {
         gamePointsInfo.totalPoints = 0
         gamePointsInfo.help = 0
         gamePointsInfo.bonus = 0
-        gamePointsInfo.totalPoints = 0
         
         iconPause.removeClass(zIndexMinus1)
         iconHelp.removeClass(zIndexMinus1)
 
         comparisonPosition = 0
+
+        console.log(inGameInfo)
+        console.log(gameTimeInfo)
+        console.log(gamePointsInfo)
     }
 })
