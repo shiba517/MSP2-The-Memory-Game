@@ -392,13 +392,15 @@ $(document).ready(function() {
     // CALCULATES THE LENGTH OF TIME THE ICONS WILL BE ON DISPLAY
     function updatePreviewTime() {
         if (gamePointsInfo.correctClicks !== 0) {
+            console.log('Does not equal to 0')
             if (gamePointsInfo.correctClicks % inGameDifficulty.toNextLevel == 0) {
-                gameTimeInfo.previewTime -= (inGameDifficulty.maxPrevTime * inGameDifficulty.challengeSpeed)
-                console.log(gameTimeInfo.previewTime)
+                gameTimeInfo.previewTime -= (gameTimeInfo.previewTime * inGameDifficulty.challengeSpeed)
             }
         }
-        console.log(gameTimeInfo.previewTime)
-        return gameTimeInfo.previewTime
+
+        console.log(gameTimeInfo.previewTime * 1000)
+
+        return gameTimeInfo.previewTime * 1000
     }
 
     // RESETS ALL CARDS
