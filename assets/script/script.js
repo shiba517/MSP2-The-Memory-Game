@@ -300,6 +300,7 @@ $(document).ready(function() {
                 $(this).addClass(cssBgCorrect)
                 $(this).children().removeClass(cssDisplayNone)
                 comparisonPosition++
+                playMatchSound()
                 
                 checkMatchCompletion()
             }
@@ -322,8 +323,6 @@ $(document).ready(function() {
     // CHECKS IF A COMPLETE MATCH OCCURS
     function checkMatchCompletion() {
         if (comparisonPosition == inGameDifficulty.cardsToMatch) {
-            playMatchSound()
-
             theTimer.empty()
             theTimer.append(iconChild)
 
