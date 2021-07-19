@@ -488,7 +488,7 @@ $(document).ready(function() {
                                 
             theTimer.empty()
             theTimer.append(iconSkullCrossbones)
-            gameOverFinalScore.text(showFinalScore + ' pts!')
+            gameOverFinalScore.text(showFinalScore + 'pts!')
             gameOverTotalMatches.text(gamePointsInfo.correctClicks)
             gameOverTotalNonMatches.text(gamePointsInfo.incorrectClicks)
             gameOverTotalBonus.text(gamePointsInfo.bonus * inGameDifficulty.bonusPoints)

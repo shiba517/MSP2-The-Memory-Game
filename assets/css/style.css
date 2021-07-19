@@ -361,7 +361,7 @@ body {
 /* *********** SECTION 2.6 - GAME OVER *********** */
 #sectionGameOver .nbs-card {
     overflow-y: hidden;
-} 
+}
 
 #gameOverFinalScore {
     /* Copied from bootsrap.css (.display-4) */
@@ -380,6 +380,12 @@ body {
 
     #sectionGameOver h6 {
         font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #gameOverFinalScore {
+        font-size: 3.5rem;
     }
 }
 
