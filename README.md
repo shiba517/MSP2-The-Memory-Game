@@ -253,6 +253,31 @@ Clicking on the Instagram icon leads to the Instagram site opening on a new scre
 Clicking on the Twitter icon leads to the Twitter site opening on a new screen | yes | yes | yes
 Clicking on the YouTube icon leads to the YouTube site opening on a new screen | yes | yes | yes
 
+#### Basic visuals of the game
+AIM | mobile | tablet | laptop/PC
+--- | --- | --- | ---
+9 Field cards should be on show when ‘The Game’ section (Section 2.5) is on show | [yes](assets/images/cross-platform-testing/nine-field-cards-are-on-show-on-mobile-screen.jpg) | [yes](assets/images/cross-platform-testing/nine-field-cards-are-on-show-on-tablet-screen.jpg) | [yes](assets/images/cross-platform-testing/nine-field-cards-are-on-show-on-laptop-screen.jpg)
+Footer section should not be visible when ‘The Game’ section (Section 2.5) is on show | [yes](assets/images/cross-platform-testing/no-footer-during-the-game.jpg) | yes | yes
+When on easy mode, 1 head card is on show | yes | yes | [yes](assets/images/cross-platform-testing/one-head-card-on-show-during-easy-mode.jpg)
+When on medium mode, 2 head cards are on show 
+When on hard mode, 3 head cards are on show 
+‘Game options’ section (Section 1.3) should be visible above the ‘Game Info’ section (Section 1.2) when ‘The Game’ section (Section 2.5) is on show 
+When a card matches, the chosen field card turns green 
+When a card does not match, the chosen field card turns red 
+When all card matches, all field cards turn green 
+When lives reaches to 0, all field cards turn red 
+Lives icon and quantity is visible 
+Timer icon is a clock before the cards are clickable
+Once field cards are clickable, clock icon is removed and replaced with numbers acting as a countdown 
+When timer reaches 0, the countdown number is replaced by a poo icon 
+When lives reaches 0, the countdown number is replaced by a skull icon 
+When all cards match, the countdown number is replaced by a human icon 
+Points increase when all field cards matches
+Points decrease when a field card does not match 
+When lives reaches 0, ‘Game Over’ section (Section 2.6) will be on show 
+When ‘Game Over’ screen does occur, the ‘Start’ button text is replaced by the text ‘Play again’  
+
+
 
 ## DEPLOYMENT
 ### Github pages
