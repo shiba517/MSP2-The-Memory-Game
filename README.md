@@ -235,88 +235,24 @@ NOTE: The screen contains up to 4 main parts
 * Section 2 – There will be a few sections named ‘section 2.’ followed by a number. The number followed is the main number that identifies different parts of this section. (I.e., section 2.1, section 2.5) 
 * The footer – Contains the websites social media links 
 
-#### Navigation testing - Do all buttons go to intended locations? 
+#### Basic navigation of screens/sections
 AIM | mobile | tablet | laptop/PC
 --- | --- | --- | ---
-‘How to play’ button leads to only Section 2.2(How to play screen) on show; replacing whatever section 2.? that was on display  | yes | yes | yes
-‘Start’ button leads to only Section 2.3(Start game screen) on show; replacing whatever section 2.? that was on display   | yes | yes | yes
-‘About us’ button leads to only Section 2.4(About us screen) on show; replacing whatever section 2.? that was on display   | yes | yes | yes
-‘easy’ button leads to only Section 2.5(The game screen) on show; replacing section 2.3   | yes | yes | yes
-‘medium’ button leads to only Section 2.5(The game screen) on show; replacing section 2.3   | yes | yes | yes
-‘hard’ button leads to only Section 2.5(The game screen) on show; replacing section 2.3   | yes | yes | yes
+Clicking on ‘How to play’ button always leads to ‘How to Play’ section (Section 2.2) on show  | yes | yes | yes
+Clicking on ‘Start’ button always leads to ‘Start Game’ section (Section 2.3) on show | yes | yes | yes
+Clicking on ‘About us’ button always leads to ‘About Us’ section (Section 2.4) on show | yes | yes | yes
+Clicking on ‘easy’ button from ‘About Us’ section (Section 2.4) leads to ‘The Game’ section (Section 2.5) on show | yes | yes | yes
+Clicking on ‘medium’ button from ‘About Us’ section (Section 2.4) leads to ‘The Game’ section (Section 2.5) on show | yes | yes | yes
+Clicking on ‘hard’ button from ‘About Us’ section (Section 2.4) leads to ‘The Game’ section (Section 2.5) on show | yes | yes | yes
+Clicking on the Facebook icon leads to the Facebook site opening on a separate tab | yes | yes | yes
+Clicking on the Instagram icon leads to the Instagram site opening on a separate tab | yes | yes | yes
+Clicking on the Twitter icon leads to the Twitter site opening on a separate tab | yes | yes | yes
+Clicking on the YouTube icon leads to the YouTube site opening on a separate tab | yes | yes | yes
+Clicking on the Facebook icon leads to the Facebook site opening on a new screen | yes | yes | yes
+Clicking on the Instagram icon leads to the Instagram site opening on a new screen | yes | yes | yes
+Clicking on the Twitter icon leads to the Twitter site opening on a new screen | yes | yes | yes
+Clicking on the YouTube icon leads to the YouTube site opening on a new screen | yes | yes | yes
 
-#### Footer testing
-AIM | mobile | tablet | laptop/PC
---- | --- | --- | ---
-‘Facebook’ icon leads to facebook.com in another tab | yes | yes | yes
-‘Instagram’ icon leads to instagram.com in another tab | yes | yes | yes
-‘Twitter’ icon leads to twitter.com in another tab | yes | yes | yes
-‘YouTube’ icon leads to youtube.com in another tab | yes | yes | yes
-Footer only disappears when section 2.5 is on display | yes | yes | yes
-
-#### Audio testing 
-AIM | mobile | tablet | laptop/PC
---- | --- | --- | ---
-This sound should audible when a card has matched | yes | yes | yes
-This sound should be audible if all cards clicked match | yes | yes | yes
-This sound should be audible if a card does not match | yes | yes | yes
-This sound should be audible if the game is over | yes | yes | yes
-
-#### Game option icons testing
-AIM | mobile | tablet | laptop/PC
---- | --- | --- | ---
-When no music is being played, clicking on the sound icon plays music | yes | yes | yes
-When music is playing, clicking on the sound icon pauses the music | yes | yes | yes
-Home icon leads to a modal popping up | yes | yes | yes
-The modal should have a title asking ‘ARE YOU SURE?’ | yes | yes | yes
-Clicking on the ‘YES’ button on the modal should lead to screen looking how it did when the page is first opened by the user | yes | yes | yes
-Clicking on ‘NO’ should get rid of modal and the game should continue | yes | yes | yes
-Home icon should stop the timer from changing | yes | yes | yes
-Home icon should lead to icons on field cards not being on display | yes | yes | yes
-Home icon should not let the help icon be interactive when clicked on | yes | yes | yes
-Home icon should not let field cards to be interactive when clicked on | yes | yes | yes
-Home icon should let sound icon to be interactive when clicked | yes | yes | yes
-Home icon should let pause icon to be interactive when clicked | yes | yes | yes
-Pause icon pauses the game; timer should stop changing | yes | yes | yes
-Pause icon pauses the game; icons on field cards should not be on display | yes | yes | yes
-Pause icon pauses the game; help icon should not interact when clicked on | yes | yes | yes
-Pause icon pauses the game; field cards should not interact when clicked on | yes | yes | yes
-Pause icon pauses the game; home icon should interact when clicked on | yes | yes | yes
-Pause icon pauses the game; sound icon should interact when clicked on | yes | yes | yes
-Help icon should temporarily show icons on field cards | yes | yes | yes
-
-#### Playing the game testing
-AIM | mobile | tablet | laptop/PC
---- | --- | --- | ---
-Clicking on a matching card turns that card green yes | yes | yes
-Clicking on a card that does not match turns the card red yes | yes | yes
-Clicking on card that is red should turn green if it that card does match yes | yes | yes
-All cards should temporarily turn green when all cards are matched yes | yes | yes
-All cards should turn temporarily turn red if lives reach to 0 yes | yes | yes
-Icons on field cards should randomise itself when all cards match yes | yes | yes
-Icons on head cards should randomise itself when all cards match yes | yes | yes
-Icons on head cards should be available on the field cards yes | yes | yes
-When a clicked card does not match, 1 life should be removed yes | yes | yes
-When life is equal to 0, this section should disappear and section 2.6(Game over screen) should be on display yes | yes | yes
-Timer should countdown once the icons on the field cards are not visible yes | yes | yes
-When timer reaches 0, all cards should reset yes | yes | yes
-When timer reaches 0, 1 life should be removed yes | yes | yes
-Points should increase if all cards match yes | yes | yes
-Points should decrease when a card does not match yes | yes | yes
-Points should decrease when the help icon is clicked yes | yes | yes
-Easy mode should display 1 head card yes | yes | yes
-Easy mode should give user 2 lives yes | yes | yes
-Easy mode should give user 4 seconds per round yes | yes | yes
-Medium mode should display 2 head cards yes | yes | yes
-Medium mode should give user 3 lives yes | yes | yes
-Medium mode should give user 6 seconds per round yes | yes | yes
-Hard mode should display 3 head cards yes | yes | yes
-Hard mode should give user 4 lives yes | yes | yes
-Hard mode should give user 6 seconds per round yes | yes | yes
-Points shown in section 2.6 should be the same as the points shown that was on screen whilst the game was in play yes | yes | yes
-Correct matches should match gamePointsInfo.correctClicks from script.js yes | yes | yes
-Incorrect matches should match gamePointsInfo.incorrectClicks from script.js yes | yes | yes
-Bonus points should match the calculation for the bonus points from script.js (Can be found in checkGameOver()) yes | yes | yes
 
 ## DEPLOYMENT
 ### Github pages
@@ -336,7 +272,7 @@ You may want to have access via a copy of the repository on your own device. The
 2. Click on the button with a drop-down menu named ‘Code’ which will be placed next to the green ‘Gitpod’ button 
 3. You will then have the option to download it on to your system via the ‘Download ZIP’ option 
 
-Method 2 
+* Method 2 
 1. Open up your preferred IDE and open up the folder where you would the repository to be copied/cloned 
 2. In the terminal, type in ‘git clone’ ; do not press enter or anything else 
 3. Now login to your GitHub account and open up the repository you would like to copy 
