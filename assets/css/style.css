@@ -325,12 +325,16 @@ body {
     border: 4px solid black;
     border: 0.3rem solid black;
     border-radius: 15%;
+    /* C/I code 1.1 beg. */
     transform: scale(1);
+    /* C/I code 1.1 end */
 }
 
 .nbs-fieldCard:active {
+    /* C/I code 1.2 beg. */
     transform: scale(0.97);
     transition: transform .1s;
+    /* C/I code 1.2 end */
 }
 
 .nbs-fieldCard i {

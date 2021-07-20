@@ -346,17 +346,19 @@ Method 2
 
 ## CREDITS
 ### Codes
-* When field cards are clicked, they have a slight animation in the form of changing its size. I found and copied the code from this youTube video created by freeCodeCamp.org - [link](https://youtu.be/ZniVgo8U7ek?t=693)
-* I used a youTube video created by The Net Ninja to help me create a modal; It appears when the home icon is clicked - [link](https://www.youtube.com/watch?v=jp_p6wCkc9I&t=317s)
+Below are a list of codes that I have either directly copied or used as a template/inspiration. To find them, click on the 'file to be found in' link near the end of the bullet point and then search (Ctrl + f) for 'C/I code ' followed by the numbers given just before the link you just clicked on (example, C/I code 4.8).
+* When field cards are clicked, they have a slight animation in the form of changing its size. I found and copied the code from this YouTube video created by freeCodeCamp.org - [link](https://youtu.be/ZniVgo8U7ek?t=693) - 1.1 & 1.2 [file to be found in](assets/css/style.css)
+* I used a youTube video created by The Net Ninja to help me create a modal; It appears when the home icon is clicked - [link](https://www.youtube.com/watch?v=jp_p6wCkc9I&t=317s) - 2.1 [file to be found in](assets/script/script.js)
 
 ### Content
 * Inpsiration for the fictional story of the aim of the making of the website, written in the Overview section, was inspired by an article found on sciencedaily.com - [link](https://www.sciencedaily.com/releases/2004/07/040722085301.htm)
 * All written content on the website was created by me
+
 ### Media
-Colour scheme - https://visme.co/blog/website-color-schemes/ 
-Typography for headings - https://fonts.google.com/specimen/Comfortaa?query=comfort 
-Typography for non-headings - https://fonts.google.com/specimen/Montserrat?query=mont 
-Background music - https://www.bensound.com/royalty-free-music/track/ukulele 
-Sound for when a correct card is clicked - https://freesound.org/people/unadamlar/sounds/476178/ 
-Sound for when incorrect card is clicked - https://freesound.org/people/Bertrof/sounds/131657/ 
-Sound for when game is over - https://freesound.org/people/themusicalnomad/sounds/253886/ 
+Colour scheme (#26) by **Five Hundred** - https://visme.co/blog/website-color-schemes/ 
+Typography for headings by **Johan Aukerlund** - https://fonts.google.com/specimen/Comfortaa?query=comfort 
+Typography for non-headings by **Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral and Jacques Le Bailly** - https://fonts.google.com/specimen/Montserrat?query=mont 
+Background music by **Benjamin Tissot** - https://www.bensound.com/royalty-free-music/track/ukulele 
+Sound for when a correct card is clicked by **unadamlar** - https://freesound.org/people/unadamlar/sounds/476178/ 
+Sound for when incorrect card is clicked by **Bertrof** - https://freesound.org/people/Bertrof/sounds/131657/ 
+Sound for when game is over by themusicalnomad - https://freesound.org/people/themusicalnomad/sounds/253886/ 
