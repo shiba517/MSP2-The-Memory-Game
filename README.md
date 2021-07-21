@@ -301,6 +301,13 @@ A negative sounding sound occurs when a field card does not match | yes | yes | 
 A doomed sounding sound occurs when the game is over | yes | yes | yes
 A fun sounding music occurs and turns off when the music icon is clicked in a toggle like manner | yes | yes | yes 
 
+### Bugs and Fixes
+* Help icon not always working
+    * Whilst making the screenshots for my testing, I realised the Help icon did not work after I had clicked on the Pause button but did work if I had not clicked in the Pause button. 
+    * I realised the problem was due to indexing of the icon; I did not re-align the indexing for the Help icon after I had clicked on the Puase icon.
+    * [Image](assets/images/bugs-and-fixes/help-icon-index-solved.jpg)
+    * 
+
 ## DEPLOYMENT
 ### Github pages
 The website was deployed onto GitHub via the following steps: 

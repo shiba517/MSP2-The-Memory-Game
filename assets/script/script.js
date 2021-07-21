@@ -548,8 +548,6 @@ $(document).ready(function() {
             goToHomeScreen()
         }
         else if ($(this).text() == 'no') {
-            iconPause.removeClass(zIndexMinus1)
-            iconHelp.removeClass(zIndexMinus1)
             inGameInfo.pause = false
             inGameInfo.clickable = true
 
@@ -624,6 +622,7 @@ $(document).ready(function() {
         }
         else if (inGameInfo.pause == true) {
             console.log(inGameInfo.pause)
+            iconHelp.addClass(zIndexPlus2)
             inGameInfo.pause = false
             inGameInfo.clickable = true
 
