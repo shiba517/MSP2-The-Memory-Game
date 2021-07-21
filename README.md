@@ -272,12 +272,18 @@ Once field cards are clickable, clock icon is removed and replaced with numbers 
 When timer reaches 0, the countdown number is replaced by a poo icon 
 When lives reaches 0, the countdown number is replaced by a skull icon 
 When all cards match, the countdown number is replaced by a human icon 
-Points increase when all field cards matches
+Points increase when all field cards matches | [yes](assets/images/cross-platform-testing/points-increase.gif) | yes | yes
 Points decrease when a field card does not match 
 When lives reaches 0, ‘Game Over’ section (Section 2.6) will be on show 
 When ‘Game Over’ screen does occur, the ‘Start’ button text is replaced by the text ‘Play again’  
 
-
+#### Game options icon testing
+AIM | mobile | tablet | laptop/PC
+--- | --- | --- | ---
+When field cards are not clickable, Preview mode, only the Music icon is clickable 
+All ‘Game Options’ icons are clickable once the field cards are out of preview mode 
+A modal pops up when the Home icon is clicked 
+Clicking on the ‘YES’ button leads user to a screen looking exactly like the screen when the user first opened the game 
 
 ## DEPLOYMENT
 ### Github pages
