@@ -259,23 +259,23 @@ AIM | mobile | tablet | laptop/PC
 9 Field cards should be on show when ‘The Game’ section (Section 2.5) is on show | [yes](assets/images/cross-platform-testing/nine-field-cards-are-on-show-on-mobile-screen.jpg) | [yes](assets/images/cross-platform-testing/nine-field-cards-are-on-show-on-tablet-screen.jpg) | [yes](assets/images/cross-platform-testing/nine-field-cards-are-on-show-on-laptop-screen.jpg)
 Footer section should not be visible when ‘The Game’ section (Section 2.5) is on show | [yes](assets/images/cross-platform-testing/no-footer-during-the-game.jpg) | yes | yes
 When on easy mode, 1 head card is on show | yes | yes | [yes](assets/images/cross-platform-testing/one-head-card-on-show-during-easy-mode.jpg)
-When on medium mode, 2 head cards are on show 
-When on hard mode, 3 head cards are on show 
-‘Game options’ section (Section 1.3) should be visible above the ‘Game Info’ section (Section 1.2) when ‘The Game’ section (Section 2.5) is on show 
-When a card matches, the chosen field card turns green 
-When a card does not match, the chosen field card turns red 
-When all card matches, all field cards turn green 
-When lives reaches to 0, all field cards turn red 
-Lives icon and quantity is visible 
-Timer icon is a clock before the cards are clickable
-Once field cards are clickable, clock icon is removed and replaced with numbers acting as a countdown 
-When timer reaches 0, the countdown number is replaced by a poo icon 
-When lives reaches 0, the countdown number is replaced by a skull icon 
-When all cards match, the countdown number is replaced by a human icon 
+When on medium mode, 2 head cards are on show | yes | yes | [yes](assets/images/cross-platform-testing/two-head-card-on-show-during-medium-mode.jpg)
+When on hard mode, 3 head cards are on show | yes | yes | [yes](assets/images/cross-platform-testing/three-head-card-on-show-during-hard-mode.jpg)
+‘Game options’ section (Section 1.3) should be visible above the ‘Game Info’ section (Section 1.2) when ‘The Game’ section (Section 2.5) is on show | yes | [yes](assets/images/cross-platform-testing/game-options-above-game-info.jpg) | yes
+When a card matches, the chosen field card turns green | [yes](assets/images/cross-platform-testing/field-card-turning-green.jpg) | yes | yes
+When a card does not match, the chosen field card turns red | yes | [yes](assets/images/cross-platform-testing/field-card-turning-red.jpg) | yes
+When all card matches, all field cards turn green | yes | yes | [yes](assets/images/cross-platform-testing/all-field-cards-turning-green.jpg)
+When lives reaches to 0, all field cards turn red | yes | yes | [yes](assets/images/cross-platform-testing/all-field-cards-turning-red.jpg)
+Lives icon and quantity is visible | yes | yes | [yes](assets/images/cross-platform-testing/lives-icon-quantity-on-display.jpg)
+Timer icon is a clock before the cards are clickable | yes | [yes](assets/images/cross-platform-testing/timer-is-a-clock.jpg) | yes
+Once field cards are clickable, clock icon is removed and replaced with numbers acting as a countdown | yes | [yes](assets/images/cross-platform-testing/clock-icon-becomes-a-countdown.jpg) | yes
+When timer reaches 0, the countdown number is replaced by a poo icon | yes | yes | [yes](assets/images/cross-platform-testing/countdown-becomes-a-poo-icon.jpg)
+When lives reaches 0, the countdown number is replaced by a skull icon | yes | [yes](assets/images/cross-platform-testing/skull-icon-appearing-when-game-is-over.jpg) | yes
+When all cards match, the countdown number is replaced by a human icon | yes | yes | [yes](assets/images/cross-platform-testing/perons-icon-appearing-when-all-cards-matches.jpg)
 Points increase when all field cards matches | [yes](assets/images/cross-platform-testing/points-increase.gif) | yes | yes
-Points decrease when a field card does not match 
-When lives reaches 0, ‘Game Over’ section (Section 2.6) will be on show 
-When ‘Game Over’ screen does occur, the ‘Start’ button text is replaced by the text ‘Play again’  
+Points decrease when a field card does not match | yes | yes | [yes](assets/images/cross-platform-testing/points-decrease-when-no-match.gif)
+When lives reaches 0, ‘Game Over’ section (Section 2.6) will be on show | yes | [yes](assets/images/cross-platform-testing/game-over-section-appears-when-lives-reaches-zero.jpg) | yes
+When ‘Game Over’ screen does occur, the ‘Start’ button text is replaced by the text ‘Play again’ | yes | yes | [yes](assets/images/cross-platform-testing/start-text-turns-to-play-again.jpg) 
 
 #### Game options icon testing
 AIM | mobile | tablet | laptop/PC
@@ -292,6 +292,14 @@ Clicking on Pause icon again should resume the game | yes | yes | [yes](assets/i
 Clicking on Help icon should temporarily show the icons on the field cards | [yes](assets/images/cross-platform-testing/help-icon-working.gif) | yes | yes
 Clicking on the Music icon should play a background music | yes | yes | yes
 Clicking on it again should stop playing the background music | yes | yes | yes
+
+#### Audio of the game 
+AIM | mobile | tablet | laptop/PC
+--- | --- | --- | ---
+A positive sounding sound occurs when a field card matches | yes | yes | yes
+A negative sounding sound occurs when a field card does not match | yes | yes | yes
+A doomed sounding sound occurs when the game is over | yes | yes | yes
+A fun sounding music occurs and turns off when the music icon is clicked in a toggle like manner | yes | yes | yes 
 
 ## DEPLOYMENT
 ### Github pages
