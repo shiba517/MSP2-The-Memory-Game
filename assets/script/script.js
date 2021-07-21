@@ -343,7 +343,6 @@ $(document).ready(function() {
 
 
             setTimeout(function() {
-                // updatePreviewTime()
                 resetAllCards()
             }, 2000)
         }
@@ -425,7 +424,6 @@ $(document).ready(function() {
 
         let countdown = setInterval(function() {
             if (inGameInfo.matchMade == false && inGameInfo.pause == false) {
-                console.log('I am still working')
                 theTimer.text(currentTime)
                 currentTime--
 

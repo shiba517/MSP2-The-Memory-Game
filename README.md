@@ -126,11 +126,11 @@ Laptop/PC Version
 
 ### Surface
 Colour Theme
-* #17E9E0
-* #FCCD04
-* #A64AC9
-* #FFB48F
-* #F5E6CC
+* A shade of light blue - #17E9E0/rgb(23,233,224) - [example](assets/images/surface-colour-theme/colour-example-17E9E0.jpg)
+* A shade of yellow - #FCCD04/rgb(252,205,4) - [example](assets/images/surface-colour-theme/colour-example-FCCD04.jpg)
+* A shade of purple - #A64AC9/rgb(166,74,201) - [example](assets/images/surface-colour-theme/colour-example-A64AC9.jpg)
+* A peach like colour - #FFB48F/rgb(255,180,143) - [example](assets/images/surface-colour-theme/colour-example-FFB48F.jpg)
+* A very light shade of cream - #F5E6CC/rgb(245,230,204) - [example](assets/images/surface-colour-theme/colour-example-F5E6CC.jpg)
 
 Typography
 * Main headings - [link](https://fonts.google.com/specimen/Comfortaa?query=comfort)
@@ -169,15 +169,18 @@ Typography
 ## TECHNOLOGIES USED
 * HTML
 * CSS
-* Bootstrap - a mobile first library which was heavily used (https://getbootstrap.com/)
-* Font awesome - all icons were found and used from here (https://fontawesome.com/)
-* Jquery - a lightweight JavaScript library (https://jquery.com/)
-* GitHub - where I deployed my project (https://github.com/)
+* Bootstrap - a mobile first library which was heavily used - [link](https://getbootstrap.com/)
+* Font awesome - all icons were found and used from here - [link](https://fontawesome.com/)
+* Jquery - a lightweight JavaScript library - [link](https://jquery.com/)
+* GitHub - where I deployed my project - [link](https://github.com/)
 * Gitpod - where I typed and recorded my codes. Can be found via the GitHub website
-* Balsamiq - frameworks were made using their app/software (https://balsamiq.com/)
-* Free Logo Design - created the website logo from here (https://www.freelogodesign.org/)
+* Balsamiq - frameworks were made using their app/software - [link](https://balsamiq.com/)
+* Free Logo Design - created the website logo from here - [link](https://www.freelogodesign.org/)
+* Giphy - Created the gif files from this website - [link](https://giphy.com/)
 * Photos - an app which I used to resize selected images; mainly the images found in README.md. It is available on Windows 10.
-* W3C Markup Validator - used this website to detect any errors in my codes (https://validator.w3.org/)
+* Paint 3D - an app I used to help resize and mark images; mainly the images found in README.md. It is available on Windows 10.
+* W3C Markup Validator - used this website to detect any errors in my index.html - [link](https://validator.w3.org/#validate_by_upload)
+* W3C CSS Validator - used this website to detect any errors in my style.css - [link](https://jigsaw.w3.org/css-validator/)
 
 ## TESTING
 ### User Experience Testing
@@ -228,12 +231,19 @@ Frequent visitor goals:
         * Countdown and the length of time the icons are shown adds to the dynamics of the challenge 
         * Points system can help the parents and the child, ‘measure’ their skill/progress of the game and their memotry 
 
-### Cross Platform Testing
-NOTE: The screen contains up to 4 main parts 
-* The header – Contains the website heading 
-* Section 1 – There will be a few sections named ‘section 1.’ followed by a number. The number followed is the main number that identifies different parts of this section. (I.e., section 1.1, section 1.2) 
-* Section 2 – There will be a few sections named ‘section 2.’ followed by a number. The number followed is the main number that identifies different parts of this section. (I.e., section 2.1, section 2.5) 
-* The footer – Contains the websites social media links 
+### Cross Platform Testing 
+#### Basics playing of the game
+AIM | mobile | tablet | laptop/PC
+--- | --- | --- | ---
+Does matching all the field card with the relevant head card eventually lead to all cards being reset? | yes | yes | yes
+Does not matching a field card with the relevant head card lead Lives decreasing as intended? | yes | yes | yes 
+Points increase when all field cards matches | [yes](assets/images/cross-platform-testing/points-increase.gif) | yes | yes
+Points decrease when a field card does not match | yes | yes | [yes](assets/images/cross-platform-testing/points-decrease-when-no-match.gif)
+When timer reaches 0, does Lives decrease as intended? | yes | yes | yes
+When timer reaches 0, do all cards reset? | yes | yes | yes
+Is the game over once Lives reaches 0? | yes | yes | yes
+Does the length of the Preview time decrease as the game goes on as intended? | yes | yes | yes
+Are bonus points added to the total as intended?  | yes | yes | yes
 
 #### Basic navigation of screens/sections
 AIM | mobile | tablet | laptop/PC
@@ -272,8 +282,6 @@ Once field cards are clickable, clock icon is removed and replaced with numbers 
 When timer reaches 0, the countdown number is replaced by a poo icon | yes | yes | [yes](assets/images/cross-platform-testing/countdown-becomes-a-poo-icon.jpg)
 When lives reaches 0, the countdown number is replaced by a skull icon | yes | [yes](assets/images/cross-platform-testing/skull-icon-appearing-when-game-is-over.jpg) | yes
 When all cards match, the countdown number is replaced by a human icon | yes | yes | [yes](assets/images/cross-platform-testing/perons-icon-appearing-when-all-cards-matches.jpg)
-Points increase when all field cards matches | [yes](assets/images/cross-platform-testing/points-increase.gif) | yes | yes
-Points decrease when a field card does not match | yes | yes | [yes](assets/images/cross-platform-testing/points-decrease-when-no-match.gif)
 When lives reaches 0, ‘Game Over’ section (Section 2.6) will be on show | yes | [yes](assets/images/cross-platform-testing/game-over-section-appears-when-lives-reaches-zero.jpg) | yes
 When ‘Game Over’ screen does occur, the ‘Start’ button text is replaced by the text ‘Play again’ | yes | yes | [yes](assets/images/cross-platform-testing/start-text-turns-to-play-again.jpg) 
 
@@ -349,10 +357,10 @@ Below are a list of codes that I have either directly copied or used as a templa
 * All written content on the website was created by me
 
 ### Media
-Colour scheme (#26) by **Five Hundred** - https://visme.co/blog/website-color-schemes/ 
-Typography for headings by **Johan Aukerlund** - https://fonts.google.com/specimen/Comfortaa?query=comfort 
-Typography for non-headings by **Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral and Jacques Le Bailly** - https://fonts.google.com/specimen/Montserrat?query=mont 
-Background music by **Benjamin Tissot** - https://www.bensound.com/royalty-free-music/track/ukulele 
-Sound for when a correct card is clicked by **unadamlar** - https://freesound.org/people/unadamlar/sounds/476178/ 
-Sound for when incorrect card is clicked by **Bertrof** - https://freesound.org/people/Bertrof/sounds/131657/ 
-Sound for when game is over by themusicalnomad - https://freesound.org/people/themusicalnomad/sounds/253886/ 
+* Colour scheme (#26) by **Five Hundred** - https://visme.co/blog/website-color-schemes/
+* Typography for headings by **Johan Aukerlund** - https://fonts.google.com/specimen/Comfortaa?query=comfort 
+* Typography for non-headings by **Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral and Jacques Le Bailly** - https://fonts.google.com/specimen/Montserrat?query=mont 
+* Background music by **Benjamin Tissot** - https://www.bensound.com/royalty-free-music/track/ukulele 
+* Sound for when a correct card is clicked by **unadamlar** - https://freesound.org/people/unadamlar/sounds/476178/ 
+* Sound for when incorrect card is clicked by **Bertrof** - https://freesound.org/people/Bertrof/sounds/131657/ 
+* Sound for when game is over by **themusicalnomad** - https://freesound.org/people/themusicalnomad/sounds/253886/ 
