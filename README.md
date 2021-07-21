@@ -280,10 +280,18 @@ When ‘Game Over’ screen does occur, the ‘Start’ button text is replaced 
 #### Game options icon testing
 AIM | mobile | tablet | laptop/PC
 --- | --- | --- | ---
-When field cards are not clickable, Preview mode, only the Music icon is clickable 
-All ‘Game Options’ icons are clickable once the field cards are out of preview mode 
-A modal pops up when the Home icon is clicked 
-Clicking on the ‘YES’ button leads user to a screen looking exactly like the screen when the user first opened the game 
+When field cards are not clickable, Preview mode, only the Music icon is clickable | yes | yes | yes
+All ‘Game Options’ icons are clickable once the field cards are out of preview mode | yes | yes | yes
+A modal pops up when the Home icon is clicked | yes | yes | [yes](assets/images/cross-platform-testing/modal-pops-up-when-home-icon-is-clicked.jpg)
+Clicking on the ‘YES’ button leads user to a screen looking exactly like the screen when the user first opened the game | yes | yes | [yes](assets/images/cross-platform-testing/clicking-on-yes-button.gif)
+Clicking on the ‘NO’ button resumes the game | yes | yes | [yes](assets/images/cross-platform-testing/clicking-on-no-button.gif)
+Pause and Help icon should not be clickable when Home icon has been clicked on | yes | yes | yes
+Pause icon should lead to timer not changing and staying at current state | yes | [yes](assets/images/cross-platform-testing/pause-icon-pausing-time.gif) | yes
+Only Help icon should not be clickable when Pause icon has been clicked | yes | yes | yes
+Clicking on Pause icon again should resume the game | yes | yes | [yes](assets/images/cross-platform-testing/pause-icon-toggling.gif)
+Clicking on Help icon should temporarily show the icons on the field cards | [yes](assets/images/cross-platform-testing/help-icon-working.gif) | yes | yes
+Clicking on the Music icon should play a background music | yes | yes | yes
+Clicking on it again should stop playing the background music | yes | yes | yes
 
 ## DEPLOYMENT
 ### Github pages
