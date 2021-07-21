@@ -127,13 +127,13 @@ body {
 
 .nbs-gameOptionsIconAll i {
     color: #A64AC9;
-    margin-inline: 0.5rem;
+    margin: 0.5rem;
     font-size: 2rem;
 }
 
 @media (min-width: 576px) {
     .nbs-gameOptionsIconAll i {
-        margin-inline: 0.5rem;
+        margin: 0.5rem;
         font-size: 4rem;
     }
 }
@@ -370,12 +370,9 @@ body {
 /* *********** FOOTER *********** */
 .nbs-footerArea {
     height: 8vh;
-    background-color: gray;
     background-color: #F5E6CC;
 }
 
 .nbs-socialm-icon-dec {
-    color: #F5E6CC;
-    color: #FFB48F;
     color: #A64AC9;
 }

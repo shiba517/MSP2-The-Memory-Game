@@ -302,11 +302,14 @@ A doomed sounding sound occurs when the game is over | yes | yes | yes
 A fun sounding music occurs and turns off when the music icon is clicked in a toggle like manner | yes | yes | yes 
 
 ### Bugs and Fixes
-* Help icon not always working
-    * Whilst making the screenshots for my testing, I realised the Help icon did not work after I had clicked on the Pause button but did work if I had not clicked in the Pause button. 
-    * I realised the problem was due to indexing of the icon; I did not re-align the indexing for the Help icon after I had clicked on the Puase icon.
-    * [Image](assets/images/bugs-and-fixes/help-icon-index-solved.jpg)
-    * 
+
+### Validation
+* I used the [W3C Validator](https://validator.w3.org/#validate_by_upload) website to check for any errors in my [index.html](index.html) file. Below are the results:
+    * Attempt 1: [Image 1](assets/images/validation/index-html-validation-attempt-1-p1.jpg), [Image 2](assets/images/validation/index-html-validation-attempt-1-p2.jpg), [Image 3](assets/images/validation/index-html-validation-attempt-1-p3.jpg), [Image 4](assets/images/validation/index-html-validation-attempt-1-p4.jpg)
+    * Attempt 2: [Image 1](assets/images/validation/index-html-validation-attempt-2-p1.jpg)
+* I used the [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) website to check for any errors in my [style.css](assets/css/style.css) file. Below are the results:
+    * Attempt 1: [Image 1](assets/images/validation/stye-css-jigsaw-validation-attempt-1-p1.jpg)
+    * Attempt 2: [Image 1](assets/images/validation/stye-css-jigsaw-validation-attempt-2-p1.jpg)
 
 ## DEPLOYMENT
 ### Github pages
