@@ -27,7 +27,6 @@
 }
 
 .nbs-screenOverlay {
-    /* display: none; */
     position: fixed;
     z-index: 1;
     top: 0;
@@ -68,7 +67,6 @@ body {
 /* *********** SECTION 1.1 - THE GAME MENU *********** */
 .nbs-menuArea {
     height: 10vh;
-    /* background-color: hotpink; */
 }
 
 .nbs-menuArea .row {
@@ -85,7 +83,6 @@ body {
     overflow: hidden;
     transform: scale(1);
     font-size: 0.9rem;
-    /* margin: 0; */
     padding: 0;
 }
 
@@ -117,10 +114,6 @@ body {
 }
 
 @media (min-width: 576px) {
-    .nbs-gameInfoArea {
-        /* background-color: #A64AC9; */
-    }
-
     .nbs-gameInfoAreaFont {
         font-size: 4rem;
     }
@@ -130,7 +123,6 @@ body {
 /* *********** SECTION 1.3 - GAME OPTIONS *********** */
 .nbs-gameOptionsArea {
     height: 8vh;
-    /* background-color: darkolivegreen; */
 }
 
 .nbs-gameOptionsIconAll i {
@@ -148,7 +140,6 @@ body {
 
 
 /* GO HOME MODAL */
-
 .nbs-modal-popUp {
     width: 70%;
     height: 40%;
@@ -159,7 +150,6 @@ body {
 
 .nbs-modal-popUp h2 {
     font-size: 2rem;
-    /* font-size: 1.75rem; */
     padding: 0;
 }
 
@@ -204,9 +194,7 @@ body {
 /* *********** SECTION 2.2 - HOW TO PLAY SCREEN *********** */
 .nbs-card {
     overflow-y: auto;
-    background-color: #F5E6CC;
     background-color: #FFB48F;
-    /* height: fit-content; */
     height: 80%;
     position: relative;
     border: 0.25rem solid black;
@@ -217,7 +205,6 @@ body {
     .nbs-card {
         border: 0.5rem solid black;
         border-radius: 2rem;
-        /* background-color: #FCCD04; */
     }
 
     .nbs-card p {
@@ -227,20 +214,12 @@ body {
 }
 
 @media (min-width: 992px) {
-    .nbs-card {
-        /* background-color: #A64AC9; */
-    }
-
     .nbs-card p {
         font-size: 1.8rem;
     }
 }
 
 @media (min-width: 1200px) {
-    .nbs-card {
-        /* background-color: #FFB48F; */
-    }
-
     .nbs-card p {
         font-size: 2rem;
     }
@@ -254,7 +233,6 @@ body {
 
 .nbs-difficultyButton {
     background-color: #FFB48F;
-    border: none;
     border: 0.3rem solid black;
     width: 100%;
     border-radius: 2rem;
@@ -290,18 +268,14 @@ body {
 /* HEAD CARDS */
 .nbs-headCardsArea {
     height: 20vh;
-    /* background-color: #A64AC9; */
 }
 
 .nbs-headCard {
     background-color: #FCCD04;
     font-size: 3.5rem;
-    /* height: 90%; */
     height: 18vh;
-    /* width: 30%; */
     width: 18vh;
     border: 0.35rem solid black;
-    border-radius: 2%;
     border-radius: 15%;
 }
 
@@ -315,7 +289,6 @@ body {
 /* FIELD CARDS */
 .nbs-fieldCardsArea {
     min-height: 50vh;
-    /* background-color: lemonchiffon; */
 }
 
 .nbs-fieldCard {
@@ -351,7 +324,6 @@ body {
 
 @media (min-width: 576px) {
     .nbs-fieldCard {
-        /* background-color: #fff; */
         border: 0.5rem solid black;
         border-radius: 15%;
     }
@@ -368,18 +340,20 @@ body {
 }
 
 #gameOverFinalScore {
-    /* Copied from bootsrap.css (.display-4) */
+    /* C/I code 3.1 (.display-4) beg. */
     font-size: calc(1.475rem + 2.7vw);
     font-weight: 300; 
     line-height: 1.2;
+    /* C/I code 3.1 (.display-4) (.display-4) end */
 }
 
 @media (min-width: 576px) {
     #gameOverFinalScore {
-        /* Copied from bootsrap.css (.display-3) */
+        /* C/I code 3.2 (.display-3) beg. */
         font-size: calc(1.525rem + 3.3vw);
         font-weight: 300;
         line-height: 1.2;
+        /* C/I code 3.2 (.display-3) beg. */
     }
 
     #sectionGameOver h6 {
@@ -397,14 +371,11 @@ body {
 .nbs-footerArea {
     height: 8vh;
     background-color: gray;
-    /* background-color: #A64AC9; */
     background-color: #F5E6CC;
-    /* background-color: #FFB48F; */
 }
 
 .nbs-socialm-icon-dec {
     color: #F5E6CC;
     color: #FFB48F;
     color: #A64AC9;
-    /* font-size: 1.5rem; */
 }

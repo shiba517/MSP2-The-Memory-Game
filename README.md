@@ -339,6 +339,7 @@ You may want to have access via a copy of the repository on your own device. The
 Below are a list of codes that I have either directly copied or used as a template/inspiration. To find them, click on the 'file to be found in' link near the end of the bullet point and then search (Ctrl + f) for 'C/I code ' followed by the numbers given just before the link you just clicked on (example, C/I code 4.8).
 * When field cards are clicked, they have a slight animation in the form of changing its size. I found and copied the code from this YouTube video created by freeCodeCamp.org - [link](https://youtu.be/ZniVgo8U7ek?t=693) - 1.1 & 1.2 [file to be found in](assets/css/style.css)
 * I used a youTube video created by The Net Ninja to help me create a modal; It appears when the home icon is clicked - [link](https://www.youtube.com/watch?v=jp_p6wCkc9I&t=317s) - 2.1 [file to be found in](assets/script/script.js)
+* Due to loss of specifity ordering, I had to copy a few codes from bootstrap library to be included into my style.css - 3.1, 3.2 [link](assets/css/style.css)
 
 ### Content
 * Inpsiration for the fictional story of the aim of the making of the website, written in the Overview section, was inspired by an article found on sciencedaily.com - [link](https://www.sciencedaily.com/releases/2004/07/040722085301.htm)

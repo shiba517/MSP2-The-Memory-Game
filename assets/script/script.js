@@ -378,12 +378,9 @@ $(document).ready(function() {
         }
 
         let plusThese = (gamePointsInfo.completeMatch * inGameDifficulty.posPoints) + (gamePointsInfo.bonus * inGameDifficulty.bonusPoints)
-        console.log(plusThese)
         let minusThese = (gamePointsInfo.nonMatch * inGameDifficulty.negPoints) + (gamePointsInfo.help * inGameDifficulty.helpPoints)
-        console.log(minusThese)
         let totalToBe = plusThese - minusThese
         gamePointsInfo.totalPoints = totalToBe
-        console.log(totalToBe)
 
         thePoints.text(totalToBe)
     }
@@ -391,13 +388,10 @@ $(document).ready(function() {
     // CALCULATES THE LENGTH OF TIME THE ICONS WILL BE ON DISPLAY
     function updatePreviewTime() {
         if (gamePointsInfo.correctClicks !== 0) {
-            console.log('Does not equal to 0')
             if (gamePointsInfo.correctClicks % inGameDifficulty.toNextLevel == 0) {
                 gameTimeInfo.previewTime -= (gameTimeInfo.previewTime * inGameDifficulty.challengeSpeed)
             }
         }
-
-        console.log(gameTimeInfo.previewTime * 1000)
 
         return gameTimeInfo.previewTime * 1000
     }
@@ -472,7 +466,6 @@ $(document).ready(function() {
 
     // CALCULATES THE FINAL POINTS FOR USE IN checkGameOver()
     function finalPoints() {
-        console.log(gamePointsInfo)
         return gamePointsInfo.totalPoints
     }
 
@@ -480,7 +473,6 @@ $(document).ready(function() {
     function checkGameOver() {
         if (inGameInfo.lives <= 0) {
             showFinalScore = finalPoints()
-            console.log(showFinalScore)
 
             playGameOverSound()
 
@@ -529,6 +521,7 @@ $(document).ready(function() {
         }
     })
 
+    // THE DISPLAYING OF THE MODAL
     function goHomeModalOnDisplay() {
         inGameInfo.pause = true
 
@@ -538,9 +531,8 @@ $(document).ready(function() {
         goHomeModalArea.removeClass(cssDisplayNone)
     }
 
+    // THE ACTIONS OF THE YES AND NO BUTTONS ON THE MODAL WHICH SHOWS UP WHEN THE HOME ICON HAS BEEN CLICKED
     goHomeModalButtons.click(function() {
-        console.log('This is working')
-
         if ($(this).text() == 'yes') {
             goHomeModalArea.addClass(cssDisplayNone)
             removeAllGameOptionIconZindex()
@@ -553,10 +545,10 @@ $(document).ready(function() {
 
             goHomeModalArea.addClass(cssDisplayNone)
             removeAllGameOptionIconZindex()
-            console.log('I want to keep on playing')
         }
     })
 
+    // RESETS Z INDEX FOR GAME OPTION ICONS BACK TO ORIGINAL STATE
     function removeAllGameOptionIconZindex() {
         iconGoHome.removeClass(zIndexMinus1)
         iconPause.removeClass(zIndexMinus1)
@@ -568,10 +560,9 @@ $(document).ready(function() {
         iconMusic.removeClass(zIndexPlus2)
     }
 
+    // ALTERS THE Z INDEX FOR GAME OPTION ICONS BASED ON WHICH GAME OPTION ICON HAS BEEN CLICKED ON
     function iconOptionsClickable(iconName) {
-        console.log('This is happening')
         if (iconName == iconGoHome.attr('data-name')) {
-            console.log('I clicked GO HOME')
             removeAllGameOptionIconZindex()
             iconPause.addClass(zIndexMinus1)
             iconHelp.addClass(zIndexMinus1)
@@ -586,6 +577,7 @@ $(document).ready(function() {
         }
     }
 
+    // TAKES USER BACK TO THE HOME SCREEN (SECTION 1.1)
     function goToHomeScreen() {
         inGameInfo.inPlay = false
         resetAllGameInfo()
@@ -607,7 +599,6 @@ $(document).ready(function() {
         if (inGameInfo.pause == false && inGameInfo.inPreview == false) {
             iconOptionsClickable(iconPause.attr('data-name'))
 
-            console.log(inGameInfo.pause)
             inGameInfo.pause = true
             inGameInfo.clickable = false
 
@@ -621,7 +612,6 @@ $(document).ready(function() {
             screenOverlay.removeClass(cssDisplayNone)
         }
         else if (inGameInfo.pause == true) {
-            console.log(inGameInfo.pause)
             iconHelp.addClass(zIndexPlus2)
             inGameInfo.pause = false
             inGameInfo.clickable = true
@@ -649,9 +639,5 @@ $(document).ready(function() {
         iconHelp.removeClass(zIndexMinus1)
 
         comparisonPosition = 0
-
-        console.log(inGameInfo)
-        console.log(gameTimeInfo)
-        console.log(gamePointsInfo)
     }
 })
