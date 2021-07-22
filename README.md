@@ -322,35 +322,35 @@ A fun sounding music occurs and turns off when the music icon is clicked in a to
 ## DEPLOYMENT
 ### Github pages
 The website was deployed onto GitHub via the following steps: 
-1. Logging into my GitHub account and creating a new repository 
-2. Under the subheading ‘Repository template’, I chose the template given to me by Code Institute from the drop-down menu 
-3. I named my repository under the subheading ‘Repository name’ and then clicked on the green button named ‘Create repository’. 
-4. Once the repository was created, I was lead to my repository page. From here, I clicked on the ‘Settings’ button near the top of the page 
-5. Scroll down to the ‘GitHub Pages’ section and click on the text, ‘Check it out here!’, which will be in blue 
-6. Under the subheading ‘Source’, click on its only drop-down menu and select ‘Master’ and then click on the button ‘Save’ 
-7. The repository webpage will now have been created and the link will now be shown to you for your use 
+1. Logging into my GitHub account and creating a new repository
+2. Under the subheading ‘Repository template’, I chose the template given to me by Code Institute from the drop-down menu - [example](assets/images/deployment/deployment-github-pages-point-2.jpg)
+3. I named my repository under the subheading ‘Repository name’ and then clicked on the green button named ‘Create repository’. - [example](assets/images/deployment/deployment-github-pages-point-3.jpg)
+4. Once the repository was created, I was lead to my repository page. From here, I clicked on the ‘Settings’ button near the top of the page - [example](assets/images/deployment/deployment-github-pages-point-4.jpg)
+5. Scroll down to the ‘GitHub Pages’ section and click on the text, ‘Check it out here!’, which will be in blue - [example](assets/images/deployment/deployment-github-pages-point-5.jpg)
+6. Under the subheading ‘Source’, click on its only drop-down menu and select ‘Master’ and then click on the button ‘Save’ - [example](assets/images/deployment/deployment-github-pages-point-6.jpg)
+7. The repository webpage will now have been created and the link will now be shown to you for your use - [example](assets/images/deployment/deployment-github-pages-point-7.jpg)
 
 ### Making A Local Clone
 You may want to have access via a copy of the repository on your own device. There are three ways to do this: 
 * Method 1
 1. Login to your GitHub account and open up the repository you would like to copy 
-2. Click on the button with a drop-down menu named ‘Code’ which will be placed next to the green ‘Gitpod’ button 
-3. You will then have the option to download it on to your system via the ‘Download ZIP’ option 
+2. Click on the button with a drop-down menu named ‘Code’ which will be placed next to the green ‘Gitpod’ button - [example](assets/images/deployment/deployment-making-a-local-clone-method-1-point-2.jpg)
+3. You will then have the option to download it on to your system via the ‘Download ZIP’ option - [example](assets/images/deployment/deployment-making-a-local-clone-method-1-point-3.jpg)
 
 * Method 2 
-1. Open up your preferred IDE and open up the folder where you would the repository to be copied/cloned 
-2. In the terminal, type in ‘git clone’ ; do not press enter or anything else 
-3. Now login to your GitHub account and open up the repository you would like to copy 
-4. Click on the ‘Code’ button again and copy the text given under the subheading ‘HTTPS’. A button next to this text gives you an easier way of copying the text 
-5. Back to your IDE terminal, after the ‘git clone’, press the spacebar button and paste in the link you copied from the repository. Your entry in the terminal should look something like this: ‘gti clone https://github.com/shiba517/MSP2-The-Memory-Game.git’. Then press enter 
-6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination 
+1. Open up your preferred IDE and open up the folder where you would the repository to be copied/cloned - [example](assets/images/deployment/deployment-making-a-local-clone-method-2-point-1.jpg)
+2. In the terminal, type in ‘git clone’ ; do not press enter or anything else - [example](assets/images/deployment/deployment-making-a-local-clone-method-2-point-2.jpg)
+3. Now login to your GitHub account and open up the repository you would like to copy
+4. Click on the ‘Code’ button again and copy the text given under the subheading ‘HTTPS’. A button next to this text gives you an easier way of copying the text - [example](assets/images/deployment/deployment-making-a-local-clone-method-2-point-4.jpg)
+5. Back to your IDE terminal, after the ‘git clone’, press the spacebar button and paste in the link you copied from the repository. Your entry in the terminal should look something like this: ‘gti clone https://github.com/shiba517/MSP2-The-Memory-Game.git’. Then press enter - [example](assets/images/deployment/deployment-making-a-local-clone-method-2-point-5.jpg)
+6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination - [example](assets/images/deployment/deployment-making-a-local-clone-method-2-point-6.jpg)
 
 ## CREDITS
 ### Codes
 Below are a list of codes that I have either directly copied or used as a template/inspiration. To find them, click on the 'file to be found in' link near the end of the bullet point and then search (Ctrl + f) for 'C/I code ' followed by the numbers given just before the link you just clicked on (example, C/I code 4.8).
-* When field cards are clicked, they have a slight animation in the form of changing its size. I found and copied the code from this YouTube video created by freeCodeCamp.org - [link](https://youtu.be/ZniVgo8U7ek?t=693) - 1.1 & 1.2 [file to be found in](assets/css/style.css)
-* I used a youTube video created by The Net Ninja to help me create a modal; It appears when the home icon is clicked - [link](https://www.youtube.com/watch?v=jp_p6wCkc9I&t=317s) - 2.1 [file to be found in](assets/script/script.js)
-* Due to loss of specifity ordering, I had to copy a few codes from bootstrap library to be included into my style.css - 3.1, 3.2 [link](assets/css/style.css)
+* When field cards are clicked, they have a slight animation in the form of changing its size. I found and copied the code from this YouTube video created by **freeCodeCamp.org** - [link](https://youtu.be/ZniVgo8U7ek?t=693) - 1.1 & 1.2 [file to be found in](assets/css/style.css)
+* I used a youTube video created by **TheNetNinja** to help me create a modal; It appears when the home icon is clicked - [link](https://www.youtube.com/watch?v=jp_p6wCkc9I&t=317s) - 2.1 [file to be found in](assets/script/script.js)
+* Due to loss of specifity ordering, I had to copy a few codes from bootstrap library to be included into my style.css - 3.1, 3.2 [file to be found in](assets/css/style.css)
 
 ### Content
 * Inpsiration for the fictional story of the aim of the making of the website, written in the Overview section, was inspired by an article found on sciencedaily.com - [link](https://www.sciencedaily.com/releases/2004/07/040722085301.htm)
