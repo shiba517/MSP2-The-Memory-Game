@@ -6,16 +6,22 @@
 
 ## CONTENT
 - [Overview](#overview)
-- [User Experience](#user-experience-(ux))
+- [User Experience](#user-experience)
     * [Project goals](#project-goals)
     * [User Stories](#user-stories)
+- [The 5 Planes](#the-5-planes)
+    * [Strategy](#strategy)
+    * [Scope](#scope)
+    * [Structure](#structure)
+    * [Skeleton](#skeleton)
+    * [surface](#surface)
 
 ## **OVERVIEW**
 A study in 2004 by Vladimir Sloutsky found children performed better than adults at a surprise recognition test that was based on the idea that children are more likely to use an induction like thinking when analysing pictures whilst adults are more likely to use a category like thinking. Another recognition experiment was done on another group of children and adults but the test was not a surprise. The results were that adults performed much better than the children.
 
 The mayor of London did not like how much better the adults performed in the latter test. He has hired me to create a game where children's memory skills will be tested, exercised and improved so that the next time this experiment is performed, his local children will close or even beat the performance gap.
 
-## **USER EXPERIENCE (UX)**
+## **USER EXPERIENCE**
 ### **Project Goals**
 Player goals
 * As a player, I want to be challenged on my memory Parental goals
@@ -52,8 +58,8 @@ Developer and business person
 * Frequent visitor goals:
     * I want parents to encourage their children to play again as the children memory is clearly getting better
 
-## THE 5 PLANES
-### Strategy
+## **THE 5 PLANES**
+### **Strategy**
 Purpose of the website?
 * The purpose of the website is to challenge young children's memory skills, and to exercise it to become better via a fun game.
 
@@ -74,7 +80,7 @@ What we shouldn’t do
 The colours to be too dull or adult oriented. It should be remembered that parents are the secondary user, not the main user
 Add too many options/features as this may confuse or/and put off the child from wanting to play
 
-### Scope
+### **Scope**
 Intended Features
 * Difficulty level for all intelligence level
 * Be able to save the high score for repeat visits
@@ -92,7 +98,7 @@ Future alterations/additions
 Note
 * 'Existing Features' in 'FEATURES' will have details of the final features to be included
 
-### Structure
+### **Structure**
 Interactive design
 * Colour theme and visuals (i.e., design and positioning of buttons) must be consistent throughout
 * Should be obvious when a something has been clicked especially during the game
@@ -101,7 +107,7 @@ Information Architecture
 * Linnear narrative because he target audience are children therefore navigation must be simple without unnecessary ‘branches’
 Nested List becasue it provides straight forward links to chosen destinations. Should also get to the final game within three clicks
 
-### Skeleton
+### **Skeleton**
 Mobile Version
 * Black and white
     * Landing/Home screen - [image](assets/readme-files/images/wireframes/wf-mobile-bw-homePage.png)
@@ -135,7 +141,7 @@ Laptop/PC Version
     * The game screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-theGame.png)
     * Game over screen - [image](assets/readme-files/images/wireframes/wf-laptopPC-clr-gameOver.png)
 
-### Surface
+### **Surface**
 Colour Theme
 * A shade of light blue - #17E9E0/rgb(23,233,224) - [example](assets/images/surface-colour-theme/colour-example-17E9E0.jpg)
 * A shade of yellow - #FCCD04/rgb(252,205,4) - [example](assets/images/surface-colour-theme/colour-example-FCCD04.jpg)
