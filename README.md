@@ -15,14 +15,14 @@ A study in 2004 by Vladimir Sloutsky found children performed better than adults
 
 The mayor of London did not like how much better the adults performed in the latter test. He has hired me to create a game where children's memory skills will be tested, exercised and improved so that the next time this experiment is performed, his local children will close or even beat the performance gap.
 
-## USER EXPERIENCE (UX)
-### Project Goals
+## **USER EXPERIENCE (UX)**
+### **Project Goals**
 Player goals
 * As a player, I want to be challenged on my memory Parental goals
 * As a parent, I want the game to improve on my children memory muscles Developer and business goals
 * As a developer and business person, I want children to want to play the game as often as they could with also encouragement from their parents.
 
-### User Stories
+### **User Stories**
 Player/child
 * First time visitor goals:
     * I want to be excited about the game via its visual
