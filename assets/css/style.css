@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* 
+*********** NOTES ***********
+    * Because I used mainly/a lot of bootstrap, I included '.nbs-' in the beginning title of all class tags written by me to make reffering and building easy
+    * To avoid specefity issues, I had to copy a few codes from the bootstrap library. I included '.bsc-' followed by the class tag name you will find in the bootstrap library files. All copied class tags are noted on this file where it was used; It'll be coded too for ease of find with the aid of the README.md file in the sub section 'Codes'
+*********** NOTES ***********
+*/
+
 
 /* *********** UNIVERSAL *********** */
 * {
@@ -34,7 +41,14 @@
     height: 100vh;
     width: 100vw;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 576px) {
+    .nbs-section2Area {
+        min-height: 62vh;
+        height: fit-content;
+    }
 }
 
 
@@ -50,17 +64,21 @@ body {
 }
 
 @media (min-width: 576px) {
+    /* C/I code 3.3.1 (.display-1) beg. */
     .bsc-display-1 {
         font-size: calc(1.625rem + 4.5vw);
         font-weight: 300;
         line-height: 1.2;
     }
+    /* C/I code 3.3.1 (.display-1) end */
 }
 
 @media (min-width: 1200px) {
+    /* C/I code 3.3.2 (.display-1) beg. */
     .bsc-display-1 {
       font-size: 5rem;
     }
+    /* C/I code 3.3.2 (.display-1) end */
 }
 
 
@@ -139,7 +157,7 @@ body {
 }
 
 
-/* GO HOME MODAL */
+/* *********** GO HOME MODAL *********** */
 .nbs-modal-popUp {
     width: 70%;
     height: 40%;
@@ -166,7 +184,7 @@ body {
 
 @media (min-width: 576px) {
     .nbs-modal-popUp {
-        width: 40%;
+        width: 50%;
         height: 40%;
         border: 0.5rem solid black;
     }
@@ -203,6 +221,7 @@ body {
 
 @media (min-width: 576px) {
     .nbs-card {
+        min-height: fit-content;
         border: 0.5rem solid black;
         border-radius: 2rem;
     }
@@ -250,11 +269,13 @@ body {
         border-radius: 4rem;
     }
 
+    /* C/I code 3.4 (.display-5) beg. */
     .bsc-display-5 {
         font-size: calc(1.425rem + 2.1vw);
         font-weight: 300;
         line-height: 1.2;
     }
+    /* C/I code 3.4 (.display-5) end */
 }
 
 @media (min-width: 1200px) {
@@ -263,6 +284,14 @@ body {
     }
 }
 
+
+/* *********** SECTION 2.4 - ABOUT US *********** */
+
+@media (min-width: 576px) {
+    #sectionAboutUs .nbs-section2Area {
+        padding-bottom: 3rem;
+    }
+}
 
 /* *********** SECTION 2.5 - THE GAME *********** */
 /* HEAD CARDS */
@@ -336,7 +365,8 @@ body {
 
 /* *********** SECTION 2.6 - GAME OVER *********** */
 #sectionGameOver .nbs-card {
-    overflow-y: hidden;
+    overflow-y: auto;
+    height: fit-content;
 }
 
 #gameOverFinalScore {
@@ -344,7 +374,7 @@ body {
     font-size: calc(1.475rem + 2.7vw);
     font-weight: 300; 
     line-height: 1.2;
-    /* C/I code 3.1 (.display-4) (.display-4) end */
+    /* C/I code 3.1 (.display-4) end */
 }
 
 @media (min-width: 576px) {
@@ -353,7 +383,7 @@ body {
         font-size: calc(1.525rem + 3.3vw);
         font-weight: 300;
         line-height: 1.2;
-        /* C/I code 3.2 (.display-3) beg. */
+        /* C/I code 3.2 (.display-3) end */
     }
 
     #sectionGameOver h6 {
