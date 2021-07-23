@@ -195,14 +195,12 @@ Player/child
         * High numbered points system (100 points or 2000 points) is more exciting than low numbered points system (1point or 10 points) - [example](assets/images/ux-testing/high-points-system.jpg)
     * I want to easily find out/be explained of the rules and how to play the game
         * A button leading to the description/explanation of the game can be found on the first screen - [example](assets/images/ux-testing/how-to-play-description.jpg)
-
-Returning visitor goals:
+* Returning visitor goals:
     * I want to easily start the game without too many clicks
         * No more than two clicks are needed to get the game started - [example](assets/images/ux-testing/no-more-than-two-clicks-for-start.gif)
     * I want to easily find the rules in case it’s been a while and I need a recap of the rules and how to play
         * A button leading to the description/explanation of the game can be found on the first screen 
-
-Frequent visitor goals:
+* Frequent visitor goals:
     * I want to know of my previous progress in the game
         * This is not available yet due to limited skills but has been included in the features section of this document for future consideration under the subheading ‘Future features’ 
 
@@ -215,10 +213,10 @@ Parents
         * High numbered points system (100 points or 2000 points) is more exciting than low numbered points system (1point or 10 points) 
     * I want to easily find out/be explained of the rules and how to play the game
         * A button leading to the description/explanation of the game can be found on the first screen 
-Returning visitor goals:
+* Returning visitor goals:
     * I want my child to want to play the game as it has a good balance of challenge and fun 
         * The speed of the game increases which adds another dynamic to the level of challenge the game has. Also, there is a help option available to help create the balance of challenging and too challenging - [example](assets/images/ux-testing/game-does-get-faster-for-challenge.jpg)
-Frequent visitor goals:
+* Frequent visitor goals:
     * I want my child to not eventually get bored of the game 
         * The user will be asked to choose how difficult they would like the game to be before the game starts. This will help prevent the child from getting bored of the game if the game becomes too easy - [example](assets/images/ux-testing/choice-of-difficulty.jpg)
 
@@ -226,10 +224,10 @@ Developer and business person
 * First time visitor goals:
     * I want the user to feel excited and playful 
         * Bright and complimentary colours, fun/cute icons and objects, high scoring system and sound make up an exciting first experience   
-Returning visitor goals:
+* Returning visitor goals:
     * I want the users to play again in as quickly as possible without too many boring clicks 
         * The use will be able to start within two necessary clicks  
-Frequent visitor goals:
+* Frequent visitor goals:
     * I want parents to encourage their children to play again as the children memory is clearly getting better 
         * Choice of difficulty level can be used to see how much better the childs memory is getting better 
         * Countdown and the length of time the icons are shown adds to the dynamics of the challenge 
