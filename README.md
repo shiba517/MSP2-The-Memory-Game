@@ -14,7 +14,22 @@
     * [Scope](#scope)
     * [Structure](#structure)
     * [Skeleton](#skeleton)
-    * [surface](#surface)
+    * [Surface](#surface)
+- [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+    * [User Experience Testing](#user-experience-testing)
+    * [Cross Platform Testing](#cross-platform-testing)
+    * [Bugs and Fixes](#bugs-and-fixes)
+    * [Validation](#validation)
+- [Deployment](#deployment)
+- [Credits](#credits)
+    * [Codes](#codes)
+    * [Content](#content)
+    * [Media](#media)
+
 
 ## **OVERVIEW**
 A study in 2004 by Vladimir Sloutsky found children performed better than adults at a surprise recognition test that was based on the idea that children are more likely to use an induction like thinking when analysing pictures whilst adults are more likely to use a category like thinking. Another recognition experiment was done on another group of children and adults but the test was not a surprise. The results were that adults performed much better than the children.
@@ -96,7 +111,7 @@ Future alterations/additions
 * The ability to change visuals to narrow down target audiences. For example, the options to change visuals that will engage with girls more than boys and visa versa.
 
 Note
-* 'Existing Features' in 'FEATURES' will have details of the final features to be included
+* ['Existing Features' in 'FEATURES'](#existing-features) will have details of the final features to be included
 
 ### **Structure**
 Interactive design
@@ -154,8 +169,8 @@ Typography
 * Regular text - [link](https://fonts.google.com/specimen/Montserrat?query=mont)
 
 
-## FEATURES
-### Existing Features
+## **FEATURES**
+### **Existing Features**
 * Header section – Contains the title of the game. Will be on display on every screen 
 * Home screen – contains the game menu and the website logo 
 * Game menu – Has three buttons (How to play, Start, and About us) which links to different screens 
@@ -178,12 +193,12 @@ Typography
 * Game over – informs the user the game has ended and will contain information regarding the final points.  
 * Footer – contains icons linking to websites social media pages.  
 
-### Future Features
+### **Future Features**
 * A logo of higher pixel qulity. Due to funds being low, it was not financially feasible to have downloaded a higher pixel quality version of the logo
 * Ability to change how high or low the background music. At the moment, it is either off or on
 * Some animation of the icons such as flash, or animals bouncing off the screen 
 
-## TECHNOLOGIES USED
+## **TECHNOLOGIES USED**
 * HTML
 * CSS
 * Bootstrap - a mobile first library which was heavily used - [link](https://getbootstrap.com/)
@@ -199,8 +214,8 @@ Typography
 * W3C Markup Validator - used this website to detect any errors in my index.html - [link](https://validator.w3.org/#validate_by_upload)
 * W3C CSS Validator - used this website to detect any errors in my style.css - [link](https://jigsaw.w3.org/css-validator/)
 
-## TESTING
-### User Experience Testing
+## **TESTING**
+### **User Experience Testing**
 Player/child
 * First time visitor goals:
     * I want to be excited about the game via its visual
@@ -248,7 +263,7 @@ Developer and business person
         * Countdown and the length of time the icons are shown adds to the dynamics of the challenge 
         * Points system can help the parents and the child, ‘measure’ their skill/progress of the game and their memotry 
 
-### Cross Platform Testing 
+### **Cross Platform Testing**
 #### Basics playing of the game
 AIM | mobile | tablet | laptop/PC
 --- | --- | --- | ---
@@ -329,12 +344,12 @@ A negative sounding sound occurs when a field card does not match | yes | yes | 
 A doomed sounding sound occurs when the game is over | yes | yes | yes
 A fun sounding music occurs and turns off when the music icon is clicked in a toggle like manner | yes | yes | yes 
 
-### Bugs and Fixes
+### **Bugs and Fixes**
 Bugs | Fixes
 --- | ---
 Text sizing looking very akward on an Ipad - [example](assets/images/bugs-and-fixes/modal-text-akward-on-ipad.jpg) | Was resolved my extending the width of the modal via .nbs-modal-popup - [example](assets/images/bugs-and-fixes/modal-text-akward-on-ipad-resolved.jpg)
 
-### Validation
+### **Validation**
 * I used the [W3C Validator](https://validator.w3.org/#validate_by_upload) website to check for any errors in my [index.html](index.html) file. Below are the results:
     * Attempt 1: [Image 1](assets/images/validation/index-html-validation-attempt-1-p1.jpg), [Image 2](assets/images/validation/index-html-validation-attempt-1-p2.jpg), [Image 3](assets/images/validation/index-html-validation-attempt-1-p3.jpg), [Image 4](assets/images/validation/index-html-validation-attempt-1-p4.jpg)
     * Attempt 2: [Image 1](assets/images/validation/index-html-validation-attempt-2-p1.jpg)
@@ -342,7 +357,7 @@ Text sizing looking very akward on an Ipad - [example](assets/images/bugs-and-fi
     * Attempt 1: [Image 1](assets/images/validation/stye-css-jigsaw-validation-attempt-1-p1.jpg)
     * Attempt 2: [Image 1](assets/images/validation/stye-css-jigsaw-validation-attempt-2-p1.jpg)
 
-## DEPLOYMENT
+## **DEPLOYMENT**
 ### Github pages
 The website was deployed onto GitHub via the following steps: 
 1. Logging into my GitHub account and creating a new repository
@@ -368,8 +383,8 @@ You may want to have access via a copy of the repository on your own device. The
 5. Back to your IDE terminal, after the ‘git clone’, press the spacebar button and paste in the link you copied from the repository. Your entry in the terminal should look something like this: ‘gti clone https://github.com/shiba517/MSP2-The-Memory-Game.git’. Then press enter - [example](assets/images/deployment/deployment-making-a-local-clone-method-2-point-5.jpg)
 6. Your terminal will let you know the repository has been cloned and saved to your preferred destination and will be evident when viewing files and folders from your preferred destination - [example](assets/images/deployment/deployment-making-a-local-clone-method-2-point-6.jpg)
 
-## CREDITS
-### Codes
+## **CREDITS**
+### **Codes**
 Below are a list of codes that I have either directly copied or used as a template/inspiration. To find them, click on the 'file to be found in' link near the end of the bullet point and then search (Ctrl + f) for 'C/I code ' followed by the numbers given just before the link you just clicked on (example, C/I code 4.8).
 * When field cards are clicked, they have a slight animation in the form of changing its size. I found and copied the code from this YouTube video created by **freeCodeCamp.org** - [link](https://youtu.be/ZniVgo8U7ek?t=693) - 1.1 & 1.2 [file to be found in](assets/css/style.css)
 * I used a youTube video created by **TheNetNinja** to help me create a modal; It appears when the home icon is clicked - [link](https://www.youtube.com/watch?v=jp_p6wCkc9I&t=317s) - 2.1 [file to be found in](assets/script/script.js)
@@ -379,11 +394,11 @@ Below are a list of codes that I have either directly copied or used as a templa
     * 3.3.1 and 3.3.2 - .display-1
     * 3.4 - .display-5 
 
-### Content
+### **Content**
 * Inpsiration for the fictional story of the aim of the making of the website, written in the Overview section, was inspired by an article found on sciencedaily.com - [link](https://www.sciencedaily.com/releases/2004/07/040722085301.htm)
 * All written content on the website was created by me
 
-### Media
+### **Media**
 * Colour scheme (#26) by **Five Hundred** - https://visme.co/blog/website-color-schemes/
 * Typography for headings by **Johan Aukerlund** - https://fonts.google.com/specimen/Comfortaa?query=comfort 
 * Typography for non-headings by **Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral and Jacques Le Bailly** - https://fonts.google.com/specimen/Montserrat?query=mont 
