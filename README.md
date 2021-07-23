@@ -4,7 +4,13 @@
 ![Mock-up of website shown across deifferent platforms](assets/readme-files/images/mock-up.jpg)
 [View live website](https://shiba517.github.io/MSP2-The-Memory-Game/)
 
-## OVERVIEW
+## CONTENT
+- [Overview](#overview)
+- [User Experience](#user-experience-(ux))
+    * [Project goals](#project-goals)
+    * [User Stories](#user-stories)
+
+## **OVERVIEW**
 A study in 2004 by Vladimir Sloutsky found children performed better than adults at a surprise recognition test that was based on the idea that children are more likely to use an induction like thinking when analysing pictures whilst adults are more likely to use a category like thinking. Another recognition experiment was done on another group of children and adults but the test was not a surprise. The results were that adults performed much better than the children.
 
 The mayor of London did not like how much better the adults performed in the latter test. He has hired me to create a game where children's memory skills will be tested, exercised and improved so that the next time this experiment is performed, his local children will close or even beat the performance gap.
@@ -69,7 +75,7 @@ The colours to be too dull or adult oriented. It should be remembered that paren
 Add too many options/features as this may confuse or/and put off the child from wanting to play
 
 ### Scope
-Feature
+Intended Features
 * Difficulty level for all intelligence level
 * Be able to save the high score for repeat visits
 * Explanation of the rules/how to play
@@ -82,6 +88,9 @@ Content
 
 Future alterations/additions
 * The ability to change visuals to narrow down target audiences. For example, the options to change visuals that will engage with girls more than boys and visa versa.
+
+Note
+* 'Existing Features' in 'FEATURES' will have details of the final features to be included
 
 ### Structure
 Interactive design
