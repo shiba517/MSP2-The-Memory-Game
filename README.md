@@ -22,11 +22,11 @@ Player/child
     * I want to be excited about the game via its visual
     * I want to easily find out/be explained of the rules and how to play the game
 
-Returning visitor goals:
+* Returning visitor goals:
     * I want to easily start the game without too many clicks
     * I want to easily find the rules in case it’s been a while and I need a recap of the rules and how to play
 
-Frequent visitor goals:
+* Frequent visitor goals:
     * I want to know of my previous progress in the game
 
 Parents
@@ -36,7 +36,7 @@ Parents
 
 * Returning visitor goals:
     * I want my child to want to play the game as it has a good balance of challenge and fun
-    
+
 * Frequent visitor goals:
     * I want my child to not eventually get bored of the game
 
