@@ -195,11 +195,13 @@ Player/child
         * High numbered points system (100 points or 2000 points) is more exciting than low numbered points system (1point or 10 points) - [example](assets/images/ux-testing/high-points-system.jpg)
     * I want to easily find out/be explained of the rules and how to play the game
         * A button leading to the description/explanation of the game can be found on the first screen - [example](assets/images/ux-testing/how-to-play-description.jpg)
+
 Returning visitor goals:
     * I want to easily start the game without too many clicks
         * No more than two clicks are needed to get the game started - [example](assets/images/ux-testing/no-more-than-two-clicks-for-start.gif)
     * I want to easily find the rules in case it’s been a while and I need a recap of the rules and how to play
         * A button leading to the description/explanation of the game can be found on the first screen 
+
 Frequent visitor goals:
     * I want to know of my previous progress in the game
         * This is not available yet due to limited skills but has been included in the features section of this document for future consideration under the subheading ‘Future features’ 
