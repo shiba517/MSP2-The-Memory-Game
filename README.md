@@ -235,15 +235,15 @@ Frequent visitor goals:
 #### Basics playing of the game
 AIM | mobile | tablet | laptop/PC
 --- | --- | --- | ---
-Does matching all the field card with the relevant head card eventually lead to all cards being reset? | yes | yes | yes
-Does not matching a field card with the relevant head card lead Lives decreasing as intended? | yes | yes | yes 
+Does matching all the field card with the relevant head card eventually lead to all cards being reset? | yes | yes | [yes](assets/images/cross-platform-testing/cards-resetting-when-all-cards-match.gif)
+Does not matching a field card with the relevant head card lead Lives decreasing as intended? | yes | yes | [yes](assets/images/cross-platform-testing/lives-decreasing-when-no-match.gif) 
 Points increase when all field cards matches | [yes](assets/images/cross-platform-testing/points-increase.gif) | yes | yes
 Points decrease when a field card does not match | yes | yes | [yes](assets/images/cross-platform-testing/points-decrease-when-no-match.gif)
-When timer reaches 0, does Lives decrease as intended? | yes | yes | yes
-When timer reaches 0, do all cards reset? | yes | yes | yes
-Is the game over once Lives reaches 0? | yes | yes | yes
-Does the length of the Preview time decrease as the game goes on as intended? | yes | yes | yes
-Are bonus points added to the total as intended?  | yes | yes | yes
+When timer reaches 0, does Lives decrease as intended? | yes | yes | [yes](assets/images/cross-platform-testing/lives-decreasing-when-timer-is-0.gif)
+When timer reaches 0, do all cards reset? | yes | yes | [yes](assets/images/cross-platform-testing/cards-reseting-when-timer-is-0.gif)
+Is the game over once Lives reaches 0? | yes | yes | [yes](assets/images/cross-platform-testing/game-over-when-lives-is-0.gif)
+Does the length of the Preview time decrease as the game goes on as intended? | yes | yes | [yes](assets/images/cross-platform-testing/preview-time-updating.jpg)
+Are bonus points added to the total as intended?  | yes | yes | [yes](assets/images/cross-platform-testing/bonus-points-are-being-added.jpg)
 
 #### Basic navigation of screens/sections
 AIM | mobile | tablet | laptop/PC
