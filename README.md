@@ -348,6 +348,7 @@ A fun sounding music occurs and turns off when the music icon is clicked in a to
 Bugs | Fixes
 --- | ---
 Text sizing looking very akward on an Ipad - [example](assets/images/bugs-and-fixes/modal-text-akward-on-ipad.jpg) | Was resolved my extending the width of the modal via .nbs-modal-popup - [example](assets/images/bugs-and-fixes/modal-text-akward-on-ipad-resolved.jpg)
+Realised whilst playing the game, when the timer reached 0 and then the lives reaches 0, it resets both field and head cards before shortly going to the 'Game over' screen. | Was resolved my making sure the action of resetAllCards() will work with more dependancies. The dependancy I used was making sure this function only works if the if statement is true which is based on wether the lives is more than 0.
 
 ### **Validation**
 * I used the [W3C Validator](https://validator.w3.org/#validate_by_upload) website to check for any errors in my [index.html](index.html) file. Below are the results:

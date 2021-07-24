@@ -397,15 +397,17 @@ $(document).ready(function() {
 
     // RESETS ALL CARDS
     function resetAllCards() {
-        comparisonPosition = 0
+        if (inGameInfo.lives > 0) {
+            comparisonPosition = 0
 
-        fieldCard.each(function() {
-            $(this).removeClass(cssBgCorrect)
-            $(this).removeClass(cssBgIncorrect)
-        })
+            fieldCard.each(function() {
+                $(this).removeClass(cssBgCorrect)
+                $(this).removeClass(cssBgIncorrect)
+            })
 
-        setFieldCards()
-        setHeadCards()
+            setFieldCards()
+            setHeadCards()
+        }
     }
 
     // SETS BASE INFO OF THE GAME DEPENDING ON DIFFICULTY LEVEL CHOSEN VIA var inGameDifficulty
