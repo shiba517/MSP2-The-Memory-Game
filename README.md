@@ -171,27 +171,27 @@ Typography
 
 ## **FEATURES**
 ### **Existing Features**
-* Header section – Contains the title of the game. Will be on display on every screen 
-* Home screen – contains the game menu and the website logo 
+* Header section – Contains the title of the game. Will be on display on every screen - [image](assets/images/existing-features/heder-section.gif)
+* Home screen – contains the game menu and the website logo - [image](assets/images/existing-features/home-screen.jpg)
 * Game menu – Has three buttons (How to play, Start, and About us) which links to different screens 
-    * How to play – takes user to a screen where the rules of the game are explained 
-    * Start – takes user to a screen where the user will have the option to choose the difficulty level of the game 
-    * About us – takes user to a screen explaining about the company that had made the game 
+    * How to play – takes user to a screen where the rules of the game are explained - [image](assets/images/existing-features/how-to-play-description.jpg)
+    * Start – takes user to a screen where the user will have the option to choose the difficulty level of the game - [image](assets/images/existing-features/choose-difficulty.jpg)
+    * About us – takes user to a screen explaining about the company that had made the game - [image](assets/images/existing-features/about-us-screen.jpg)
 * Game options – Icons that are mostly available whilst playing the game 
-    * Home icon – leads user to the opening screen 
-    * Pause icon – lets user pause the game 
-    * Help icon – icons on the field cards will be on display for a short period of time 
+    * Home icon – gives option to leads user to the opening screen or continue the game - [image](assets/images/existing-features/home-icon-clicked.gif) 
+    * Pause icon – lets user pause the game - [image](assets/images/existing-features/pause-icon-clicked.gif)
+    * Help icon – icons on the field cards will be on display for a short period of time - [image](assets/images/existing-features/help-icon-clicked.gif)
     * Sound icon – lets user have background music or not. This is the only icon that is always available on every screen 
 * Game info – split into three parts; lives, time and points 
-    * Lives – will show how many lives user. Once it hits 0, the game will end 
-    * Timer – a countdown of each round. Will differ depending on which game mode is selected 
-    * Points – accumulation of points depending on users actions 
+    * Lives – will show how many lives user. Once it hits 0, the game will end - [image](assets/images/existing-features/game-info-lives-on-the-screen.jpg)
+    * Timer – a countdown of each round. Will differ depending on which game mode is selected - [image](assets/images/existing-features/game-info-timer-on-the-screen.jpg)
+    * Points – accumulation of points depending on users actions - [image](assets/images/existing-features/game-info-points-on-the-screen.jpg)
 * The Game – this is when and where the game will be played. Will include head cards and field cards 
-    * Head cards – these are cards the user will have to find a match for within the field cards 
-    * Field cards – these cards will have its icons on display for a short period of time before it disappears. User must select the card that had an icon that is the same as the one displayed on the head cards. 
+    * Head cards – these are cards the user will have to find a match for within the field cards - [image](assets/images/existing-features/head-cards-on-show.jpg)
+    * Field cards – these cards will have its icons on display for a short period of time before it disappears. User must select the card that had an icon that is the same as the one displayed on the head cards. - [image](assets/images/existing-features/field-cards-short-display.gif)
     * Game icons and game options will be on display too but not the game options 
-* Game over – informs the user the game has ended and will contain information regarding the final points.  
-* Footer – contains icons linking to websites social media pages.  
+* Game over – informs the user the game has ended and will contain information regarding the final points.  - [image](assets/images/existing-features/game-over-section.jpg)
+* Footer – contains icons linking to websites social media pages. - [image](assets/images/existing-features/footer-section.gif) 
 
 ### **Future Features**
 * A logo of higher pixel qulity. Due to funds being low, it was not financially feasible to have downloaded a higher pixel quality version of the logo
