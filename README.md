@@ -357,6 +357,8 @@ Realised whilst playing the game, when the timer reached 0 and then the lives re
 * I used the [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/) website to check for any errors in my [style.css](assets/css/style.css) file. Below are the results:
     * Attempt 1: [Image 1](assets/images/validation/stye-css-jigsaw-validation-attempt-1-p1.jpg)
     * Attempt 2: [Image 1](assets/images/validation/stye-css-jigsaw-validation-attempt-2-p1.jpg)
+* I used [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly) to check if it is mobile friendly. Below are the results:
+    * Attempt 1: [Image 1](assets/images/validation/results-for-google-mobile-friendy-attempt-1.jpg)
 
 ## **DEPLOYMENT**
 ### Github pages
